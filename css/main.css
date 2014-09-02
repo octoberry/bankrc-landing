@@ -1,0 +1,215 @@
+@import url(base.css);
+
+/*** ШАПКА САЙТА ***/
+.navbar{margin-bottom: 0px;}
+.navbar-default{
+    height: 165px;
+    background: white;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    box-shadow: none;
+    border: none;
+}
+.navbar-brand{height: 165px; padding: 50px 0 0 0;}
+.container>.navbar-header{margin: 0px;}
+
+
+/*** ПЕРВЫЙ ЭКРАН НА ГЛАВНОЙ ***/
+.preview-main{margin-bottom: 50px;}
+    .preview-main h2{margin: 50px 0px 70px 0px; text-transform: none; font-family: "latolight"; font-size: 45px;}
+    .preview-main .title-head{margin-bottom: 100px; font-size: 23px; line-height: 1.3em;}
+    .preview-main .title-footer{margin: 38px 0px 0px 0px; font-size: 21px; line-height: 1.3em; color: #00446b;}
+
+@media (max-width: 1200px){
+    .preview-main h2{margin: 30px 0px 70px 0px;}
+    .preview-main .title-head{margin-bottom: 70px;}
+}
+@media (max-width: 992px){
+    .preview-main h2{font-size: 35px;}
+    .preview-main .title-head{font-size: 20px;}
+    .preview-main .title-footer{font-size: 18px;}
+}
+@media (max-width: 768px){
+    .pm-image img{width: 100%;}
+    .preview-main h2{font-size: 25px;margin: 10px 0px 40px 0px;}
+    .preview-main .title-head{font-size: 15px; margin-bottom: 40px;}
+    .preview-main .title-footer{font-size: 13px;}
+}
+@media (max-width: 445px){
+    .pm-image {display: none;}
+    .pm-content {width: 100% !important;}
+}
+    
+/*** ВТОРОЙ ЭКРАН НА ГЛАВНОЙ ***/
+.advantage-main{padding-top: 50px; margin-bottom: 25px;}
+    .am-item{font-size: 16px;line-height: 1.3em;max-width: 205px;margin: 0 auto;}
+        .ami-image{text-align: center; margin-bottom: 35px;}
+        .am-item h2{text-transform: none; font-size: 18px; color: #00446b; text-align: center; font-family: "latoheavy";}
+@media (max-width: 992px){
+    .am-item{margin-bottom: 50px;}
+}
+
+/*** ТРЕТИЙ ЭКРАН НА ГЛАВНОЙ ***/
+.app-main{padding-top: 50px; color: white;line-height: 1.3em;font-size: 35px; margin-bottom: 45px;}
+    .app-main h2{font-size: 40px; text-transform: none; color: white; margin-bottom: 22px; font-family: "latolight";}
+    .app-main p{margin-bottom: 22px;}
+@media (max-width: 992px){
+    .app-main{font-size: 28px;}
+        .app-main h2{font-size: 35px;}
+}
+@media (max-width: 445px){
+    .app-main{font-size: 18px;}
+        .app-main h2{font-size: 25px;}
+}
+        
+/*** ЧЕТВЕРТЫЙ ЭКРАН НА ГЛАВНОЙ ***/
+.info-main{margin-bottom: 100px;}
+    .im-header {text-align: center; padding-top: 40px; margin-bottom: 90px;}
+        .im-header h2{color: black; font-size: 50px; text-transform: none; margin-bottom: 55px; font-family: "latolight";}
+        .im-header h3{color: black; text-transform: none; font-size: 35px;}
+        .im-header p{margin-bottom: 35px;}
+    .im-body{}
+        .im-image{text-align: center;}
+        .im-block{padding-top: 25px;}
+            .im-block .media{margin-bottom: 35px;}
+                .im-block .media-body{font-size: 18px;line-height: 1.3em;min-height: 80px; padding-left: 20px; color: #00446b;}
+                .im-block .media-body.text-right{padding-right: 20px;}
+                    .im-block .media-body .d-table{display: table; width: 100%; min-height: 80px;}
+                        .im-block .media-body .d-table p{display: table-cell;vertical-align: middle;}
+@media (max-width: 992px){
+    .im-header h2{font-size: 35px;}
+    .im-header h3{font-size: 25px;}
+    
+    .im-image{display: none;}
+    .im-block{padding-top: 0px;}
+    
+    .imb-item-left:nth-child(odd) {clear: both;}
+    .imb-item-left:nth-child(odd) .pull-right{ margin-left: 0px;}
+    .imb-item-left:nth-child(even) .pull-right{float: left !important;}
+    .imb-item-left:nth-child(odd) .media-body{padding-left: 0px;}
+    .imb-item-left:nth-child(even) .media-body{text-align: left !important;  padding-right: 0px; padding-left: 20px;}
+    
+    .imb-item-right:nth-child(odd) {clear: both;}
+    .imb-item-right:nth-child(odd) .pull-left{margin-left: 0px;}
+    .imb-item-right:nth-child(odd) .pull-left{float: right !important;}
+    .imb-item-right:nth-child(odd) .media-body{text-align: right !important; padding-left: 0px; padding-right: 20px;}
+    .imb-item-right .pull-left{margin-left: 10px; margin-right: 0px;}
+}
+@media (max-width: 768px){
+    .im-block .media-body{width: 50%;}
+    .imb-item-left:nth-child(odd) .media-body{float: right;}
+    .imb-item-right:nth-child(odd) .media-body{float: right;}
+}
+@media (max-width: 565px){
+    .im-block .media-body{width: 190px; margin-bottom: 50px;}
+}
+                        
+/*** ПЯТЫЙ ЭКРАН НА ГЛАВНОЙ ***/
+.sale-main{padding-top: 100px; margin-bottom: 100px;}
+    .sale-main h2{color: white; font-size: 50px; text-transform: none; margin-bottom: 100px;  font-family: "latolight"; text-align: center;}
+    .sale-main .sm-content{text-align: center; padding-top: 75px; font-size: 21px; color: white; line-height: 1.3em;}
+        .sale-main .sm-content h2{font-family: "latolight"; font-size: 70px; line-height: 50px; margin-bottom: 30px;}
+            .sale-main .sm-content h2 span{font-size: 30px; display: block;}
+        .sale-main .sm-content h3{font-family: "latolight"; font-size: 28px; line-height: 1.3em; margin-bottom: 30px;}
+        .sale-main .sm-content hr{margin-top: 50px; margin-bottom: 30px;}
+@media (max-width: 992px){
+    .sale-main h2{font-size: 35px;}
+}
+
+
+/*** ШЕСТОЙ ЭКРАН НА ГЛАВНОЙ ***/
+.card-main{padding-top: 100px; margin-bottom: 100px;}
+    .card-main h2{color: #00446b !important; font-size: 50px; text-transform: none; margin-bottom: 100px;  font-family: "latolight"; text-align: center;}
+    .cm-item{}
+        .cm-image {position: relative; min-height: 410px;}
+            .cm-image img{position: absolute; top: 0; left: 0;}
+        .cm-text{color: #00446b; font-size: 24px; line-height: 1.3em; padding-top: 15px;}
+            .cm-text h3{color: #00446b !important;font-family: "latolight"; font-size: 35px; line-height: 1.3em; margin-bottom: 0px;}
+            .cm-text p{margin-bottom: 50px;}
+@media (max-width: 992px){
+    .cm-image {min-height: 350px;}
+        .cm-image img{width: 130%;}
+    .cm-text{padding-top: 10px; font-size: 18px;}
+        .cm-text h3{font-size: 25px;}
+}
+@media (max-width: 768px){
+    .cm-item{margin-bottom: 70px;}
+        .cm-image {min-height: 350px;}
+            .cm-image img{width: 100%; left: 15%;}
+        .cm-text{ font-size: 24px; text-align: center; margin-bottom: 50px;}
+            .cm-text h3{font-size: 35px;}
+}
+@media (max-width: 565px){
+    .cm-image {min-height: 270px;}
+}
+@media (max-width: 388px){
+    .cm-image {min-height: 210px;}
+}
+
+/*** ФОРМА ОСТАВИТЬ ТЕЛЕФОН НА ГЛАВНОЙ ***/
+.call-form-main{padding-top: 100px; font-size: 25px; text-align: center; color: #00446b; line-height: 1.3em;}
+    .call-form-main h2{
+        color: #00446b !important;
+        font-size: 45px;
+        text-transform: none;
+        margin-bottom: 20px;
+        font-family: "latolight";
+        text-align: center;
+    }
+    .call-form-main h3{
+        color: #00446b !important;
+        font-size: 35px;
+        text-transform: none;
+        margin-bottom: 70px;
+        text-align: center;
+    }
+    .call-form-main .form-control{
+        outline: none;
+        box-shadow: none;
+        filter: none;
+        border-bottom: #00446b 1px solid;
+        height: 70px;
+        font-size: 50px;
+        font-family: "latolight";
+        color: #00446b;
+        line-height: 1em;
+    }
+    .call-form-main .input-group{width: 460px; margin: 0 auto; margin-top: 60px;}
+        .call-form-main .input-group .input-group-addon{
+            font-size: 50px;
+            font-family: "latolight";
+            color: #00446b;
+            border-radius: 0px;
+            border: none;
+            background: transparent;
+            padding: 0px 12px;
+        }
+        .call-form-main .input-group .input-group-btn{
+            border-radius: 0px;
+            border: none;
+            background: transparent;
+            padding: 0px 12px;
+        }
+            .call-form-main .input-group .input-group-btn .btn-default,
+            .call-form-main .input-group .input-group-btn .btn-default:focus,
+            .call-form-main .input-group .input-group-btn .btn-default:active,
+            .call-form-main .input-group .input-group-btn .btn-default:hover{
+                border-radius: 0px;
+                border: none;
+                background: transparent;
+                box-shadow: none;
+                filter: none;
+                outline: none;
+                padding: 0;
+            }
+@media (max-width: 768px){
+    .call-form-main{font-size: 18px;}
+        .call-form-main h2{font-size: 35px;}
+        .call-form-main h3{font-size: 25px;}
+        
+        .call-form-main .input-group{width: 310px;}
+            .call-form-main .input-group .input-group-addon{font-size: 30px;}
+            .call-form-main .form-control{font-size: 30px; height: 40px;}
+            .call-form-main .input-group .input-group-btn{}
+                .call-form-main .input-group .input-group-btn img{height: 30px;}
+}
