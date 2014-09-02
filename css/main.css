@@ -109,7 +109,7 @@
     .sale-main h2{color: white; font-size: 50px; text-transform: none; margin-bottom: 100px;  font-family: "latolight"; text-align: center;}
     .sale-main .sm-content{text-align: center; padding-top: 75px; font-size: 21px; color: white; line-height: 1.3em;}
         .sale-main .sm-content h2{font-family: "latolight"; font-size: 70px; line-height: 50px; margin-bottom: 30px;}
-            .sale-main .sm-content h2 span{font-size: 30px; display: block;}
+            .sale-main .sm-content h2 span:not(.rub){font-size: 30px; display: block;}
         .sale-main .sm-content h3{font-family: "latolight"; font-size: 28px; line-height: 1.3em; margin-bottom: 30px;}
         .sale-main .sm-content hr{margin-top: 50px; margin-bottom: 30px;}
 @media (max-width: 992px){
