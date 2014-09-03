@@ -35,11 +35,14 @@ $(document).ready(function() {
                         }
                     });
                 } else {
-                    $('#cf_success').show();
+                    form.hide();
+                    $('#cf_success').fadeIn();
                     setTimeout(function() {
                         clearForm("call-form");
                         $('#klaatu').remove();
                         form.find('.alert').hide();
+                        $('#cf_success').hide();
+                        form.show();
                     }, 5000);
                 }
             }
@@ -80,12 +83,16 @@ $(document).ready(function() {
                         }
                     });
                 } else {
-                    $('#cfm_success').show();
+                    form.hide();
+                    $('#cfm_success').fadeIn();
                     setTimeout(function() {
                         $('#callModalForm').modal('hide');
-                        clearForm("call-form-modal");
-                        $('#klaatu').remove();
-                        form.find('.alert').hide();
+                        $('#callModalForm').on('hidden.bs.modal', function(e) {
+                            clearForm("call-form-modal");
+                            $('#klaatu').remove();
+                            $('#cfm_success').hide();
+                            form.show();
+                        });
                     }, 5000);
                 }
             }

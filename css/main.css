@@ -41,16 +41,17 @@
 }
     
 /*** ВТОРОЙ ЭКРАН НА ГЛАВНОЙ ***/
-.advantage-main{padding-top: 50px; margin-bottom: 25px;}
+.advantage-main{padding-top: 100px; margin-bottom: 100px;}
     .am-item{font-size: 16px;line-height: 1.3em;max-width: 205px;margin: 0 auto;}
         .ami-image{text-align: center; margin-bottom: 35px;}
         .am-item h2{text-transform: none; font-size: 18px; color: #00446b; text-align: center; font-family: "latoheavy";}
 @media (max-width: 992px){
-    .am-item{margin-bottom: 50px;}
+    .advantage-main{margin-bottom: 50px;}
+        .am-item{margin-bottom: 50px;}
 }
 
 /*** ТРЕТИЙ ЭКРАН НА ГЛАВНОЙ ***/
-.app-main{padding-top: 50px; color: white;line-height: 1.3em;font-size: 35px; margin-bottom: 45px;}
+.app-main{padding-top: 100px; color: white;line-height: 1.3em;font-size: 35px; margin-bottom: 100px;}
     .app-main h2{font-size: 40px; text-transform: none; color: white; margin-bottom: 22px; font-family: "latolight";}
     .app-main p{margin-bottom: 22px;}
 @media (max-width: 992px){
@@ -63,8 +64,8 @@
 }
         
 /*** ЧЕТВЕРТЫЙ ЭКРАН НА ГЛАВНОЙ ***/
-.info-main{margin-bottom: 100px;}
-    .im-header {text-align: center; padding-top: 40px; margin-bottom: 90px;}
+.info-main{margin-bottom: 50px;}
+    .im-header {text-align: center; padding-top: 100px; margin-bottom: 90px;}
         .im-header h2{color: black; font-size: 50px; text-transform: none; margin-bottom: 55px; font-family: "latolight";}
         .im-header h3{color: black; text-transform: none; font-size: 35px;}
         .im-header p{margin-bottom: 35px;}
@@ -74,7 +75,7 @@
             .im-block .media{margin-bottom: 35px;}
                 .im-block .media-body{font-size: 18px;line-height: 1.3em;min-height: 80px; padding-left: 20px; color: #00446b;}
                 .im-block .media-body.text-right{padding-right: 20px;}
-                    .im-block .media-body .d-table{display: table; width: 100%; min-height: 80px;}
+                    .im-block .media-body .d-table{display: table; width: 100%; min-height: 80px; height: 80px;}
                         .im-block .media-body .d-table p{display: table-cell;vertical-align: middle;}
 @media (max-width: 992px){
     .im-header h2{font-size: 35px;}
@@ -107,11 +108,11 @@
 /*** ПЯТЫЙ ЭКРАН НА ГЛАВНОЙ ***/
 .sale-main{padding-top: 100px; margin-bottom: 100px;}
     .sale-main h2{color: white; font-size: 50px; text-transform: none; margin-bottom: 100px;  font-family: "latolight"; text-align: center;}
-    .sale-main .sm-content{text-align: center; padding-top: 75px; font-size: 21px; color: white; line-height: 1.3em;}
-        .sale-main .sm-content h2{font-family: "latolight"; font-size: 70px; line-height: 50px; margin-bottom: 30px;}
-            .sale-main .sm-content h2 span:not(.rub){font-size: 30px; display: block;}
-        .sale-main .sm-content h3{font-family: "latolight"; font-size: 28px; line-height: 1.3em; margin-bottom: 30px;}
-        .sale-main .sm-content hr{margin-top: 50px; margin-bottom: 30px;}
+    .sale-main .sm-content{text-align: center; padding-top: 10px; font-size: 21px; color: white; line-height: 1.3em;}
+        .sale-main .sm-content h2{font-family: "latolight"; font-size: 50px; line-height: 50px; margin-bottom: 30px;}
+            .sale-main .sm-content h2 span:not(.rub){font-family: "latobold";font-size: 20px; display: block;line-height: 1.8em;text-transform: uppercase;}
+        .sale-main .sm-content h3{font-family: "latolight"; font-size: 28px; line-height: 1.3em; margin-bottom: 30px; margin-top: 50px;}
+        .sale-main .sm-content hr{margin-top: 40px; margin-bottom: 30px;}
 @media (max-width: 992px){
     .sale-main h2{font-size: 35px;}
 }
@@ -202,6 +203,7 @@
                 outline: none;
                 padding: 0;
             }
+    .modal-body .call-form-main .input-group {margin-top: 30px;}
 @media (max-width: 768px){
     .call-form-main{font-size: 18px;}
         .call-form-main h2{font-size: 35px;}
