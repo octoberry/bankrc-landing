@@ -55,40 +55,28 @@ strong{font-family: "latoheavy"; font-weight: normal;}
     0% {
         color: #00446b;
         border-color: #00446b;
-        -webkit-box-shadow: 0 0 20px rgba(200, 50, 50, 0);
-                box-shadow: 0 0 20px rgba(200, 50, 50, 0);
     }
     50% {
-        color: #843534;
-        border-color: #843534;
-        -webkit-box-shadow: 0 0 20px rgba(200, 50, 50, 0.9);
-                box-shadow: 0 0 20px rgba(200, 50, 50, 0.9);
+        color: #cf4040;
+        border-color: #cf4040;
     }
     100% {
         color: #00446b;
         border-color: #00446b;
-        -webkit-box-shadow: 0 0 20px rgba(200, 50, 50, 0);
-                box-shadow: 0 0 20px rgba(200, 50, 50, 0);
     }
 }
 @keyframes pulse {
     0% {
         color: #00446b;
         border-color: #00446b;
-        -webkit-box-shadow: 0 0 20px rgba(200, 50, 50, 0);
-                box-shadow: 0 0 20px rgba(200, 50, 50, 0);
     }
     50% {
-        color: #843534;
-        border-color: #843534;
-        -webkit-box-shadow: 0 0 20px rgba(200, 50, 50, 0.9);
-                box-shadow: 0 0 20px rgba(200, 50, 50, 0.9);
+        color: #cf4040;
+        border-color: #cf4040;
     }
     100% {
         color: #00446b;
         border-color: #00446b;
-        -webkit-box-shadow: 0 0 20px rgba(200, 50, 50, 0);
-                box-shadow: 0 0 20px rgba(200, 50, 50, 0);
     }
 }
 
@@ -179,8 +167,8 @@ strong{font-family: "latoheavy"; font-weight: normal;}
     }
     .default-form .has-error .form-control,
     .default-form .has-error .form-control:focus {
-        color: #843534;
-        border-color: #843534;
+        color: #cf4040;
+        border-color: #cf4040;
         -webkit-box-shadow: none;
                 box-shadow: none;
     }
@@ -239,8 +227,10 @@ strong{font-family: "latoheavy"; font-weight: normal;}
             font-size: 20px;
             opacity: 0.8;
             filter: alpha(opacity=80);
+            outline: none;
         }
         .modal-header .close:hover {opacity: 1; filter: alpha(opacity=100);}
+            .modal-header .close img{outline: none;}
     .modal-body {padding: 50px 50px 0px 50px; margin-bottom: 0px;}
     .modal-footer {border-top: none; padding: 50px; margin-top: 0px; font-size: 18px;}
 @media (min-width: 992px){
