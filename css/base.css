@@ -51,6 +51,47 @@ strong{font-family: "latoheavy"; font-weight: normal;}
     .col-md-20{width: 20%;}
 }
 
+@-webkit-keyframes pulse {
+    0% {
+        color: #00446b;
+        border-color: #00446b;
+        -webkit-box-shadow: 0 0 20px rgba(200, 50, 50, 0);
+                box-shadow: 0 0 20px rgba(200, 50, 50, 0);
+    }
+    50% {
+        color: #843534;
+        border-color: #843534;
+        -webkit-box-shadow: 0 0 20px rgba(200, 50, 50, 0.9);
+                box-shadow: 0 0 20px rgba(200, 50, 50, 0.9);
+    }
+    100% {
+        color: #00446b;
+        border-color: #00446b;
+        -webkit-box-shadow: 0 0 20px rgba(200, 50, 50, 0);
+                box-shadow: 0 0 20px rgba(200, 50, 50, 0);
+    }
+}
+@keyframes pulse {
+    0% {
+        color: #00446b;
+        border-color: #00446b;
+        -webkit-box-shadow: 0 0 20px rgba(200, 50, 50, 0);
+                box-shadow: 0 0 20px rgba(200, 50, 50, 0);
+    }
+    50% {
+        color: #843534;
+        border-color: #843534;
+        -webkit-box-shadow: 0 0 20px rgba(200, 50, 50, 0.9);
+                box-shadow: 0 0 20px rgba(200, 50, 50, 0.9);
+    }
+    100% {
+        color: #00446b;
+        border-color: #00446b;
+        -webkit-box-shadow: 0 0 20px rgba(200, 50, 50, 0);
+                box-shadow: 0 0 20px rgba(200, 50, 50, 0);
+    }
+}
+
 /**
 Использование шрифта для показа знака рубля
 .rub{font-family: "als_rublregular"; text-transform: none !important;}
@@ -130,6 +171,19 @@ strong{font-family: "latoheavy"; font-weight: normal;}
     .default-form label{font-size: 18px; color: white; font-weight: normal; line-height: 1.3em;}
     .default-form .hidden-fields{display: none;}
     .default-form .form-control{font-size: 18px; border-radius: 0px; border: none; height: 30px; color: black;}
+    .default-form .has-error .form-control{
+        transition: 0.5s;
+        -webkit-animation: pulse 1.5s 3;
+           -moz-animation: pulse 1.5s 3;
+                animation: pulse 1.5s 3;
+    }
+    .default-form .has-error .form-control,
+    .default-form .has-error .form-control:focus {
+        color: #843534;
+        border-color: #843534;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+    }
     .default-form textarea.form-control{height: 90px; transition: 0.5s; resize: none;}
     .default-form textarea.form-control.small{height: 30px; padding: 3px 12px;}
     

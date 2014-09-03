@@ -1,8 +1,25 @@
 $(document).ready(function() {
+    
+    var listRU = $.masksSort($.masksLoad("/js/plugins/inputmask/phones-ru.json"), ['#'], /[0-9]|#/, "mask");
+    var optsRU = {
+        inputmask: {
+            definitions: {
+                '#': {validator: "[0-9]", cardinality: 2}
+            },
+            showMaskOnHover: true, autoUnmask: false, clearIncomplete: false,
+        },
+        match: /[0-9]/, replace: '#', list: listRU, listKey: "mask"
+    };
+
+    //Формализация ввода телефона
+    $('#cf-phone-field').inputmasks(optsRU);
+    $('#cfm-phone-field').inputmasks(optsRU);
+    
     $('input[name=phone]').keypress(function(key) {
         if(key.charCode == 13) return true;
         if(key.charCode < 48 || key.charCode > 57) return false;
     });
+  
 
     //Модальная форма "Оставьте свой телефон"
     $('#call-form').submit(function() {
@@ -16,7 +33,7 @@ $(document).ready(function() {
         var options = {
             dataType: 'json',
             beforeSubmit: function() {
-                form.find('.alert, .error').hide();
+                form.find('.alert, .success, .error').hide();
                 form.find('.has-error').removeClass('has-error');
             },
             success: function(data) {
@@ -29,9 +46,9 @@ $(document).ready(function() {
                             for (var j in n) {
                                 form.find('*[name=' + n[j] + ']').parent().addClass('has-error');
                             }
-                            $("#cf_nodata_error").show();
+                            //$("#cf_nodata_error").show();
                         } else {
-                            $('#cf_' + i + '_error').show();
+                            //$('#cf_' + i + '_error').show();
                         }
                     });
                 } else {
@@ -64,7 +81,7 @@ $(document).ready(function() {
         var options = {
             dataType: 'json',
             beforeSubmit: function() {
-                form.find('.alert, .error').hide();
+                form.find('.alert, .success, .error').hide();
                 form.find('.has-error').removeClass('has-error');
             },
             success: function(data) {
@@ -77,9 +94,9 @@ $(document).ready(function() {
                             for (var j in n) {
                                 form.find('*[name=' + n[j] + ']').parent().addClass('has-error');
                             }
-                            $("#cfm_nodata_error").show();
+                            //$("#cfm_nodata_error").show();
                         } else {
-                            $('#cfm_' + i + '_error').show();
+                            //$('#cfm_' + i + '_error').show();
                         }
                     });
                 } else {

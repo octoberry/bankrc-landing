@@ -71,6 +71,9 @@ function clearForm(form_id) {
     var form = $('#' + form_id);
     if (!form.length)
         return;
+    form.find('.alert, .success, .error').hide();
+    form.find('.has-error').removeClass('has-error');
+    
     form.find('input[type=text], input[type=file], input[type=email], input[type=password]').each(function() {
         $(this).val('');
     });
