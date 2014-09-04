@@ -238,18 +238,28 @@ strong{font-family: "latoheavy"; font-weight: normal;}
 }
 
 /*** СПИСОК ***/
-.bullet-list{border: white 2px solid; padding: 55px 50px;}
-    .bullet-list .media{margin-bottom: 50px; margin-top: 0px;}
+.bullet-list{border: white 2px solid; padding: 54px 50px;}
+    .bullet-list .media{margin-bottom: 48px; margin-top: 0px;}
         .bullet-list .media-body{font-size: 24px;line-height: 1em;min-height: 50px; padding-left: 20px; color: white;}
         .bullet-list .media:last-child{margin-bottom: 0px;}
         .bullet-list .media-body.text-right{padding-right: 20px;}
             .bullet-list .media-body .d-table{display: table; width: 100%; min-height: 50px;}
                 .bullet-list .media-body .d-table p{display: table-cell;vertical-align: middle;}
+@media (max-width: 1200px){
+    .bullet-list .media-body{font-size: 21px;}
+}
 @media (max-width: 992px){
-    .bullet-list{margin-bottom: 50px;}
+    .bullet-list{margin-bottom: 50px; padding: 47px 50px;}
+    .bullet-list .media-body{font-size: 18px;}
 }
 @media (max-width: 768px){
-    .bullet-list .media-body{font-size: 18px;}
+    .bullet-list{margin-bottom: 50px; padding: 47px 25px;}
+    .bullet-list .media-body{font-size: 16px;}
+}
+@media (max-width: 600px){
+    .bullet-list{margin-bottom: 50px; padding: 47px 10px;}
+    .bullet-list .pull-left{display: none;}
+    .bullet-list .media-body{padding-left: 0px; font-size: 14px;}
 }
             
 /*** FOOTER ***/

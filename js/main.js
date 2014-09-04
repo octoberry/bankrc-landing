@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    
+
     var listRU = $.masksSort($.masksLoad("/js/plugins/inputmask/phones-ru.json"), ['#'], /[0-9]|#/, "mask");
     var optsRU = {
         inputmask: {
@@ -14,12 +14,14 @@ $(document).ready(function() {
     //Формализация ввода телефона
     $('#cf-phone-field').inputmasks(optsRU);
     $('#cfm-phone-field').inputmasks(optsRU);
-    
+
     $('input[name=phone]').keypress(function(key) {
-        if(key.charCode == 13) return true;
-        if(key.charCode < 48 || key.charCode > 57) return false;
+        if (key.charCode == 13)
+            return true;
+        if (key.charCode < 48 || key.charCode > 57)
+            return false;
     });
-  
+
 
     //Модальная форма "Оставьте свой телефон"
     $('#call-form').submit(function() {
@@ -76,7 +78,6 @@ $(document).ready(function() {
         form.append('<input type="hidden" name="klaatu" id="klaatu" value="klaatu_ajax" />');
         form.attr("action", GLOBAL.URL_POST);
         form.css("opacity", "0.3");
-		return false;
         var options = {
             dataType: 'json',
             beforeSubmit: function() {
