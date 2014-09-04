@@ -85,7 +85,7 @@ strong{font-family: "latoheavy"; font-weight: normal;}
 .rub{font-family: "als_rublregular"; text-transform: none !important;}
 **/
 .rub {display: inline-block;position: relative;}
-.rub:before {display: block;content: "–";position: absolute;top: 0.08em;}
+.rub:before {display: block;content: "–";position: absolute;top: 0.08em; left: -0.05em;}
 
 .p-relative{position: relative;}
 

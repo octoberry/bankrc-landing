@@ -6,7 +6,7 @@ $(document).ready(function() {
             definitions: {
                 '#': {validator: "[0-9]", cardinality: 2}
             },
-            showMaskOnHover: true, autoUnmask: false, clearIncomplete: false, placeholder: "  "
+            showMaskOnHover: true, autoUnmask: false, clearIncomplete: false, placeholder: " "
         },
         match: /[0-9]/, replace: '#', list: listRU, listKey: "mask"
     };
@@ -76,6 +76,7 @@ $(document).ready(function() {
         form.append('<input type="hidden" name="klaatu" id="klaatu" value="klaatu_ajax" />');
         form.attr("action", GLOBAL.URL_POST);
         form.css("opacity", "0.3");
+		return false;
         var options = {
             dataType: 'json',
             beforeSubmit: function() {

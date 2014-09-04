@@ -176,7 +176,7 @@
         color: #00446b;
         line-height: 1em;
     }
-    .call-form-main .input-group{width: 540px; margin: 0 auto; margin-top: 60px;}
+    .call-form-main .input-group{width: 550px; margin: 0 auto; margin-top: 60px;}
         .call-form-main .input-group .input-group-addon{
             font-size: 50px;
             font-family: "latolight";
@@ -205,14 +205,16 @@
                 padding: 0;
             }
     .modal-body .call-form-main .input-group {margin-top: 30px;}
+    input[name="phone"]{word-spacing: 15px;}
 @media (max-width: 768px){
     .call-form-main{font-size: 18px;}
         .call-form-main h2{font-size: 35px;}
         .call-form-main h3{font-size: 25px;}
         
-        .call-form-main .input-group{width: 360px;}
+        .call-form-main .input-group{width: 370px;}
             .call-form-main .input-group .input-group-addon{font-size: 30px;}
             .call-form-main .form-control{font-size: 30px; height: 40px;}
             .call-form-main .input-group .input-group-btn{}
                 .call-form-main .input-group .input-group-btn img{height: 30px;}
+    input[name="phone"]{word-spacing: 10px;}
 }
