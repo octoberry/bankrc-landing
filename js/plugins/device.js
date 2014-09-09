@@ -119,9 +119,9 @@
     
     _setViewportForMobile = function(){
         if (device.landscape()) {
-            $('#viewport').attr('content', 'width=1170');
+            $('#viewport').attr('content', 'width=769');
         } else {
-            $('#viewport').attr('content', 'width=1024');
+            $('#viewport').attr('content', 'width=445');
         }
     }
 

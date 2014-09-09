@@ -32,8 +32,8 @@
 @media (max-width: 768px){
     .pm-image img{width: 100%;}
     .preview-main h2{font-size: 25px;margin: 10px 0px 40px 0px;}
-    .preview-main .title-head{font-size: 15px; margin-bottom: 40px;}
-    .preview-main .title-footer{font-size: 13px;}
+    .preview-main .title-head{font-size: 20px; margin-bottom: 40px;}
+    .preview-main .title-footer{font-size: 18px;}
 }
 @media (max-width: 445px){
     .pm-image {display: none;}
@@ -138,9 +138,9 @@
 }
 @media (max-width: 600px){
     .sale-main .sm-price-block .sm-price-bg{width: 100px; height: 540px;}
-    .sale-main .sm-price-block h2.price-short{margin-top: 166px; margin-left: -10px; font-size: 20px; line-height: 1em;}
-    .sale-main .sm-price-block h2.price-full{margin-top: 207px; margin-left: 30px;font-size: 20px; line-height: 1em;}
-    .sale-main .sm-price-block h2 span:not(.rub){font-size: 10px;}
+    .sale-main .sm-price-block h2.price-short{margin-top: 142px;margin-left: 38px;font-size: 42px;line-height: 1em;}
+    .sale-main .sm-price-block h2.price-full{margin-top: 178px;margin-left: 10px;font-size: 32px;line-height: 1em;}
+    .sale-main .sm-price-block h2 span:not(.rub){font-size: 20px;}
 }
 
 
@@ -233,7 +233,7 @@
     .modal-body .call-form-main .input-group {margin-top: 30px;}
     input[name="phone"]{word-spacing: 15px;}
 @media (max-width: 768px){
-    .call-form-main{font-size: 18px;}
+    .call-form-main{font-size: 22px;}
         .call-form-main h2{font-size: 35px;}
         .call-form-main h3{font-size: 25px;}
         
