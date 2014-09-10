@@ -77,6 +77,12 @@
                 .im-block .media-body.text-right{padding-right: 20px;}
                     .im-block .media-body .d-table{display: table; width: 100%; min-height: 80px; height: 80px;}
                         .im-block .media-body .d-table p{display: table-cell;vertical-align: middle;}
+    
+    .s-im-body{display: none;}
+        .s-im-block{text-align: center;}
+            .s-im-block .s-im-gimage{margin-bottom: 20px; width: 175px;}
+            .s-im-block .s-im-image{margin-bottom: 20px;}
+            .s-im-block .s-im-item{margin-top: 20px;font-size: 18px;line-height: 1.3em;min-height: 80px;color: #00446b;width: 230px;margin: 0 auto;}
 @media (max-width: 992px){
     .im-header h2{font-size: 35px;}
     .im-header h3{font-size: 25px;}
@@ -97,6 +103,8 @@
     .imb-item-right .pull-left{margin-left: 10px; margin-right: 0px;}
 }
 @media (max-width: 768px){
+    .im-body{display: none;}
+    .s-im-body{display: block;}
     .im-block .media-body{width: 50%;}
     .imb-item-left:nth-child(odd) .media-body{float: right;}
     .imb-item-right:nth-child(odd) .media-body{float: right;}

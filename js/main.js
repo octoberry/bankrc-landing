@@ -1,5 +1,21 @@
 $(document).ready(function() {
 
+    //Слайдер для мобильного
+    var mySwiper = new Swiper('.swiper-container', {
+        pagination: '.pagination',
+        loop: true,
+        grabCursor: true,
+        paginationClickable: true
+    })
+    $('.arrow-left').on('click', function(e) {
+        e.preventDefault()
+        mySwiper.swipePrev()
+    })
+    $('.arrow-right').on('click', function(e) {
+        e.preventDefault()
+        mySwiper.swipeNext()
+    })
+
     var listRU = $.masksSort($.masksLoad("/js/plugins/inputmask/phones-ru.json"), ['#'], /[0-9]|#/, "mask");
     var optsRU = {
         inputmask: {
@@ -22,6 +38,18 @@ $(document).ready(function() {
             return false;
     });
 
+    slider.init($("*[data-slider]"));
+    $("*[data-slider]").hover(
+            function() {
+                var $this = $(this);
+                var id = $this.attr("data-slider");
+                var img = $this.attr("data-info-img");
+                $("#" + id).attr("src", img);
+            },
+            function() {
+
+            }
+    );
 
     //Модальная форма "Оставьте свой телефон"
     $('#call-form').submit(function() {
@@ -119,3 +147,46 @@ $(document).ready(function() {
         return false;
     });
 });
+
+
+slider = {
+    ready: [],
+    complete: 0,
+    current: 0,
+    progress: false,
+    images: [],
+    init: function(images) {
+        if (!images || images === undefined || images.length == 0)
+            return false;
+
+        images.each(function(i, n) {
+            slider.images.push($(this).attr("data-info-img"));
+        });
+
+        slider.load();
+    },
+    load: function(i) {
+        if (!i || i === undefined)
+            i = 0;
+
+        if (!slider.ready[i]) {
+            slider.ready[i] = new Image();
+            slider.ready[i].src = slider.images[i];
+            setTimeout(function() {
+                slider.check(i);
+            }, 50);
+        }
+    },
+    check: function(i) {
+        if (slider.ready[i].complete) {
+            slider.complete++;
+            if (i < slider.images.length - 1)
+                slider.load(i + 1);
+        } else {
+            setTimeout(function() {
+                slider.check(i);
+            }, 50);
+            return false;
+        }
+    }
+};

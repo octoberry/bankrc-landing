@@ -36,6 +36,8 @@
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css" />
         <link rel="stylesheet" type="text/css" href="/css/main.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/css/idangerous.swiper.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/css/idangerous.swiper.theme.css" media="all" />
 
         <!-- JS Includes -->
         <script type="text/javascript">
@@ -47,11 +49,14 @@
         <script type="text/javascript" src="/js/source/jquery.easing.js"></script>
         <script type="text/javascript" src="/js/source/jquery.mousewheel.js"></script>
         <script type="text/javascript" src="/js/source/jquery.event.drag-2.2.js"></script>
+        
         <script type="text/javascript" src="/js/plugins/bootstrap.min.js"></script>
         <script type="text/javascript" src="/js/plugins/device.js"></script>
         <script type="text/javascript" src="/js/plugins/inputmask/jquery.inputmask.js"></script>
         <script type="text/javascript" src="/js/plugins/inputmask/jquery.bind-first-0.1.min.js"></script>
         <script type="text/javascript" src="/js/plugins/inputmask/jquery.inputmask-multi.js"></script>
+        <script type="text/javascript" src="/js/plugins/idangerous.swiper.min.js"></script>
+        
         <script type="text/javascript" src="/js/scripts.js"></script>
         <script type="text/javascript" src="/js/main.js"></script>
 
@@ -179,7 +184,7 @@
                                 <div class="col-md-4 col-sm-12 col-xs-12 im-block">
                                     <div class="row">
                                         <div class="col-md-12 col-sm-6 col-xs-12 imb-item-left" data-scroll-reveal="enter from the left over 0.4s after 0.2s">
-                                            <div class="media">
+                                            <div class="media" data-slider="info-slider" data-info-img="/img/content/info/phone-1.png">
                                                 <span class="pull-right">
                                                     <img class="media-object" src="/img/content/info/1.png" alt="" />
                                                 </span>
@@ -191,7 +196,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12 col-sm-6 col-xs-12 imb-item-left" data-scroll-reveal="enter from the left over 0.4s after 0.3s">
-                                            <div class="media">
+                                            <div class="media" data-slider="info-slider" data-info-img="/img/content/info/phone-2.png">
                                                 <span class="pull-right">
                                                     <img class="media-object" src="/img/content/info/2.png" alt="" />
                                                 </span>
@@ -203,7 +208,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12 col-sm-6 col-xs-12 imb-item-left" data-scroll-reveal="enter from the left over 0.4s after 0.4s">
-                                            <div class="media">
+                                            <div class="media" data-slider="info-slider" data-info-img="/img/content/info/phone-3.png">
                                                 <span class="pull-right">
                                                     <img class="media-object" src="/img/content/info/3.png" alt="" />
                                                 </span>
@@ -215,7 +220,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12 col-sm-6 col-xs-12 imb-item-left" data-scroll-reveal="enter from the left over 0.4s after 0.5s">
-                                            <div class="media">
+                                            <div class="media" data-slider="info-slider" data-info-img="/img/content/info/phone-4.png">
                                                 <span class="pull-right">
                                                     <img class="media-object" src="/img/content/info/4.png" alt="" />
                                                 </span>
@@ -229,12 +234,12 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4 im-image" data-scroll-reveal="enter easy over 0.4s">
-                                    <img src="/img/content/info-phone.png" alt="" />
+                                    <img id="info-slider" src="/img/content/info/phone-1.png" alt="" width="240" />
                                 </div>
                                 <div class="col-md-4 col-sm-12 col-xs-12 im-block">
                                     <div class="row">
                                         <div class="col-md-12 col-sm-6 col-xs-12 imb-item-right" data-scroll-reveal="enter from the right over 0.4s after 0.2s">
-                                            <div class="media">
+                                            <div class="media" data-slider="info-slider" data-info-img="/img/content/info/phone-5.png">
                                                 <span class="pull-left">
                                                     <img class="media-object" src="/img/content/info/5.png" alt="" />
                                                 </span>
@@ -246,7 +251,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12 col-sm-6 col-xs-12 imb-item-right" data-scroll-reveal="enter from the right over 0.4s after 0.3s">
-                                            <div class="media">
+                                            <div class="media" data-slider="info-slider" data-info-img="/img/content/info/phone-6.png">
                                                 <span class="pull-left">
                                                     <img class="media-object" src="/img/content/info/6.png" alt="" />
                                                 </span>
@@ -258,7 +263,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12 col-sm-6 col-xs-12 imb-item-right" data-scroll-reveal="enter from the right over 0.4s after 0.4s">
-                                            <div class="media">
+                                            <div class="media" data-slider="info-slider" data-info-img="/img/content/info/phone-7.png">
                                                 <span class="pull-left">
                                                     <img class="media-object" src="/img/content/info/7.png" alt="" />
                                                 </span>
@@ -270,7 +275,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12 col-sm-6 col-xs-12 imb-item-right" data-scroll-reveal="enter from the right over 0.4s after 0.5s">
-                                            <div class="media">
+                                            <div class="media" data-slider="info-slider" data-info-img="/img/content/info/phone-0.png">
                                                 <span class="pull-left">
                                                     <img class="media-object" src="/img/content/info/8.png" alt="" />
                                                 </span>
@@ -283,6 +288,84 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="row s-im-body">
+                            <div class="device">
+                                <a class="arrow-left" href="#"></a> 
+                                <a class="arrow-right" href="#"></a>
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="content-slide s-im-block">
+                                                <img class="s-im-gimage" src="/img/content/info/phone-1.png" />
+                                                <div class="s-im-item">
+                                                    <div class="s-im-image">
+                                                        <img src="/img/content/info/1.png" alt="" />
+                                                    </div>
+                                                    <p>Правильное и корректное оформление валютных сделок без риска штрафов</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="content-slide s-im-block">
+                                                <img class="s-im-gimage" src="/img/content/info/phone-2.png" />
+                                                <div class="s-im-item">
+                                                    <div class="s-im-image">
+                                                        <img src="/img/content/info/2.png" alt="" />
+                                                    </div>
+                                                    <p>Быстрая легальная оплата работы фрилансеров</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="content-slide s-im-block">
+                                                <img class="s-im-gimage" src="/img/content/info/phone-3.png" />
+                                                <div class="s-im-item">
+                                                    <div class="s-im-image">
+                                                        <img src="/img/content/info/3.png" alt="" />
+                                                    </div>
+                                                    <p>Личный бизнес-консультант</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="content-slide s-im-block">
+                                                <img class="s-im-gimage" src="/img/content/info/phone-4.png" />
+                                                <div class="s-im-item">
+                                                    <div class="s-im-image">
+                                                        <img src="/img/content/info/4.png" alt="" />
+                                                    </div>
+                                                    <p>Овердрафт или кредит для предпринимателей</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="content-slide s-im-block">
+                                                <img class="s-im-gimage" src="/img/content/info/phone-5.png" />
+                                                <div class="s-im-item">
+                                                    <div class="s-im-image">
+                                                        <img src="/img/content/info/5.png" alt="" />
+                                                    </div>
+                                                    <p>Инструменты финансового<br />планирования</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="content-slide s-im-block">
+                                                <img class="s-im-gimage" src="/img/content/info/phone-6.png" />
+                                                <div class="s-im-item">
+                                                    <div class="s-im-image">
+                                                        <img src="/img/content/info/6.png" alt="" />
+                                                    </div>
+                                                    <p>Интеграция с любым бухгалтерским ПО</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pagination"></div>
                             </div>
                         </div>
                     </div>
@@ -530,7 +613,7 @@
                 if (!device.mobile()) {
                     'use strict';
                     window.scrollReveal = new scrollReveal({reset: false});
-                    
+
                     // This function returns the appropriate CSS-transition end event name
                     // to the transitionEnd variable. e.g usage: $(el).on('transitionEnd', func(e));
                     var transitionEnd = (function() {
