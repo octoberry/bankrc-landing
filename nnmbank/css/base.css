@@ -16,7 +16,7 @@ body {
     line-height: 1.3em;
 }
 
-.container{max-width: 720px;}
+.container{max-width: 750px;}
 .landscape .container{max-width: 1024px !important;}
  
 /** для firefox **/
