@@ -184,6 +184,8 @@ function formRefresh(){
 
 function setBorderPage() {
     var h = $(window).height();
-    $("#border-page").css({height: h + "px"});
-    $("#border-page .inner").css({height: (h - (parseInt($("#border-page").css("border-top-width").replace("px", "")) * 2)) + "px"});
+    if ($("#border-page").length){
+        $("#border-page").css({height: h + "px"});
+        $("#border-page .inner").css({height: (h - (parseInt($("#border-page").css("border-top-width").replace("px", "")) * 2)) + "px"});
+    }
 }
