@@ -1,0 +1,139 @@
+/*** БАЗОВЫЕ СТИЛИ ***/
+
+@import url(fonts.css);
+*{padding: 0; margin: 0;}
+html, body {margin:0px; padding:0px;}
+html {position: relative; min-height: 100%;}
+body {
+    background: white;
+    color: black; 
+    margin-bottom: 160px; 
+    height: auto !important; 
+    height: 100%; 
+    min-height: 100%; 
+    font-family: "proxima_nova_ltlight";
+    font-size: 14px; 
+    line-height: 1.3em;
+}
+
+.container{max-width: 720px;}
+ 
+/** для firefox **/
+#dst{display: none;}
+
+a{color: #8e394f; text-decoration: none;}
+a.default{color: white !important;}
+a.primary{color: #f8de49 !important;}
+.pseudo{text-decoration: none; border-bottom: 1px dashed;}
+a:hover, a:focus, a:active{color: #00a2e2; text-decoration: none !important; outline: none;}
+h1{font-size: 40px; color: #62a3e6; margin-top: 0px; font-weight: bold;}
+h2{font-size: 72px; color: black; margin-top: 0px; margin-bottom: 20px; line-height: 1.3em;}
+    h2 a{color: black;}
+    h2 a:hover, h2 a:focus, h2 a:active{color: black;}
+    h2 .pseudo{border-bottom: 3px dashed;}
+h3{font-size: 48px; color: black; margin-top: 0px; margin-bottom: 20px; line-height: 1.3em;}
+h4{font-size: 14px; font-weight: bold; color: #62a3e6; margin-top: 20px; margin-bottom: 15px;}
+hr{border: none; border-top: white 1px solid; margin: 10px 0px;}
+hr.w2{width: 20%; margin: 10px auto;}
+hr.w8{width: 80%; margin: 10px auto;}
+@media (max-width: 992px){
+    h2{font-size: 38px;}
+    h2 .pseudo{border-bottom: 2px dashed;}
+}
+@media (max-width: 768px){
+    h2{font-size: 28px;}
+    h2 .pseudo{border-bottom: 2px dashed;}
+}
+
+
+.rub {display: inline-block;position: relative;}
+.rub:before {display: block;content: "–";position: absolute;top: 0.08em; left: -0.05em;}
+
+.p-relative{position: relative;}
+
+.f-left{float: left;}
+.f-right{float: right;}
+
+.f-bold{font-weight: bold !important;}
+
+.no-marging{margin: 0 !important;}
+.no-marging-top{margin-top: 0 !important;}
+.no-marging-right{margin-right: 0 !important;}
+.no-marging-bottom{margin-bottom: 0 !important;}
+.no-marging-left{margin-left: 0 !important;}
+
+.no-padding{padding: 0 !important;}
+.no-padding-top{padding-top: 0 !important;}
+.no-padding-right{padding-right: 0 !important;}
+.no-padding-bottom{padding-bottom: 0 !important;}
+.no-padding-left{padding-left: 0 !important;}
+
+.is-hide{display: none;}
+.is-opacity{opacity: 0;}
+
+.one-block{margin-bottom: 100px;}
+.one-block.w8{margin-bottom: 80px;}
+.one-block.w7{margin-bottom: 70px;}
+
+.alert{line-height: 1.3em; font-size: 18px;}
+
+.ajax-loader{display: none; text-align: center;}
+
+.success {display: none; font-size: 26px; text-align: center;}
+    .success h2{font-size: 45px; margin-bottom: 80px; text-transform: none;}
+    .success a{text-decoration: none !important; color: white;}
+
+.page{height: 100%;padding: 0px 0px 0px 0px; overflow: hidden;}
+.page .white{background: white;}
+
+
+    
+/*** КНОПКИ ***/
+.btn{}
+.btn:focus, .btn:active:focus, .btn.active:focus{outline: none;}
+
+.btn-default, .btn-default:focus{
+    background: #8e394f;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    outline: none;
+    border: none;
+}
+.btn-default:hover, .btn-default:active{
+    background: #b3667a;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    outline: none;
+    border: none;
+}
+.btn-default.btn-lg{font-size: 32px; padding: 20px 45px; letter-spacing: 0.4em;}
+.btn-default.btn-sm{
+    font-size : 16px;
+    padding: 7px 20px;
+    color: #FFFFFF;
+    text-transform: none;
+}
+.btn-default.btn-xs{
+    font-size : 16px;
+    padding: 15px 20px;
+    letter-spacing: 0.4em;
+    line-height: 17.5px;
+    color: #FFFFFF;
+    text-transform: none;
+    letter-spacing: normal;
+}
+.btn-default.btn-fix{position: absolute; right: 10px; bottom: 10px; z-index: 10;}
+
+@media(max-height: 780px){
+    .btn-default.btn-lg{font-size: 24px; padding: 10px 25px; letter-spacing: 0.4em;}
+}
+
+
+/* checkboxes */
+.simpleCheckbox {padding:0 !important; margin: 0;position: relative; display: inline-block;}
+.simpleCheckbox.checkbox img {margin-top: -4px; vertical-align:middle;background:url('/img/icons/check.png') no-repeat bottom left;}
+.simpleCheckbox.radio img {vertical-align:middle;background:url('/img/icons/radiobox.png') no-repeat bottom left;}
+.simpleCheckbox.fChecked img {background-position: top left;}
+.simpleCheckbox input {position: absolute;width:21px;height:22px;left:0;top:0;}
