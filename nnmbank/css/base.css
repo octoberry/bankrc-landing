@@ -17,6 +17,7 @@ body {
 }
 
 .container{max-width: 720px;}
+.landscape .container{max-width: 1024px !important;}
  
 /** для firefox **/
 #dst{display: none;}
@@ -114,6 +115,7 @@ hr.w8{width: 80%; margin: 10px auto;}
     padding: 7px 20px;
     color: #FFFFFF;
     text-transform: none;
+    margin-right: 20px;
 }
 .btn-default.btn-xs{
     font-size : 16px;
@@ -124,10 +126,13 @@ hr.w8{width: 80%; margin: 10px auto;}
     text-transform: none;
     letter-spacing: normal;
 }
-.btn-default.btn-fix{position: absolute; right: 10px; bottom: 10px; z-index: 10;}
+.btn-default.btn-fix{position: fixed; right: 80px; bottom: 80px; z-index: 10;}
+.mobile .btn-default.btn-fix{position: fixed; right: 30px; bottom: 30px; z-index: 10;}
+.mobile .btn-default.btn-xs{font-size : 38px; padding: 35px 30px;}
 
 @media(max-height: 780px){
     .btn-default.btn-lg{font-size: 24px; padding: 10px 25px; letter-spacing: 0.4em;}
+    .btn-default.btn-fix{position: fixed; right: 30px; bottom: 30px; z-index: 10;}
 }
 
 

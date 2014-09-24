@@ -33,8 +33,16 @@
     .section .content.little p{margin-bottom: 50px;}
     
 @media(max-height: 780px){
+    .border-page{border: white 10px solid;}
+    .border-page .inner{border: black 10px solid;}
+    
+    #fp-nav{}
+    #fp-nav.right{right: 28px;}
+    
     .section .content{font-size: 24px;}
         .section .content h2{font-size: 36px;}
+        .section .content h3{ margin-top: 20px; margin-bottom: 20px !important; font-size: 28px;}
+        .section .content h3 br{display: none}
         .section .content p{margin-bottom: 30px;}
     .section .content.little{font-size: 18px;}
         .section .content.little p{margin-bottom: 20px;}
@@ -49,10 +57,6 @@
 .default-form .content h3{color: white !important; margin-bottom: 70px;}
 .default-form .content p{color: white !important; font-size: 24px;}
 .default-form .content a{color: white !important; text-decoration: underline;}
-@media(max-height: 780px){
-    .default-form .content h3{margin-bottom: 40px;}
-    .default-form .content h3 br{display: none;}
-}
 
 .form-control-label{font-size: 24px; font-weight: normal; line-height: 1.3em;}
 .form-control,
@@ -129,9 +133,6 @@ input:-moz-placeholder {word-spacing: normal !important;}
     height: 62px;
 }
 
-input[name="phone"] {word-spacing: 15px;}
-
-
 
 /*** ДЛЯ ТЕЛЕФОНА ***/
 .mobile .border-page{
@@ -143,18 +144,26 @@ input[name="phone"] {word-spacing: 15px;}
 
 .mobile #fp-nav{}
 .mobile #fp-nav.right{right: 28px;}
-
-.not-landscape h3, .landscape h3{font-size: 28px;}
-.not-landscape .section .content {font-size: 48px;}
-.not-landscape .section .content p br{display: none;}
-.not-landscape .section .content.little {font-size: 38px;}
-    
-.not-landscape .checkboxes .col-xs-6{float: none; width: 100%;}
-.not-landscape .checkboxes .form-control-label{font-size: 38px;}
-.not-landscape .knockout-top-to-bottom input.form-control,
-.not-landscape .knockout-top-to-bottom .form-control[disabled]{
+.mobile .for-landscape {font-size: 36px !important;}
+.mobile .for-landscape .btn{display: block; font-size: 28px; width: 50%; margin: 10px 0px;}
+.mobile .knockout-top-to-bottom input.form-control,
+.mobile .knockout-top-to-bottom .form-control[disabled]{
         font-size: 40px;
         color: #7A7A7A;
         padding: 0px 5px;
         height: 62px;
     }
+
+.landscape .section .content {font-size: 38px;}
+.landscape .section .content.little {font-size: 32px;}  
+.landscape .section .content p br{display: none;}
+.landscape .default-form .content h3{margin-bottom: 40px;}
+.landscape .default-form .content h3 br{display: none;}
+.landscape .checkboxes .form-control-label{font-size: 34px;}
+
+
+.not-landscape .section .content {font-size: 48px;}
+.not-landscape .section .content.little {font-size: 38px;}
+.not-landscape .section .content p br{display: none;}
+.not-landscape .checkboxes .col-xs-6{float: none; width: 100%;}
+.not-landscape .checkboxes .form-control-label{font-size: 38px;}

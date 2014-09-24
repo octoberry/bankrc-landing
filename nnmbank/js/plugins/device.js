@@ -119,11 +119,11 @@
     
     _setViewportForMobile = function(){
         if (device.landscape()) {
-            $('#viewport').attr('content', 'width=1024px,user-scalable=no');
+            $('#viewport').attr('content', 'width=1024px, initial-scale=0.3, maximum-scale=0.3, user-scalable=no');
             $("body").addClass("landscape");
             $("body").removeClass("not-landscape");
         } else {
-            $('#viewport').attr('content', 'width=1024px,user-scalable=no');
+            $('#viewport').attr('content', 'width=1024px, initial-scale=0.3, maximum-scale=0.3, user-scalable=no');
             $("body").removeClass("landscape");
             $("body").addClass("not-landscape");
         }

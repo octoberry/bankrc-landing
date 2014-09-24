@@ -24,7 +24,7 @@ $(document).ready(function () {
         verticalCentered: true,
         resize: false,
         sectionsColor: ['white'],
-        anchors: ['about', 'come_on', 'noname_bank', 'buy_time'],
+        anchors: [],
         scrollingSpeed: 700,
         easing: 'fadeIn',
         menu: false,
@@ -50,6 +50,11 @@ $(document).ready(function () {
         //events
         onLeave: function (index, nextIndex, direction) {
             $.fn.fullpage.moveTo(nextIndex, 0);
+            if (nextIndex == 4 || index == 4){
+                $(".btn-fix").fadeOut();
+            } else {
+                $(".btn-fix").fadeIn();
+            }
             setBorderPage();
         },
         afterLoad: function (anchorLink, index) {
@@ -64,7 +69,7 @@ $(document).ready(function () {
             }
         },
         afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
-            if (slideIndex == 0) {
+            if (slideIndex == 0 && index != 4) {
                 $(".btn-fix").fadeIn();
             }
         },
@@ -85,7 +90,7 @@ $(document).ready(function () {
             definitions: {
                 '#': {validator: "[0-9]", cardinality: 2}
             },
-            showMaskOnHover: false, autoUnmask: false, clearMaskOnLostFocus: true, clearIncomplete: true, placeholder: " "
+            showMaskOnHover: false, autoUnmask: false, clearMaskOnLostFocus: true, clearIncomplete: true, placeholder: "_"
         },
         match: /[0-9]/, replace: '#', list: listRU, listKey: "mask"
     };

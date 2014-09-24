@@ -4,6 +4,8 @@
         <title>NonameBank &mdash; надежный, технологичный банк</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" id="viewport" content="width=device-width" />
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        
         <meta name="description" content="" />
         <meta name="keywords" content="" />
 
@@ -140,8 +142,9 @@
                                         </div>
                                         
                                         <br />
-                                        <p>
-                                            <button type="submit" class="btn btn-default btn-sm" data-loading-text="Подождите...">подписаться</button>&nbsp;&nbsp;&nbsp;&nbsp;Или <a href="#" target="_blank">вспупай</a> в нашу секретную группу в <img src="/img/icons/fb.svg" width="18" alt="" class="icon-fb" />FB
+                                        <p class="for-landscape">
+                                            <button type="submit" class="btn btn-default btn-sm" data-loading-text="Подождите...">подписаться</button>
+                                            Или <a href="#" target="_blank">вспупай</a> в нашу секретную группу в <img src="/img/icons/fb.svg" width="18" alt="" class="icon-fb" />FB
                                         </p>
                                     </form>
                                     
@@ -152,8 +155,6 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <button type="button" class="btn btn-default btn-xs btn-fix toSlide" data-index="2">Хочу попробовать</button> 
                     </div>
                     <div class="section">
                         <div class="slide">
@@ -221,7 +222,10 @@
                                         </div>
                                         
                                         <br />
-                                        <p><button type="submit" class="btn btn-default btn-sm">подписаться</button>&nbsp;&nbsp;&nbsp;&nbsp;Или <a href="#" target="_blank">вспупай</a> в нашу секретную группу в <img src="/img/icons/fb.svg" width="18" alt="" class="icon-fb" />FB</p>
+                                        <p class="for-landscape">
+                                            <button type="submit" class="btn btn-default btn-sm" data-loading-text="Подождите...">подписаться</button>
+                                            Или <a href="#" target="_blank">вспупай</a> в нашу секретную группу в <img src="/img/icons/fb.svg" width="18" alt="" class="icon-fb" />FB
+                                        </p>
                                     </form>
                                     
                                     
@@ -233,7 +237,6 @@
                             </div>
                         </div>
                         
-                        <button type="button" class="btn btn-default btn-xs btn-fix toSlide" data-index="2">Хочу попробовать</button> 
                     </div>
                     <div class="section">
                         <div class="slide">
@@ -309,7 +312,10 @@
                                         </div>
                                         
                                         <br />
-                                        <p><button type="submit" class="btn btn-default btn-sm">подписаться</button>&nbsp;&nbsp;&nbsp;&nbsp;Или <a href="#" target="_blank">вспупай</a> в нашу секретную группу в <img src="/img/icons/fb.svg" width="18" alt="" class="icon-fb" />FB</p>
+                                        <p class="for-landscape">
+                                            <button type="submit" class="btn btn-default btn-sm" data-loading-text="Подождите...">подписаться</button>
+                                            Или <a href="#" target="_blank">вспупай</a> в нашу секретную группу в <img src="/img/icons/fb.svg" width="18" alt="" class="icon-fb" />FB
+                                        </p>
                                     </form>
                                     
                                     
@@ -319,9 +325,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <button type="button" class="btn btn-default btn-xs btn-fix toSlide" data-index="2">Хочу попробовать</button> 
+                        </div> 
                     </div>
                     <div class="section">
                         <div class="slide">
@@ -399,7 +403,10 @@
                                         </div>
                                         
                                         <br />
-                                        <p><button type="submit" class="btn btn-default btn-sm">подписаться</button>&nbsp;&nbsp;&nbsp;&nbsp;Или <a href="#" target="_blank">вспупай</a> в нашу секретную группу в <img src="/img/icons/fb.svg" width="18" alt="" class="icon-fb" />FB</p>
+                                        <p class="for-landscape">
+                                            <button type="submit" class="btn btn-default btn-sm" data-loading-text="Подождите...">подписаться</button>
+                                            Или <a href="#" target="_blank">вспупай</a> в нашу секретную группу в <img src="/img/icons/fb.svg" width="18" alt="" class="icon-fb" />FB
+                                        </p>
                                     </form>
                                     
                                     
@@ -412,54 +419,9 @@
                         </div>
                     </div>
                 </div>
-
+                <button type="button" class="btn btn-default btn-xs btn-fix toSlide" data-index="2">Хочу попробовать</button>
             </div>
         </div>
-
-        <!-- modals -->
-        <div class="modal fade" id="callModalForm" tabindex="-1" role="dialog" aria-labelledby="callModalFormLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form id="call-form-modal" action="" method="post" class="default-form">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                            <h4 class="modal-title" id="myModalLabel">Подключайтесь первыми!</h4>
-                        </div>
-                        <div class="modal-body">
-                            <div class="call-form-main no-padding-top">
-                                <p>Оставьте ваш номер и мы с вами свяжемся</p>
-                                <div class="input-group">
-                                    <span class="input-group-addon">+7</span>
-                                    <input type="text" id="cfm-phone-field" name="phone" class="form-control" />
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" type="submit">бум</button>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <div id="cfm_nodata_error" class="alert alert-danger is-hide text-left">
-                                <strong>Ошибка!</strong><br />
-                                Чтобы отправить нам заявку заполните все поля.
-                            </div>
-                        </div>
-                    </form>
-                    <div id="cfm_success" class="success">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="success-text">
-                                <p class="title">Спасибо!</p>
-                                <p>Ожидайте нашего звонка!</p>
-                            </div>
-                        </div>
-                        <div class="modal-footer"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /modals -->
 
     </body>
 </html>
