@@ -1,0 +1,138 @@
+.da-slider{
+	width: 100%;
+	min-width: 520px;
+	position: relative;
+	margin: 0px auto;
+	overflow: hidden;
+	background: white;
+	-webkit-transition: background-position 1.4s ease-in-out 0.3s;
+	-moz-transition: background-position 1.4s ease-in-out 0.3s;
+	-o-transition: background-position 1.4s ease-in-out 0.3s;
+	-ms-transition: background-position 1.4s ease-in-out 0.3s;
+	transition: background-position 1.4s ease-in-out 0.3s;
+}
+.da-slide{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	text-align: left;
+        background: white;
+}
+.da-slide.black{
+    background: black;
+    color: white !important;
+}
+.da-slide-current{
+	z-index: 1000;
+}
+.da-slider-fb .da-slide{
+	left: 100%;
+}
+.da-slider-fb  .da-slide.da-slide-current{
+	left: 0px;
+}
+
+.da-table{
+    display: table;
+    width: 100%;
+}
+.da-tableCell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.da-dots{
+    right: 88px;
+    position: fixed;
+    margin-top: -32px;
+    top: 50%;
+    opacity: 1;
+    z-index: 2000;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    width: 24px;
+}
+.da-dots span{
+    cursor: pointer;
+    width: 12px;
+    height: 4px;
+    background: black;
+    border-radius: 5px;
+    z-index: 1;
+    display: block;
+    margin-left: 12px;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+
+.da-dots span.da-dots-current{
+    width: 24px;
+    margin-left: 0;
+    background: #8e394f;
+}
+.da-slide.black.da-slide-current + .da-dots span{
+    background: white;
+}
+.da-slide.black.da-slide-current + .da-dots span.da-dots-current{
+    background: #8e394f;
+}
+
+
+.da-arrows{
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+.da-arrows span{
+	position: absolute;
+	top: 50%;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background: #e4b42d;
+	cursor: pointer;
+	z-index: 2000;
+	opacity: 0;
+	box-shadow: 
+		1px 1px 1px rgba(0,0,0,0.1) inset, 
+		1px 1px 1px rgba(255,255,255,0.1);
+	-webkit-transition: opacity 0.4s ease-in-out 0.2s;
+	-moz-transition: opacity 0.4s ease-in-out 0.2s;
+	-o-transition: opacity 0.4s ease-in-out 0.2s;
+	-ms-transition: opacity 0.4s ease-in-out 0.2s;
+	transition: opacity 0.4s ease-in-out 0.2s;
+}
+.da-slider:hover .da-arrows span{
+	opacity: 1;
+}
+.da-arrows span:after{
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 5px;
+	left: 5px;
+	background: transparent url(/img/cslider/arrows.png) no-repeat top left;
+	border-radius: 50%;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+.da-arrows span:hover:after{
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+.da-arrows span:active:after{
+	box-shadow: 1px 1px 1px rgba(255,255,255,0.1);
+}
+.da-arrows span.da-arrows-next:after{
+	background-position: top right;
+}
+.da-arrows span.da-arrows-prev{
+	left: 15px;
+}
+.da-arrows span.da-arrows-next{
+	right: 15px;
+}

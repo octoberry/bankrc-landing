@@ -25,16 +25,16 @@
 .icon-scroll-link{position: absolute; bottom: -80px; left: 50%; margin-left: -40px;}
 
 /*** СТИЛИ ДЛЯ СЕКЦИЙ ***/
-.section{}
-    .section .content{font-size: 32px; line-height: 1.3em; position: relative;}
-    .section .content p{margin-bottom: 70px;}
-    .section .content .text-danger{color: #8e394f;}
-    .section .content .text-danger.important{text-transform: uppercase; letter-spacing: 6px;}
+.da-slide{}
+    .da-slide .content{font-size: 28px; line-height: 1.3em; position: relative;}
+    .da-slide .content p{margin-bottom: 70px;}
+    .da-slide .content .text-danger{color: #8e394f;}
+    .da-slide .content .text-danger.important{text-transform: uppercase; letter-spacing: 6px;}
     
-    .section .content.little{font-size: 24px;}
-    .section .content.little p{margin-bottom: 50px;}
+    .da-slide .content.little{font-size: 24px;}
+    .da-slide .content.little p{margin-bottom: 50px;}
     
-@media(max-height: 780px){
+@media(max-height: 741px){
     .border-page{border: white 10px solid;}
     .border-page .inner{border: black 10px solid;}
     
@@ -43,13 +43,13 @@
     
     .icon-bomb{left: -80px;bottom: -90px;width: 210px;}
     
-    .section .content{font-size: 24px;}
-        .section .content h2{font-size: 36px;}
-        .section .content h3{ margin-top: 20px; margin-bottom: 20px !important; font-size: 28px;}
-        .section .content h3 br{display: none}
-        .section .content p{margin-bottom: 30px;}
-    .section .content.little{font-size: 18px;}
-        .section .content.little p{margin-bottom: 20px;}
+    .da-slide .content{font-size: 24px;}
+        .da-slide .content h2{font-size: 36px;}
+        .da-slide .content h3{font-size: 36px;}
+        .da-slide .content h3 br{display: none}
+        .da-slide .content p{margin-bottom: 30px;}
+    .da-slide .content.little{font-size: 18px;}
+        .da-slide .content.little p{margin-bottom: 20px;}
         
 }
 
@@ -65,7 +65,7 @@
 .form-control-label{font-size: 24px; font-weight: normal; line-height: 1.3em;}
 .form-control,
 .knockout-top-to-bottom .form-control[disabled]{
-    background: transparent;
+    background: white;
     border: none;
     outline: none !important;
     box-shadow: none !important;
@@ -74,68 +74,6 @@ input::-webkit-input-placeholder {word-spacing: normal !important;}
 input:-moz-placeholder {word-spacing: normal !important;}
 
 .form-group.small{margin-bottom: 5px;}
-
-.knockout-top-to-bottom {position: relative; }
-.knockout-top-to-bottom.for-input-lg{width: 380px;margin-bottom: 60px;}
-.knockout-top-to-bottom.input-m-right{margin-left: 15px;}
-.knockout-top-to-bottom:before, .knockout-top-to-bottom:after {
-  content: "";
-  position: absolute;
-}
-.knockout-top-to-bottom:before {
-    bottom: -1px;
-    left: -1px;
-    top: 0;
-    right: -1px;
-    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 79%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(79%,rgba(255,255,255,0)), color-stop(80%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1)));
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 79%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%);
-    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 79%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%);
-    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 79%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%);
-    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 79%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e5e5e5', endColorstr='#ffffff',GradientType=0 );
-    z-index: 0;
-}
-.knockout-top-to-bottom.disabled:before {
-    background: -moz-linear-gradient(top,  rgba(51,51,51,0) 0%, rgba(51,51,51,0) 79%, rgba(51,51,51,1) 80%, rgba(51,51,51,1) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(51,51,51,0)), color-stop(79%,rgba(51,51,51,0)), color-stop(80%,rgba(51,51,51,1)), color-stop(100%,rgba(51,51,51,1)));
-    background: -webkit-linear-gradient(top,  rgba(51,51,51,0) 0%,rgba(51,51,51,0) 79%,rgba(51,51,51,1) 80%,rgba(51,51,51,1) 100%);
-    background: -o-linear-gradient(top,  rgba(51,51,51,0) 0%,rgba(51,51,51,0) 79%,rgba(51,51,51,1) 80%,rgba(51,51,51,1) 100%);
-    background: -ms-linear-gradient(top,  rgba(51,51,51,0) 0%,rgba(51,51,51,0) 79%,rgba(51,51,51,1) 80%,rgba(51,51,51,1) 100%);
-    background: linear-gradient(to bottom,  rgba(51,51,51,0) 0%,rgba(51,51,51,0) 79%,rgba(51,51,51,1) 80%,rgba(51,51,51,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e5e5e5', endColorstr='#ffffff',GradientType=0 );
-}
-.knockout-top-to-bottom.has-error:before, .has-error .knockout-top-to-bottom:before{
-    background: -moz-linear-gradient(top,  rgba(207,64,64,0) 0%, rgba(207,64,64,0) 79%, rgba(207,64,64,1) 80%, rgba(207,64,64,1) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(207,64,64,0)), color-stop(79%,rgba(207,64,64,0)), color-stop(80%,rgba(207,64,64,1)), color-stop(100%,rgba(207,64,64,1)));
-    background: -webkit-linear-gradient(top,  rgba(207,64,64,0) 0%,rgba(207,64,64,0) 79%,rgba(207,64,64,1) 80%,rgba(207,64,64,1) 100%);
-    background: -o-linear-gradient(top,  rgba(207,64,64,0) 0%,rgba(207,64,64,0) 79%,rgba(207,64,64,1) 80%,rgba(207,64,64,1) 100%);
-    background: -ms-linear-gradient(top,  rgba(207,64,64,0) 0%,rgba(207,64,64,0) 79%,rgba(207,64,64,1) 80%,rgba(207,64,64,1) 100%);
-    background: linear-gradient(to bottom,  rgba(207,64,64,0) 0%,rgba(207,64,64,0) 79%,rgba(207,64,64,1) 80%,rgba(207,64,64,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e5e5e5', endColorstr='#ffffff',GradientType=0 );
-}
-.knockout-top-to-bottom:after {
-    z-index: 5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: black;
-}
-
-.knockout-top-to-bottom .form-control,
-.knockout-top-to-bottom .form-control[disabled]{
-    position: relative;
-    z-index: 10;
-    font-size: 24px;
-}
-.knockout-top-to-bottom .form-control.input-lg{
-    width: 380px;
-    font-size: 48px;
-    color: #7A7A7A;
-    padding: 0px 5px;
-    height: 62px;
-}
 
 
 /*** ДЛЯ ТЕЛЕФОНА ***/
@@ -150,24 +88,17 @@ input:-moz-placeholder {word-spacing: normal !important;}
 .mobile #fp-nav.right{right: 28px;}
 .mobile .for-landscape {font-size: 36px !important;}
 .mobile .for-landscape .btn{display: block; font-size: 28px; width: 50%; margin: 10px 0px;}
-.mobile .knockout-top-to-bottom input.form-control,
-.mobile .knockout-top-to-bottom .form-control[disabled]{
-        font-size: 40px;
-        color: #7A7A7A;
-        padding: 0px 5px;
-        height: 62px;
-    }
 
-.landscape .section .content {font-size: 38px;}
-.landscape .section .content.little {font-size: 32px;}  
-.landscape .section .content p br{display: none;}
+.landscape .da-slide .content {font-size: 38px;}
+.landscape .da-slide .content.little {font-size: 32px;}  
+.landscape .da-slide .content p br{display: none;}
 .landscape .default-form .content h3{margin-bottom: 40px;}
 .landscape .default-form .content h3 br{display: none;}
 .landscape .checkboxes .form-control-label{font-size: 34px;}
 
 
-.not-landscape .section .content {font-size: 48px;}
-.not-landscape .section .content.little {font-size: 38px;}
-.not-landscape .section .content p br{display: none;}
+.not-landscape .da-slide .content {font-size: 48px;}
+.not-landscape .da-slide .content.little {font-size: 38px;}
+.not-landscape .da-slide .content p br{display: none;}
 .not-landscape .checkboxes .col-xs-6{float: none; width: 100%;}
 .not-landscape .checkboxes .form-control-label{font-size: 38px;}

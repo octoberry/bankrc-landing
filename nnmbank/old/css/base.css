@@ -7,6 +7,7 @@ html {position: relative; min-height: 100%;}
 body {
     background: white;
     color: black; 
+    margin-bottom: 160px; 
     height: auto !important; 
     height: 100%; 
     min-height: 100%; 
@@ -15,7 +16,7 @@ body {
     line-height: 1.3em;
 }
 
-.container{max-width: 950px;}
+.container{max-width: 750px;}
 .landscape .container{max-width: 1024px !important;}
  
 /** для firefox **/
@@ -27,11 +28,11 @@ a.primary{color: #f8de49 !important;}
 .pseudo{text-decoration: none; border-bottom: 1px dashed;}
 a:hover, a:focus, a:active{color: #00a2e2; text-decoration: none !important; outline: none;}
 h1{font-size: 40px; color: #62a3e6; margin-top: 0px; font-weight: bold;}
-h2{font-size: 62px; color: #8e394f; margin-top: 0px; margin-bottom: 20px; line-height: 1.3em; float: left;}
+h2{font-size: 72px; color: black; margin-top: 0px; margin-bottom: 20px; line-height: 1.3em;}
     h2 a{color: black;}
     h2 a:hover, h2 a:focus, h2 a:active{color: black;}
     h2 .pseudo{border-bottom: 3px dashed;}
-h3{font-size: 62px; color: black; margin-top: 0px; margin-bottom: 20px; line-height: 1.3em;}
+h3{font-size: 48px; color: black; margin-top: 0px; margin-bottom: 20px; line-height: 1.3em;}
 h4{font-size: 14px; font-weight: bold; color: #62a3e6; margin-top: 20px; margin-bottom: 15px;}
 hr{border: none; border-top: white 1px solid; margin: 10px 0px;}
 hr.w2{width: 20%; margin: 10px auto;}
@@ -44,11 +45,6 @@ hr.w8{width: 80%; margin: 10px auto;}
     h2{font-size: 28px;}
     h2 .pseudo{border-bottom: 2px dashed;}
 }
-
-.media{min-height: 270px;}
-.media, .media-body{overflow: visible;}
-.media>.pull-right {margin-left: 145px;}
-.media>.pull-right.small {margin-left: 65px;}
 
 
 .rub {display: inline-block;position: relative;}
@@ -133,9 +129,6 @@ hr.w8{width: 80%; margin: 10px auto;}
 .btn-default.btn-fix{position: fixed; right: 80px; bottom: 80px; z-index: 10;}
 .mobile .btn-default.btn-fix{position: fixed; right: 30px; bottom: 30px; z-index: 10;}
 .mobile .btn-default.btn-xs{font-size : 38px; padding: 35px 30px;}
-
-.input-group .btn-default{height: 60px; padding: 15px 30px;}
-.input-group .form-control{height: 60px; font-size: 28px;}
 
 @media(max-height: 780px){
     .btn-default.btn-lg{font-size: 24px; padding: 10px 25px; letter-spacing: 0.4em;}

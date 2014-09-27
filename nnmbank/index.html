@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" id="viewport" content="width=device-width" />
         <meta name="apple-mobile-web-app-capable" content="yes"/>
-        
+
         <meta name="description" content="" />
         <meta name="keywords" content="" />
 
@@ -37,8 +37,9 @@
         <!-- CSS Includes -->
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css" />
-        <link rel="stylesheet" type="text/css" href="/css/jquery.fullPage.css" />
         <link rel="stylesheet" type="text/css" href="/css/main.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/css/cslider/style.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/css/animate.css" media="all" />
 
         <!-- JS Includes -->
         <script type="text/javascript">
@@ -48,16 +49,13 @@
         <script type="text/javascript" src="/js/source/jquery.js"></script>
         <script type="text/javascript" src="/js/source/jquery.form.js"></script>
         <script type="text/javascript" src="/js/source/jquery.easing.js"></script>
-        <script type="text/javascript" src="/js/source/jquery.slimscroll.min.js"></script>
         <script type="text/javascript" src="/js/source/jquery.mousewheel.js"></script>
         <script type="text/javascript" src="/js/source/jquery.event.drag-2.2.js"></script>
 
         <script type="text/javascript" src="/js/plugins/bootstrap.min.js"></script>
         <script type="text/javascript" src="/js/plugins/device.js"></script>
-        <script type="text/javascript" src="/js/plugins/jquery.fullPage.min.js"></script>
-        <script type="text/javascript" src="/js/plugins/inputmask/jquery.inputmask.js"></script>
-        <script type="text/javascript" src="/js/plugins/inputmask/jquery.bind-first-0.1.min.js"></script>
-        <script type="text/javascript" src="/js/plugins/inputmask/jquery.inputmask-multi.js"></script>
+        <script type="text/javascript" src="/js/plugins/cslider/modernizr.custom.js"></script>
+
 
         <script type="text/javascript" src="/js/scripts.js"></script>
         <script type="text/javascript" src="/js/main.js"></script>
@@ -69,372 +67,158 @@
 
     </head>
     <body>
-        <!-- бордер внешний -->
-        <!--
-        <div id="border-page" class="border-page">
-            <div id="border-page-inner" class="inner">
-        -->
-                <div id="fullpage">
-                    <div class="section">
-                        <div class="slide">
-                            <div class="container">
-                                <div class="content">
-                                    <h2>Накипело!</h2>
-                                    <p>
-                                        Мы  — <img src="/img/icons/team.svg" width="30" alt="" /> команда разработчиков и креативных<br />
-                                        директоров  с огромным чемоданом проектов<br />
-                                        в банковской сфере.
-                                    <p>
-                                    <p>
-                                        В каких «альфах» или «втбанках» мы работали – неважно! <img src="img/icons/ear.svg" width="17" alt="" />
-                                    <p>
-                                        Сейчас мы просто хотим заниматься свим бизнесом,<br />
-                                        не вздрагивая от очередных санкций,<br />
-                                        без страха отзыва лицензий у наших банков.<br />
-                                        В общем, у нас <span class="text-danger important">НАКИПЕЛО.</span>
-                                    </p>
-                                    <img src="/img/icons/bomb.svg" width="375" alt="" class="icon-bomb" />
-                                    
-                                    <a href="#" class="icon-scroll-link" data-go-slide="yes" data-slide="2"><img src="/img/icons/scroll.svg" class="icon-scroll" alt="" width="80" /></a>
-                                </div>
+        <div id="da-slider" class="da-slider">
+            <div class="da-slide">
+                <div class="container">
+                    <div class="content">
+                        <h2>Мы&nbsp;</h2>
+                        <div class="clearfix"></div>
+
+                        <div class="media">
+                            <span class="pull-right">
+                                <img class="media-object animated" alt="" src="/img/icons/boat.svg" width="200" />
+                            </span>
+                            <div class="media-body">
+                                <p class="animated">
+                                    Команда разработчиков с огромным чемоданом проектов в банковской сфере. Мы молодые предприниматели, и всё, чего мы хотим — это спокойно заниматься своим бизнесом без страха отзыва лицензий у наших банков.
+                                </p>
                             </div>
                         </div>
-                        
-                        <!-- 1 слайд -->
-                        <div class="slide default-form">
-                            <div class="container">
-                                <div class="content">
-                                    <form id="request-form-1" data-id="request-form" action="" method="post">
-                                        <h3>
-                                            Оставь телефон<br />
-                                            и мы тебе сообщим,<br />
-                                            когда запустимся
-                                        </h3>
-                                        
-                                        <div class="form-group knockout-top-to-bottom for-input-lg">
-                                            <input type="text" id="rf1-phone-field" name="phone" class="form-control input-lg" placeholder="+7 900 123 45 67" />
-                                        </div>
-                                        
-                                        <div class="row checkboxes">
-                                            <div class="col-xs-6">
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf1-feature-1" name="feature[]" value="1" />
-                                                    <label for="rf1-feature-1" class="form-control-label">Легкий валютный контроль</label>
-                                                </div>
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf1-feature-2" name="feature[]" value="2" />
-                                                    <label for="rf1-feature-2" class="form-control-label">Второй счет</label>
-                                                </div>
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf1-feature-3" name="feature[]" value="3" />
-                                                    <label for="rf1-feature-3" class="form-control-label">SMS-отчеты</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-6">
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf1-feature-4" name="feature[]" value="4" />
-                                                    <label for="rf1-feature-4" class="form-control-label">iPhone приложение</label>
-                                                </div>
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf1-feature-5" data-id="feature-5" data-form-prefix="rf1" name="feature[]" value="5" />
-                                                    <label for="rf1-feature-5" class="form-control-label">Свой вариант</label>
-                                                </div>
-                                                <div class="form-group small">
-                                                    <div id="rf1-feature-my-block" class="form-group knockout-top-to-bottom input-m-right disabled">
-                                                        <input type="text" id="rf1-feature-my-field" name="feature_my" class="form-control" placeholder="Личный секретарь" disabled="disabled" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <br />
-                                        <p class="for-landscape">
-                                            <button type="submit" class="btn btn-default btn-sm" data-loading-text="Подождите...">подписаться</button>
-                                            Или <a href="https://www.facebook.com/groups/805959709424491/" target="_blank">вступай</a> в нашу секретную группу в <img src="/img/icons/fb.svg" width="18" alt="" class="icon-fb" />FB
-                                        </p>
-                                    </form>
-                                    
-                                    <div id="rf_success_1" class="success">
-                                        <h2>Спасибо, мы записали</h2>
-                                        <p><a href="javascript:formRefresh();"><img src="/img/icons/refresh.svg" width="30" alt="" />&nbsp;&nbsp;Сначала</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section">
-                        <div class="slide">
-                            <div class="container">
-                                <div class="content">
-                                    <h2>Боль</h2>
-                                    <p>
-                                        Когда под одну гребенку причесывают большие и маленькие,<br />
-                                        проверенные и помоечные банки – ясно одно: нет смысла платить<br />
-                                        за статус, бренд и мнимую надежность.<br />
-                                        Нет смысла оплачивать навязанный функционал, которым никто не пользуется.<a href="#" class="text-danger toSlide" data-index="2">Come on! <img src="/img/icons/rocket.svg" class="icon-rocket" alt="" /></a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- 2 слайд -->
-                        <div class="slide default-form">
-                            <div class="container">
-                                <div class="content">
-                                    <form id="request-form-2" data-id="request-form" action="" method="post">
-                                        <h3>
-                                            Оставь телефон<br />
-                                            и мы тебе сообщим,<br />
-                                            когда запустимся
-                                        </h3>
-                                        
-                                        <div class="form-group knockout-top-to-bottom for-input-lg">
-                                            <input type="text" id="rf2-phone-field" name="phone" class="form-control input-lg" placeholder="+7 900 123 45 67" />
-                                        </div>
-                                        
-                                        <div class="row checkboxes">
-                                            <div class="col-xs-6">
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf2-feature-1" name="feature[]" value="1" />
-                                                    <label for="rf2-feature-1" class="form-control-label">Легкий валютный контроль</label>
-                                                </div>
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf2-feature-2" name="feature[]" value="2" />
-                                                    <label for="rf2-feature-2" class="form-control-label">Второй счет</label>
-                                                </div>
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf2-feature-3" name="feature[]" value="3" />
-                                                    <label for="rf2-feature-3" class="form-control-label">SMS-отчеты</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-6">
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf2-feature-4" name="feature[]" value="4" />
-                                                    <label for="rf2-feature-4" class="form-control-label">iPhone приложение</label>
-                                                </div>
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf2-feature-5" data-id="feature-5" data-form-prefix="rf2" name="feature[]" value="5" />
-                                                    <label for="rf2-feature-5" class="form-control-label">Свой вариант</label>
-                                                </div>
-                                                <div class="form-group small">
-                                                    <div id="rf2-feature-my-block" class="form-group knockout-top-to-bottom input-m-right disabled">
-                                                        <input type="text" id="rf2-feature-my-field" name="feature_my" class="form-control" placeholder="Личный секретарь" disabled="disabled" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <br />
-                                        <p class="for-landscape">
-                                            <button type="submit" class="btn btn-default btn-sm" data-loading-text="Подождите...">подписаться</button>
-                                            Или <a href="https://www.facebook.com/groups/805959709424491/" target="_blank">вступай</a> в нашу секретную группу в <img src="/img/icons/fb.svg" width="18" alt="" class="icon-fb" />FB
-                                        </p>
-                                    </form>
-                                    
-                                    
-                                    <div id="rf_success_2" class="success">
-                                        <h2>Спасибо, мы записали</h2>
-                                        <p><a href="javascript:formRefresh();"><img src="/img/icons/refresh.svg" width="30" alt="" />&nbsp;&nbsp;Сначала</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="section">
-                        <div class="slide">
-                            <div class="container">
-                                <div class="content little">
-                                    <h2>Noname bank</h2>
-                                    <p>
-                                        Мы решили создать свой банк.<br />
-                                        Надежный, удобный и технологичный.
-                                    </p>
-                                    <p>
-                                        Названия и стиля пока нет, но мы и не собираемся тратить силы на обертку.<br />
-                                        Мы фокусируемся на функциях, на сервисе и интерфейсе.
-                                    </p>
-                                    <p>
-                                        Мы помешаны на приватности и безопасности ваших счетов.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- 3 слайд -->
-                        <div class="slide default-form">
-                            <div class="container">
-                                <div class="content">
-                                    <form id="request-form-3" data-id="request-form" action="" method="post">
-                                        <h3>
-                                            Оставь телефон<br />
-                                            и мы тебе сообщим,<br />
-                                            когда запустимся
-                                        </h3>
-                                        
-                                        <div class="form-group knockout-top-to-bottom for-input-lg">
-                                            <input type="text" id="rf3-phone-field" name="phone" class="form-control input-lg" placeholder="+7 900 123 45 67" />
-                                        </div>
-                                        
-                                        <div class="row checkboxes">
-                                            <div class="col-xs-6">
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf3-feature-1" name="feature[]" value="1" />
-                                                    <label for="rf3-feature-1" class="form-control-label">Легкий валютный контроль</label>
-                                                </div>
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf3-feature-2" name="feature[]" value="2" />
-                                                    <label for="rf3-feature-2" class="form-control-label">Второй счет</label>
-                                                </div>
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf3-feature-3" name="feature[]" value="3" />
-                                                    <label for="rf3-feature-3" class="form-control-label">SMS-отчеты</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-6">
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf3-feature-4" name="feature[]" value="4" />
-                                                    <label for="rf3-feature-4" class="form-control-label">iPhone приложение</label>
-                                                </div>
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf3-feature-5" data-id="feature-5" data-form-prefix="rf3" name="feature[]" value="5" />
-                                                    <label for="rf3-feature-5" class="form-control-label">Свой вариант</label>
-                                                </div>
-                                                <div class="form-group small">
-                                                    <div id="rf3-feature-my-block" class="form-group knockout-top-to-bottom input-m-right disabled">
-                                                        <input type="text" id="rf3-feature-my-field" name="feature_my" class="form-control" placeholder="Личный секретарь" disabled="disabled" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <br />
-                                        <p class="for-landscape">
-                                            <button type="submit" class="btn btn-default btn-sm" data-loading-text="Подождите...">подписаться</button>
-                                            Или <a href="https://www.facebook.com/groups/805959709424491/" target="_blank">вступай</a> в нашу секретную группу в <img src="/img/icons/fb.svg" width="18" alt="" class="icon-fb" />FB
-                                        </p>
-                                    </form>
-                                    
-                                    
-                                    <div id="rf_success_3" class="success">
-                                        <h2>Спасибо, мы записали</h2>
-                                        <p><a href="javascript:formRefresh();"><img src="/img/icons/refresh.svg" width="30" alt="" />&nbsp;&nbsp;Сначала</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                    </div>
-                    <div class="section">
-                        <div class="slide">
-                            <div class="container">
-                                <div class="content">
-                                    <div class="content little">
-                                        <h2>Секретик</h2>
-                                        <p>
-                                            Этот банк мы делаем для себя и своих друзей.
-                                        </p>
-                                        <p>
-                                            К примеру, нас бесит, как организован сейчас валютный контроль,<br />
-                                            поэтому мы сделаем его простым.
-                                        </p>
-                                        <p>
-                                            Мы уже нашли инвесторов и собрали отличную команду,<br />
-                                            поэтому ничто не помешает создать отличный продукт.
-                                        </p>
-                                        
-                                        <p class="text-center"><button type="button" class="btn btn-default btn-lg toSlide" data-index="2">Готов тестить</button></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- 4 слайд -->
-                        <div class="slide default-form">
-                            <div class="container">
-                                <div class="content">
-                                    <form id="request-form-4" data-id="request-form" action="" method="post">
-                                        <h3>
-                                            Оставь телефон<br />
-                                            и мы тебе сообщим,<br />
-                                            когда запустимся
-                                        </h3>
-                                        
-                                        <div class="form-group knockout-top-to-bottom for-input-lg">
-                                            <input type="text" id="rf4-phone-field" name="phone" class="form-control input-lg" placeholder="+7 900 123 45 67" />
-                                        </div>
-                                        
-                                        <div class="row checkboxes">
-                                            <div class="col-xs-6">
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf4-feature-1" name="feature[]" value="1" />
-                                                    <label for="rf4-feature-1" class="form-control-label">Легкий валютный контроль</label>
-                                                </div>
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf4-feature-2" name="feature[]" value="2" />
-                                                    <label for="rf4-feature-2" class="form-control-label">Второй счет</label>
-                                                </div>
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf4-feature-3" name="feature[]" value="3" />
-                                                    <label for="rf4-feature-3" class="form-control-label">SMS-отчеты</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-6">
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf4-feature-4" name="feature[]" value="4" />
-                                                    <label for="rf4-feature-4" class="form-control-label">iPhone приложение</label>
-                                                </div>
-                                                <div class="form-group small">
-                                                    <input type="checkbox" id="rf4-feature-5" data-id="feature-5" data-form-prefix="rf4" name="feature[]" value="5" />
-                                                    <label for="rf4-feature-5" class="form-control-label">Свой вариант</label>
-                                                </div>
-                                                <div class="form-group small">
-                                                    <div id="rf4-feature-my-block" class="form-group knockout-top-to-bottom input-m-right disabled">
-                                                        <input type="text" id="rf4-feature-my-field" name="feature_my" class="form-control" placeholder="Личный секретарь" disabled="disabled" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <br />
-                                        <p class="for-landscape">
-                                            <button type="submit" class="btn btn-default btn-sm" data-loading-text="Подождите...">подписаться</button>
-                                            Или <a href="https://www.facebook.com/groups/805959709424491/" target="_blank">вступай</a> в нашу секретную группу в <img src="/img/icons/fb.svg" width="18" alt="" class="icon-fb" />FB
-                                        </p>
-                                    </form>
-                                    
-                                    
-                                    <div id="rf_success_4" class="success">
-                                        <h2>Спасибо, мы записали</h2>
-                                        <p><a href="javascript:formRefresh();"><img src="/img/icons/refresh.svg" width="30" alt="" />&nbsp;&nbsp;Сначала</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section">
-                            <div class="container">
-                                <div class="content">
-                                    <div class="content">
-                                        <h2>Давай к нам!</h2>
-                                        <p>
-                                            Если тебя <img src="/img/icons/shit.svg" width="16" alt="" /> задолбал твой банк или тебе нужен второй банк<br />
-                                            с человеческим интерфейсом — давай к нам!
-                                        </p>
-                                        <p>
-                                            Нам очень нужны твои инсайты и моральная поддержка в виде обратной связи.<br />
-                                            Мы понимаем, что твое время стоит дорого, поэтому предлагаем<br />
-                                            20 лет бесплатного обслуживания в нашем банке за 2 месяца твоих советов и тестов.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
                     </div>
                 </div>
-                <button type="button" class="btn btn-default btn-xs btn-fix toSlide" data-index="2">Хочу попробовать</button>
-        <!--
+            </div>
+            <div class="da-slide">
+                <div class="container">
+                    <div class="content">
+                        <h2>Мы&nbsp;</h2> <h3 class="animated">не хотим платить за воздух</h3>
+                        <div class="clearfix"></div>
+
+                        <div class="media">
+                            <span class="pull-right">
+                                <img class="media-object animated" alt="" src="/img/icons/stop.svg" width="200" />
+                            </span>
+                            <div class="media-body">
+                                <p class="animated">
+                                    Когда под одну гребенку причесывают большие и маленькие, помоечные и проверенные банки — ясно одно: нет смысла платить за бренд, статус и мнимую надежность. Мы не хотим оплачивать навязанный фунционал, нам нужны только рабочие инструменты.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="da-slide">
+                <div class="container">
+                    <div class="content">
+                        <h2>Мы&nbsp;</h2> <h3 class="animated">не сидим сложа руки</h3>
+                        <div class="clearfix"></div>
+
+                        <div class="media">
+                            <span class="pull-right">
+                                <img class="media-object animated" alt="" src="/img/icons/target.svg" width="200" />
+                            </span>
+                            <div class="media-body">
+                                <p class="animated">
+                                    Поэтому решили создать свой банк. Надёжный, удобный и технологичный. Названия и стиля пока нет, но мы и не собираемся тратить силы на обёртку. Мы фокусируемся на функциях, надёжности и интерфейсе.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="da-slide">
+                <div class="container">
+                    <div class="content">
+                        <h2>Мы&nbsp;</h2> <h3 class="animated">помешаны на надёжности</h3>
+                        <div class="clearfix"></div>
+
+                        <div class="media">
+                            <span class="pull-right">
+                                <img class="media-object animated" alt="" src="/img/icons/shield.svg" width="200" />
+                            </span>
+                            <div class="media-body">
+                                <p class="animated">
+                                    Этот банк мы делаем для себя и своих друзей, поэтому самое главное — обеспечить безопасность и надёжность наших счетов. Когда лопаются даже проверенные банки, доверять остается только друзьям и личным рекомендациям.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="da-slide">
+                <div class="container">
+                    <div class="content">
+                        <h2>Мы&nbsp;</h2> <h3 class="animated">ищем таких же</h3>
+                        <div class="clearfix"></div>
+
+                        <div class="media">
+                            <span class="pull-right">
+                                <img class="media-object animated" alt="" src="/img/icons/help.svg" width="200" />
+                            </span>
+                            <div class="media-body">
+                                <p class="animated">
+                                    Если тебя задолбал твой банк или тебе нужен второй банк с человеческим интерфейсом — давай к нам! Нам очень нужны твои инсайты и моральная поддержка в виде обратной связи.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="da-slide">
+                <div class="container">
+                    <div class="content">
+                        <h2>Мы&nbsp;</h2> <h3 class="animated">понимаем</h3>
+                        <div class="clearfix"></div>
+
+                        <div class="media">
+                            <span class="pull-right">
+                                <img class="media-object animated" alt="" src="/img/icons/cookie.svg" width="200" />
+                            </span>
+                            <div class="media-body">
+                                <p class="animated">
+                                    Твое время стоит дорого, поэтому предлагаем 20 лет бесплатного обслуживания в noname банке за 2 месяца твоих советов и тестов.
+                                </p>
+                                <button type="button" class="btn btn-default animated">Хочу участвовать</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="da-slide black">
+                <div class="container">
+                    <div class="content">
+                        <div class="media">
+                            <span class="pull-right small">
+                                <img class="media-object animated" alt="" src="/img/icons/mail.svg" width="200" />
+                            </span>
+                            <div class="media-body">
+                                <p class="animated">
+                                    Оставь свою почту, если ты разделяешь нашу боль и хочешь участвовать в разработке за 20 лет бесплатного обслуживания
+                                </p>
+
+                                <form id="subscribe-form" action="" method="post">
+                                    <div class="input-group animated">
+                                        <input type="text" class="form-control" placeholder="Эл. почта" />
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="submit">Отправить</button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        -->
 
+        <script type="text/javascript" src="/js/plugins/cslider/jquery.cslider.js"></script>
+
+        <script type="text/javascript">
+            $(function () {
+                $('#da-slider').cslider();
+            });
+        </script>
     </body>
 </html>
