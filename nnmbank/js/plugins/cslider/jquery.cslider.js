@@ -61,7 +61,7 @@
             this.cssTransitions = Modernizr.csstransitions;
 
             if (!this.cssAnimations || !this.cssAnimations) {
-                
+
                 this.$el.addClass('da-slider-fb');
 
             }
@@ -94,14 +94,9 @@
             var classTo, classToAnimate, classFrom, classFromAnimate, d;
 
             if (!dir) {
-
                 (page > this.current) ? d = 'next' : d = 'prev';
-
-            }
-            else {
-
+            } else {
                 d = dir;
-
             }
 
             if (this.cssAnimations && this.cssAnimations) {
@@ -118,19 +113,16 @@
                 else {
 
                     classTo = 'da-slide-toright';
-                    classToAnimate = 'animated fadeOutUp';
+                    classToAnimate = 'animated fadeOutDown';
                     classFrom = 'da-slide-fromleft';
-                    classFromAnimate = 'animated fadeInUp';
+                    classFromAnimate = 'animated fadeInDown';
                     --this.bgpositer;
 
                 }
 
                 this.$el.css('background-position', this.bgpositer * this.options.bgincrement + '% 0%');
 
-            } else {
-                alert("бум!");
             }
-
             this.current = page;
 
             $next = this.$slides.eq(this.current);
@@ -138,14 +130,21 @@
             if (this.cssAnimations && this.cssAnimations) {
 
                 var rmClasses = 'da-slide-toleft da-slide-toright da-slide-fromleft da-slide-fromright';
-                var rmClassesAnimate = 'fadeInUp fadeOutUp';
+                var rmClassesAnimate = 'fadeInUp fadeOutUp fadeOutDown fadeInDown';
                 $current.removeClass(rmClasses);
                 $current.find(".animated").removeClass(rmClassesAnimate);
                 $next.removeClass(rmClasses);
                 $next.find(".animated").removeClass(rmClassesAnimate);
 
                 $current.addClass(classTo);
-                $current.find(".animated").addClass(classToAnimate);
+                var isTimeout = 0;
+                $current.find(".animated").each(function (i, n) {
+                    var $this = $(this);
+                    setTimeout(function () {
+                        $this.addClass(classToAnimate);
+                    }, isTimeout);
+                    isTimeout = isTimeout + 100;
+                });
 
                 setTimeout(function () {
                     $next.addClass(classFrom);
@@ -155,13 +154,10 @@
                     $next.addClass('da-slide-current');
                 }, 800);
 
-            } else {
-                alert("бум!");
             }
 
             // fallback
             if (!this.cssAnimations || !this.cssAnimations) {
-                alert("бум!");
                 $next.css('left', (d === 'next') ? '100%' : '-100%').stop().animate({
                     left: '0%'
                 }, 1000, function () {
@@ -182,8 +178,19 @@
             var sliderHeight;
             sliderHeight = $(window).height();
             $("#da-slider").css("height", sliderHeight + "px");
-            
-            $("#da-slider").find(".da-tableCell").css("height", sliderHeight + "px")
+
+            $("#da-slider").find(".da-tableCell").css("height", sliderHeight + "px");
+
+            var mh = 0;
+            var obj = $("#da-slider *[data-general-vert=yes]");
+            obj.each(function () {
+                var h_block = parseInt($(this).height());
+                if (h_block > mh) {
+                    mh = h_block;
+                }
+                ;
+            });
+            obj.height(mh);
         },
         _updatePage: function () {
             this.$pages.removeClass('da-dots-current');
@@ -298,6 +305,41 @@
                 }
             });
 
+            //mobile touch
+            var q = 0, z = 0, n = 0, y = 0;
+            function fa(b) {
+                var d = b.originalEvent;
+                b.preventDefault();
+
+                if (d = Q(d), n = d.y, y = d.x, Math.abs(z - y) > Math.abs(q - n)) {
+                    return true;
+                    //Math.abs(z - y) > $(window).width() / 100 * 5 && (z > y ? !!!RIGHT!!! : !!!LEFT!!!) 
+                } else {
+                    Math.abs(q - n) > $(window).height() / 100 * 5 && (q > n ? moveNext() : n > q && movePrev());
+                }
+            }
+            function Q(a) {
+                var c = [];
+                if (window.navigator.msPointerEnabled) {
+                    c.y = a.pageY;
+                    c.x = a.pageX;
+                } else {
+                    c.y = a.touches[0].pageY;
+                    c.x = a.touches[0].pageX;
+                }
+                return c;
+            }
+            function ga(b) {
+                b = Q(b.originalEvent);
+                q = b.y;
+                z = b.x;
+            }
+
+            MSPointer = window.PointerEvent ? {down: "pointerdown", move: "pointermove"} : {down: "MSPointerDown", move: "MSPointerMove"};
+            $(document).off("touchstart " + MSPointer.down)
+                    .on("touchstart " + MSPointer.down, ga);
+            $(document).off("touchmove " + MSPointer.move)
+                    .on("touchmove " + MSPointer.move, fa);
 
         },
         _reBuild: function () {

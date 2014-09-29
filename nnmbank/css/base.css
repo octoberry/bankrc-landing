@@ -39,10 +39,12 @@ hr.w8{width: 80%; margin: 10px auto;}
 @media (max-width: 992px){
     h2{font-size: 38px;}
     h2 .pseudo{border-bottom: 2px dashed;}
+    h3{font-size: 38px;}
 }
 @media (max-width: 768px){
     h2{font-size: 28px;}
     h2 .pseudo{border-bottom: 2px dashed;}
+    h3{font-size: 28px;}
 }
 
 .media{min-height: 270px;}

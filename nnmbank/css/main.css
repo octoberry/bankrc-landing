@@ -34,6 +34,21 @@
     .da-slide .content.little{font-size: 24px;}
     .da-slide .content.little p{margin-bottom: 50px;}
     
+.not-landscape .da-slide .media{width: 85%;}
+.not-landscape .da-slide .media>.pull-right{margin-left: 50px; min-height: 600px;}
+
+.landscape     .da-slide .media>.pull-right {margin-left: 100px; min-height: 300px;}
+    
+@media (max-width: 992px){
+    .da-slide .content{font-size: 24px;}
+    .da-slide .media{width: 80%;}
+    .da-slide .media>.pull-right{margin-left: 50px;}
+}
+@media (max-width: 768px){
+    .da-slide .content{font-size: 18px;}
+    .da-slide .media>.pull-right{margin-left: 20px;}
+}
+    
 @media(max-height: 741px){
     .border-page{border: white 10px solid;}
     .border-page .inner{border: black 10px solid;}
