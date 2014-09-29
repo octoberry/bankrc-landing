@@ -97,7 +97,7 @@ hr.w8{width: 80%; margin: 10px auto;}
     
 /*** КНОПКИ ***/
 .btn{}
-.btn:focus, .btn:active:focus, .btn.active:focus{outline: none;}
+.btn:focus, .btn:active:focus, .btn.active:focus{outline: none;border: none;}
 
 .btn-default, .btn-default:focus{
     background: #8e394f;
@@ -108,7 +108,7 @@ hr.w8{width: 80%; margin: 10px auto;}
     border: none;
 }
 .btn-default:hover, .btn-default:active{
-    background: #b3667a;
+    background: #8e394f;
     color: white;
     text-transform: uppercase;
     letter-spacing: 6px;
@@ -138,6 +138,7 @@ hr.w8{width: 80%; margin: 10px auto;}
 
 .input-group .btn-default{height: 60px; padding: 15px 30px;}
 .input-group .form-control{height: 60px; font-size: 28px;}
+.input-group-btn:last-child>.btn{margin-left: 0px;}
 
 @media(max-height: 780px){
     .btn-default.btn-lg{font-size: 24px; padding: 10px 25px; letter-spacing: 0.4em;}
