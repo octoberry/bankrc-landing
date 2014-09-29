@@ -250,6 +250,17 @@
                 return false;
 
             });
+            
+            $("*[data-slide-go]").on("click", function(event){
+                var $this = $(this);
+                var slide = $this.attr("data-slide-go");
+                if (_self.options.autoplay) {
+                    clearTimeout(_self.slideshow);
+                    _self.options.autoplay = false;
+                }
+                _self._navigate(slide);
+                return false;
+            });
 
             this.$navNext.on('click.cslider', function (event) {
                 moveNext();
