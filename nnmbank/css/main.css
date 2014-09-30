@@ -37,26 +37,17 @@
     
     .da-slide .content.little{font-size: 24px;}
     .da-slide .content.little p{margin-bottom: 50px;}
-    
-
-    
-.not-landscape .da-slide .media{width: 95%; min-height: 790px;}
-.not-landscape .da-slide .media>.pull-right{display: none;} 
-.not-landscape .visible-mobile-not-landscape{display: block;}
-
-.landscape     .da-slide .media{width: 95%; min-height: 400px;}
-.landscape     .da-slide .media>.pull-right {margin-left: 100px; min-height: 300px;}
 
 
 
 @media (max-width: 1024px){
-    .da-slide .content{font-size: 24px;}
-    .da-slide .media{width: 80%;}
-    .da-slide .media>.pull-right{margin-left: 50px;}
+    .content{font-size: 24px;}
+    .media{width: 80%;}
+    .media>.pull-right{margin-left: 50px;}
 }
 @media (max-width: 768px){
-    .da-slide .content{font-size: 18px;}
-    .da-slide .media>.pull-right{margin-left: 20px;}
+    .content{font-size: 18px;}
+    .media>.pull-right{margin-left: 20px;}
 }
     
 @media(max-height: 741px){
@@ -79,17 +70,27 @@
 }
 
 /*** ФОРМА ***/
-.default-form {background: black;}
-.default-form .container{max-width: 780px;}
-.default-form .content{color: white !important;}
-.default-form .content h2{color: white !important;}
-.default-form .content h3{color: white !important; margin-bottom: 70px;}
-.default-form .content p{color: white !important; font-size: 24px;}
-.default-form .content a{color: white !important; text-decoration: underline;}
+.default-form {
+    display: none;
+    position: fixed;
+    color: white;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 3000;
+}
+.default-form .content{font-size: 28px; line-height: 1.3em; position: relative;}
+.default-form .content p{margin-bottom: 70px;}
+.default-form .content .text-danger{color: #8e394f;}
+.default-form .content .text-danger.important{text-transform: uppercase; letter-spacing: 6px;}
+
+.default-form .content.little{font-size: 24px;}
+.default-form .content.little p{margin-bottom: 50px;}
 
 .form-control-label{font-size: 24px; font-weight: normal; line-height: 1.3em;}
-.form-control,
-.knockout-top-to-bottom .form-control[disabled]{
+.form-control{
     background: white;
     border: none;
     outline: none !important;
@@ -117,13 +118,23 @@ input:-moz-placeholder {word-spacing: normal !important;}
 .landscape .da-slide .content {font-size: 38px;}
 .landscape .da-slide .content.little {font-size: 32px;}  
 .landscape .da-slide .content p br{display: none;}
-.landscape .default-form .content h3{margin-bottom: 40px;}
-.landscape .default-form .content h3 br{display: none;}
+.landscape .default-form .content {font-size: 38px;}
+.landscape .default-form .content.little {font-size: 32px;}  
+.landscape .default-form .content p br{display: none;}
 .landscape .checkboxes .form-control-label{font-size: 34px;}
+.landscape .media{width: 95%; min-height: 400px;}
+.landscape .media>.pull-right {margin-left: 100px; min-height: 300px;}
 
 
 .not-landscape .da-slide .content {font-size: 48px;}
 .not-landscape .da-slide .content.little {font-size: 38px;}
 .not-landscape .da-slide .content p br{display: none;}
+.not-landscape .default-form .content {font-size: 48px;}
+.not-landscape .default-form .content.little {font-size: 38px;}
+.not-landscape .default-form .content p br{display: none;}
 .not-landscape .checkboxes .col-xs-6{float: none; width: 100%;}
 .not-landscape .checkboxes .form-control-label{font-size: 38px;}
+.not-landscape .media{width: 95%; min-height: 790px;}
+.not-landscape .media>.pull-right{display: none;} 
+.not-landscape .visible-mobile-not-landscape{display: block;}
+

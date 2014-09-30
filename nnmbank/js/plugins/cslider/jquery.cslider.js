@@ -189,7 +189,7 @@
             sliderHeight = $(window).height();
             $("#da-slider").css("height", sliderHeight + "px");
 
-            $("#da-slider").find(".da-tableCell").css("height", sliderHeight + "px");
+            $("body").find(".da-tableCell").css("height", sliderHeight + "px");
 
             var mh = 0;
             var obj = $("#da-slider *[data-general-vert=yes]");

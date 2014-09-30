@@ -1,4 +1,11 @@
 $(document).ready(function(){
+    $("*[data-form-show=yes]").on("click", function(){
+        var $this = $(this);
+        var form_id = $this.attr("data-form-id");
+        
+        $(form_id).fadeIn();
+    });
+    
     $('input:checkbox, input:radio').each(function() {
         var o = $(this);
         var fc = $('<img/>').width(21).height(22).attr('src', '/css/blank.gif');
