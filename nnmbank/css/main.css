@@ -38,12 +38,18 @@
     .da-slide .content.little{font-size: 24px;}
     .da-slide .content.little p{margin-bottom: 50px;}
     
-.not-landscape .da-slide .media{width: 85%;}
-.not-landscape .da-slide .media>.pull-right{margin-left: 50px; min-height: 600px;}
 
-.landscape     .da-slide .media>.pull-right {margin-left: 100px; min-height: 300px;}
     
-@media (max-width: 992px){
+.not-landscape .da-slide .media{width: 95%; min-height: 790px;}
+.not-landscape .da-slide .media>.pull-right{display: none;} 
+.not-landscape .visible-mobile-not-landscape{display: block;}
+
+.landscape     .da-slide .media{width: 95%; min-height: 400px;}
+.landscape     .da-slide .media>.pull-right {margin-left: 100px; min-height: 300px;}
+
+
+
+@media (max-width: 1024px){
     .da-slide .content{font-size: 24px;}
     .da-slide .media{width: 80%;}
     .da-slide .media>.pull-right{margin-left: 50px;}

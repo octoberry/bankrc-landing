@@ -51,6 +51,9 @@ strong{font-family: "proxima_nova_rgbold"; font-style: normal; font-weight: norm
 
 form{margin-bottom: 70px;}
 
+.visible-mobile-landscape{display: none;}
+.visible-mobile-not-landscape{display: none;}
+
 .media{min-height: 270px;}
 .media, .media-body{overflow: visible;}
 .media>.pull-right {margin-left: 145px;}

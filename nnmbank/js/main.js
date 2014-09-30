@@ -20,20 +20,6 @@ $(document).ready(function () {
         setBorderPage();
     });
 
-    $("*[data-id=feature-5]").change(function(){
-        var $this = $(this);
-        var _this = this;
-        var form_prefix = $(this).attr("data-form-prefix");
-        if (_this.checked) {
-            $("#" + form_prefix + "-feature-my-block").removeClass("disabled");
-            $("#" + form_prefix + "-feature-my-field").removeAttr("disabled");
-        } else {
-            $("#" + form_prefix + "-feature-my-block").addClass("disabled");
-            $("#" + form_prefix + "-feature-my-field").attr("disabled", "disabled");
-        }
-    });
-
-
     //Модальная форма "Оставьте свой телефон"
     $('*[data-id=request-form]').submit(function () {
         var form = $(this);
@@ -82,8 +68,4 @@ function formRefresh(){
 
 function setBorderPage() {
     var h = $(window).height();
-    if ($("#border-page").length){
-        $("#border-page").css({height: h + "px"});
-        $("#border-page .inner").css({height: (h - (parseInt($("#border-page").css("border-top-width").replace("px", "")) * 2)) + "px"});
-    }
 }

@@ -90,13 +90,23 @@
 
             this.isAnimating = true;
 
-            // check dir
             var classTo, classToAnimate, classFrom, classFromAnimate, d;
 
+            // check dir
             if (!dir) {
                 (page > this.current) ? d = 'next' : d = 'prev';
             } else {
                 d = dir;
+            }
+
+            //Убираем зацикливание
+            if (this.current + 1 == this.slidesCount && d == 'next') {
+                this.isAnimating = false;
+                return false;
+            }
+            if (this.current == 0 && d == 'prev') {
+                this.isAnimating = false;
+                return false;
             }
 
             if (this.cssAnimations && this.cssAnimations) {
@@ -188,7 +198,6 @@
                 if (h_block > mh) {
                     mh = h_block;
                 }
-                ;
             });
             obj.height(mh);
         },
@@ -250,8 +259,8 @@
                 return false;
 
             });
-            
-            $("*[data-slide-go]").on("click", function(event){
+
+            $("*[data-slide-go]").on("click", function (event) {
                 var $this = $(this);
                 var slide = $this.attr("data-slide-go");
                 if (_self.options.autoplay) {
@@ -279,9 +288,11 @@
 
             //for full screen
             $(window).resize(function () {
-                K ? _self._reBuild() : (clearTimeout(Y), Y = setTimeout(_self._reBuild(), 500));
+                _self._reBuild();
             });
-
+            $('body').bind('orientationchange', function () {
+                _self._reBuild();
+            });
 
 
             //mouse scrolling
@@ -351,7 +362,6 @@
                     .on("touchstart " + MSPointer.down, ga);
             $(document).off("touchmove " + MSPointer.move)
                     .on("touchmove " + MSPointer.move, fa);
-
         },
         _reBuild: function () {
             this._resize();

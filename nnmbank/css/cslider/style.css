@@ -45,6 +45,10 @@
     height: 100%;
     overflow: hidden;
 }
+.not-landscape .da-table{display: block; padding-top: 300px;}
+.not-landscape .da-tableCell{display: block;}
+.landscape     .da-table{display: block; padding-top: 100px;}
+.landscape     .da-tableCell{display: block;}
 
 
 .da-dots{
@@ -81,6 +85,12 @@
 }
 .da-slide.black.da-slide-current + .da-dots span.da-dots-current{
     background: #8e394f;
+}
+
+@media (max-width: 1144px){
+    .da-dots{
+        right: 20px;
+    }
 }
 
 

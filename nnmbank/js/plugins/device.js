@@ -127,7 +127,18 @@
             $("body").removeClass("landscape");
             $("body").addClass("not-landscape");
         }
-    }
+    };
+    
+    _setViewportForTablet = function(){
+        $('#viewport').attr('content', 'width=device-width, initial-scale=1');
+        if (device.landscape()) {
+            $("body").addClass("landscape");
+            $("body").removeClass("not-landscape");
+        } else {
+            $("body").removeClass("landscape");
+            $("body").addClass("not-landscape");
+        }
+    };
 
     //Устанавливаем правильный viewport
     if (device.mobile()) {
@@ -148,8 +159,24 @@
 
         _handleOrientation();
     }
+    
     if (device.tablet()) {
-        $('#viewport').attr('content', 'width=device-width, initial-scale=1');
+        _handleOrientation = function() {
+            _setViewportForTablet();
+        };
+        _supports_orientation = "onorientationchange" in window;
+
+        _orientation_event = _supports_orientation ? "orientationchange" : "resize";
+
+        if (window.addEventListener) {
+            window.addEventListener(_orientation_event, _handleOrientation, false);
+        } else if (window.attachEvent) {
+            window.attachEvent(_orientation_event, _handleOrientation);
+        } else {
+            window[_orientation_event] = _handleOrientation;
+        }
+
+        _handleOrientation();
     }
 
 }).call(this);
