@@ -46,6 +46,10 @@ hr.w8{width: 80%; margin: 10px auto;}
     h2 .pseudo{border-bottom: 2px dashed;}
     h3{font-size: 28px;}
 }
+i{font-family: "proxima_novaregular_italic"; font-style: normal;}
+strong{font-family: "proxima_nova_rgbold"; font-style: normal; font-weight: normal;}
+
+form{margin-bottom: 70px;}
 
 .media{min-height: 270px;}
 .media, .media-body{overflow: visible;}
@@ -96,7 +100,7 @@ hr.w8{width: 80%; margin: 10px auto;}
 
     
 /*** КНОПКИ ***/
-.btn{}
+.btn{font-weight: normal;}
 .btn:focus, .btn:active:focus, .btn.active:focus{outline: none;border: none;}
 
 .btn-default, .btn-default:focus{
@@ -106,6 +110,7 @@ hr.w8{width: 80%; margin: 10px auto;}
     letter-spacing: 6px;
     outline: none;
     border: none;
+    padding: 16px 60px;
 }
 .btn-default:hover, .btn-default:active{
     background: #8e394f;
@@ -114,6 +119,7 @@ hr.w8{width: 80%; margin: 10px auto;}
     letter-spacing: 6px;
     outline: none;
     border: none;
+    padding: 16px 60px;
 }
 .btn-default.btn-lg{font-size: 32px; padding: 20px 45px; letter-spacing: 0.4em;}
 .btn-default.btn-sm{
@@ -133,6 +139,7 @@ hr.w8{width: 80%; margin: 10px auto;}
     letter-spacing: normal;
 }
 .btn-default.btn-fix{position: fixed; right: 80px; bottom: 80px; z-index: 10;}
+.btn-default.btn-bold{font-family: "proxima_nova_rgbold"; font-size: 18px;}
 .mobile .btn-default.btn-fix{position: fixed; right: 30px; bottom: 30px; z-index: 10;}
 .mobile .btn-default.btn-xs{font-size : 38px; padding: 35px 30px;}
 
