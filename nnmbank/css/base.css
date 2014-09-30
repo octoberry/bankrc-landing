@@ -93,8 +93,8 @@ form{margin-bottom: 70px;}
 
 .ajax-loader{display: none; text-align: center;}
 
-.success {display: none; font-size: 26px; text-align: center;}
-    .success h2{font-size: 45px; margin-bottom: 80px; text-transform: none;}
+.success {display: none;}
+    .success h2{margin-bottom: 40px; text-transform: none; color: white; display: block; float: none;}
     .success a{text-decoration: none !important; color: white;}
 
 .page{height: 100%;padding: 0px 0px 0px 0px; overflow: hidden;}

@@ -21,7 +21,7 @@ $(document).ready(function () {
     });
 
     //Модальная форма "Оставьте свой телефон"
-    $('*[data-id=request-form]').submit(function () {
+    $('#subscribe-form').submit(function () {
         var form = $(this);
         var submit = form.find("*[type=submit]");
         submit.attr("disabled", "disabled");
@@ -49,7 +49,7 @@ $(document).ready(function () {
                     });
                 } else {
                     form.hide();
-                    $('#rf_success_'+form.attr("id").split('-')[2]).fadeIn();
+                    $('#sf_success').fadeIn();
                     
                 }
             }
@@ -61,9 +61,9 @@ $(document).ready(function () {
 });
 
 function formRefresh(){
-    $('*[id^=rf_success').hide();
-    $('*[data-id=request-form]').show();
-    clearForm("*[data-id=request-form]");
+    $('*[id^=sf_success').hide();
+    $('#subscribe-form').show();
+    clearForm("#subscribe-form");
 }
 
 function setBorderPage() {

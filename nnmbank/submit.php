@@ -7,7 +7,7 @@ if (isset($_POST) && $_POST) {
     $result = array();
     $errors = array();
     
-    $required = array('phone');
+    $required = array('email');
     foreach ($required as $r) {
         if (!isset($data[$r]) || !trim($data[$r])) {
             if (!isset($errors['required'])) {

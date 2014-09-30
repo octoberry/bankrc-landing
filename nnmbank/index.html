@@ -83,12 +83,12 @@
                                 <p class="animated">
                                     Команда разработчиков с огромным чемоданом проектов в банковской сфере. Мы молодые предприниматели, и всё, чего мы хотим — это спокойно заниматься своим бизнесом без страха отзыва лицензий у наших банков.
                                 </p>
-                                
+
                                 <div class="text-center visible-mobile-not-landscape">
                                     <img class="animated" alt="" src="/img/icons/boat.svg" width="200" />
                                 </div>
                             </div>
-                            
+
                         </div>
                         <span class="logo"><img src="/img/logo.png" alt="NonameBank" width="30" /> Nonamebank</span>
                     </div>
@@ -108,7 +108,7 @@
                                 <p class="animated">
                                     Когда под одну гребенку причесывают большие и маленькие, помоечные и проверенные банки — ясно одно: <i>нет смысла платить за бренд</i>, статус и мнимую надежность. Мы <i>не хотим оплачивать</i> навязанный фунционал, нам нужны только рабочие инструменты.
                                 </p>
-                                
+
                                 <div class="text-center visible-mobile-not-landscape">
                                     <img class="animated" alt="" src="/img/icons/stop.svg" width="200" />
                                 </div>
@@ -133,7 +133,7 @@
                                 <p class="animated">
                                     Поэтому решили создать свой банк. <i>Надёжный</i>, удобный и технологичный. Названия и стиля пока нет, но мы и не собираемся тратить силы на обёртку. Мы фокусируемся на функциях, надёжности и интерфейсе.
                                 </p>
-                                
+
                                 <div class="text-center visible-mobile-not-landscape">
                                     <img class="animated" alt="" src="/img/icons/target.svg" width="200" />
                                 </div>
@@ -157,7 +157,7 @@
                                 <p class="animated">
                                     Этот банк мы делаем для себя и своих друзей, поэтому самое главное — обеспечить безопасность и надёжность наших счетов. Когда лопаются даже проверенные банки, доверять остается только друзьям и личным рекомендациям.
                                 </p>
-                                
+
                                 <div class="text-center visible-mobile-not-landscape">
                                     <img class="animated" alt="" src="/img/icons/shield.svg" width="200" />
                                 </div>
@@ -181,7 +181,7 @@
                                 <p class="animated">
                                     Если тебя задолбал твой банк или тебе нужен второй банк с человеческим интерфейсом — давай к нам! Нам очень нужны твои инсайты и моральная поддержка в виде обратной связи.
                                 </p>
-                                
+
                                 <div class="text-center visible-mobile-not-landscape">
                                     <img class="animated" alt="" src="/img/icons/help.svg" width="200" />
                                 </div>
@@ -206,7 +206,7 @@
                                     Твое время стоит дорого, поэтому предлагаем 20 лет бесплатного обслуживания в noname банке за 2 месяца твоих советов и тестов.
                                 </p>
                                 <p><button type="button" class="btn btn-default btn-bold animated" data-slide-go="6">Хочу участвовать</button></p>
-                                
+
                                 <div class="text-center visible-mobile-not-landscape">
                                     <img class="animated" alt="" src="/img/icons/cookie.svg" width="200" />
                                 </div>
@@ -222,28 +222,34 @@
                     <div class="content">
                         <h2>&nbsp;</h2>
                         <div class="clearfix"></div>
-                        
+
                         <div class="media">
                             <span class="pull-right small">
                                 <img class="media-object animated" alt="" src="/img/icons/mail.svg" width="200" />
                             </span>
                             <div class="media-body">
-                                <div class="text-center visible-mobile-not-landscape">
-                                    <p><img class="animated" alt="" src="/img/icons/mail.svg" width="200" /></p>
-                                </div>
                                 
-                                <p class="animated">
-                                    Оставь свою почту, если ты разделяешь нашу боль и хочешь участвовать в разработке за 20 лет бесплатного обслуживания
-                                </p>
-
                                 <form id="subscribe-form" action="" method="post">
+                                    <div class="text-center visible-mobile-not-landscape">
+                                        <p><img class="animated" alt="" src="/img/icons/mail.svg" width="200" /></p>
+                                    </div>
+
+                                    <p class="animated">
+                                        Оставь свою почту, если ты разделяешь нашу боль и хочешь участвовать в разработке за 20 лет бесплатного обслуживания
+                                    </p>
                                     <div class="input-group animated">
-                                        <input type="text" class="form-control" placeholder="Эл. почта" />
+                                        <input type="email" id="sf-email-field" name="email" class="form-control" placeholder="Эл. почта" />
                                         <span class="input-group-btn">
                                             <button class="btn btn-default" type="submit">Отправить</button>
                                         </span>
                                     </div>
                                 </form>
+                                
+
+                                <div id="sf_success" class="success">
+                                    <h2>Спасибо, мы записали</h2>
+                                    <p><a href="javascript:formRefresh();"><img src="/img/icons/refresh.svg" width="30" alt="" />&nbsp;&nbsp;Сначала</a></p>
+                                </div>
                             </div>
                         </div>
                         <span class="logo white"><img src="/img/logo_white.png" alt="NonameBank" width="30" /> Nonamebank</span>
