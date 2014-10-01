@@ -6,6 +6,16 @@ $(document).ready(function(){
         $(form_id).fadeIn();
     });
     
+    $(".close").on("click", function(){
+        var $this = $(this);
+        var panel_id = $this.attr("data-form-id");
+        
+        $(panel_id).fadeOut(700, function(){
+            var form_id = "#" + $(panel_id).find("form").attr("id");
+            formRefresh(form_id);
+        });
+    });
+    
     $('input:checkbox, input:radio').each(function() {
         var o = $(this);
         var fc = $('<img/>').width(21).height(22).attr('src', '/css/blank.gif');

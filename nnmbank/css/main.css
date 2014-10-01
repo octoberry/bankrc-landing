@@ -85,6 +85,20 @@
 .default-form .content p{margin-bottom: 70px;}
 .default-form .content .text-danger{color: #8e394f;}
 .default-form .content .text-danger.important{text-transform: uppercase; letter-spacing: 6px;}
+.default-form .input-group {margin-bottom: 70px;}
+.default-form .close {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    color: white;
+    text-shadow: none;
+    opacity: 1;
+    font-size: 50px;
+    font-weight: normal;
+    line-height: 1em;
+    float: none;
+    outline: none;
+}
 
 .default-form .content.little{font-size: 24px;}
 .default-form .content.little p{margin-bottom: 50px;}

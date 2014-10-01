@@ -60,10 +60,11 @@ $(document).ready(function () {
     });
 });
 
-function formRefresh(){
-    $('*[id^=sf_success').hide();
-    $('#subscribe-form').show();
-    clearForm("#subscribe-form");
+function formRefresh(form_id){
+    var $this = $(form_id);
+    $('.success').hide();
+    $this.show();
+    clearForm(form_id);
 }
 
 function setBorderPage() {
