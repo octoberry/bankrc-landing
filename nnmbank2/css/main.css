@@ -121,7 +121,7 @@
         .ib-image{text-align: center; position: inherit;}
             .ib-image video{position: absolute; left: 21px; top: 73px;}
         .ib-block{padding-top: 131px;}
-            .ib-block .media{margin-bottom: 22px; padding-left: 18px; cursor: help;}
+            .ib-block .media{margin-bottom: 22px; padding-left: 18px; cursor: pointer;}
                 .media>.pull-left {margin-top: 10px;}
                 .ib-block .media-body{
                     font-size: 18px;
