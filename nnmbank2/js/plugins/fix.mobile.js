@@ -29,7 +29,6 @@ function init() {
 
 // handle scroll
 function handleScroll() {
-    //console.log("!");
     scrolledWin = getPageScroll();
     $body.addClass('scrolling');
 
@@ -44,8 +43,6 @@ function handleScroll() {
     }
 
     // app img animation
-    console.log("topOff = " + topOff);
-    console.log("scrolledWin = " + scrolledWin);
     if (topOff >= scrolledWin) {
         $appImg.removeClass('sticky');
         $appImg.css({top: ""});
