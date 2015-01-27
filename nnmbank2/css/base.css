@@ -50,7 +50,7 @@ body {
 
 a{text-decoration: underline; color: #4b4b4b; transition: 0.4s;}
 .pseudo{cursor: pointer; text-decoration: none; border-bottom: 1px dashed;}
-a:hover, a:focus, a:active{color: #ec7900; text-decoration: none !important; outline: none;}
+a:hover{color: #ec7900; text-decoration: none !important; outline: none;}
 h1{font-size: 30px; color: #ec7900; text-transform: uppercase; font-weight: bold;}
 h2{font-size: 35px; color: white; margin-top: 0px; margin-bottom: 11px; line-height: 1.3em; font-weight: normal;}
 h3{font-size: 30px; color: black; margin-top: 0px; margin-bottom: 20px;}

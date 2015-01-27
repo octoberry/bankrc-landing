@@ -1,7 +1,9 @@
 var $body = $('body');
 // app img animation
 var $appImg = $('#phone1');
+var $appImgBlock = $('#phone1_block');
 var $appImg2 = $('#phone2');
+var $appImg2Block = $('#phone2_block');
 var topOff = 0;
 var topOff2 = 0;
 var scrolledWin = 0;
@@ -13,12 +15,6 @@ $(document).ready(function () {
 });
 
 function init() {
-    window.setTimeout(function () {
-        $body.addClass("delay");
-    }, 1000);
-    
-    topOffs();
-
     // get window dimensions
     adjustWindow();
     $window.resize(function () {
@@ -33,6 +29,7 @@ function init() {
 
 // handle scroll
 function handleScroll() {
+    //console.log("!");
     scrolledWin = getPageScroll();
     $body.addClass('scrolling');
 
@@ -47,6 +44,8 @@ function handleScroll() {
     }
 
     // app img animation
+    console.log("topOff = " + topOff);
+    console.log("scrolledWin = " + scrolledWin);
     if (topOff >= scrolledWin) {
         $appImg.removeClass('sticky');
         $appImg.css({top: ""});
@@ -78,9 +77,9 @@ function topOffs() {
         if ($appImg2.find("*[data-fix="+$appImg2.attr("id")+"]").height()){
             fixMiddlePosition2 = ((winH / 2) - ($appImg2.find("*[data-fix="+$appImg2.attr("id")+"]").height() / 2));
             
-            topOff = $appImg.offset();
+            topOff = $appImgBlock.offset();
             topOff = topOff.top - fixMiddlePosition1;
-            topOff2 = $appImg2.offset();
+            topOff2 = $appImg2Block.offset();
             topOff2 = topOff2.top - fixMiddlePosition2;
 
             fixTop1 = ($("#interface-info-block").offset().top - $("#is-interface-info").offset().top);
@@ -119,4 +118,6 @@ function adjustWindow() {
 
     // app img animation
     topOffs();
+    
+    handleScroll();
 }
