@@ -9,6 +9,7 @@ var topOff2 = 0;
 var scrolledWin = 0;
 var winH, winW, fixTop1, fixTop2, fixMiddlePosition1, fixMiddlePosition2, iInfoTop, iAdvantTop;
 var $window = $(window);
+var $video = document.getElementById('interface-info-video');
 
 $(document).ready(function () {
     init();
@@ -57,11 +58,22 @@ function handleScroll() {
         $appImg2.find("img").removeClass("is-hide");
         $appImg2.css({top: (fixMiddlePosition2 + (scrolledWin - iAdvantTop - fixTop2)) + "px"});
     }
+    
     if (topOff2 <= scrolledWin) {
         $appImg2.removeClass('sticky');
         $appImg2.css({top: ""});
-    } else {
         
+        $appImg.removeClass('sticky');
+        $appImg.css({top: ""});
+        
+        try{
+            $video.stop();
+        } catch(e) {}
+    } else {
+        try{
+            $video.currentTime = 0;
+            $video.play();
+        } catch(e) {}
     }
     
 }

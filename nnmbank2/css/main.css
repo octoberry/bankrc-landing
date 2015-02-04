@@ -1,4 +1,4 @@
-/*** СТРАНИЦЫ ЛЕДИНГА ***/
+/*** СТРАНИЦЫ ЛЕДИНГ    А ***/
 #is-header{z-index: 10;}
 #is-info{z-index: 2; min-height: 910px;}
 #is-interface-info{z-index: 3;overflow: hidden;}
@@ -24,10 +24,12 @@
             width: 31px;
             height: 31px;
             margin-left: 13px;
+            transition: none !important;
         }
         .socials a.fb{background: url('/img/icons/socials.png') 0px 0px no-repeat;}
         .socials a.tw{background: url('/img/icons/socials.png') -32px 0px no-repeat;}
         .socials a.gl{background: url('/img/icons/socials.png') -64px 0px no-repeat;}
+        .socials a:hover{background-position: 0px -32px;}
 @media (max-width: 768px){
     .socials{float:none !important; margin: 0 auto; text-align: center;}
         .socials a{display: inline-block; float: none;}

@@ -30,6 +30,15 @@ $(document).ready(function () {
         }
     }
     
+    //анимация кнопки appstore
+    $('.ci-block').hover(function() {
+        $('img.ci', this).stop();
+        $('img.ci', this).fadeIn();
+    },function() {
+        $('img.ci', this).stop();
+        $('img.ci', this).fadeOut();
+    });
+    
     //Показываем форму "Получить ссылку"
     $("a[href^=#show-form]").click(function(){
         var $this = $(this);
