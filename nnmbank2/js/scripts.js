@@ -1,4 +1,20 @@
 $(document).ready(function () {
+    //Слайдер для мобильного разрешения
+    var mySwiper = new Swiper('.swiper-container', {
+        pagination: '.pagination',
+        loop: true,
+        grabCursor: true,
+        paginationClickable: true
+    });
+    $('.arrow-left').on('click', function(e) {
+        e.preventDefault()
+        mySwiper.swipePrev()
+    });
+    $('.arrow-right').on('click', function(e) {
+        e.preventDefault()
+        mySwiper.swipeNext()
+    });
+    
     //Если при загрузке странице есть hash c якорем, то скролим до якоря 
     var hash = document.location.hash;
     var name_id = hash.replace("page-", "is-");
