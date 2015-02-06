@@ -15,6 +15,45 @@ $(document).ready(function () {
         mySwiper.swipeNext()
     });
     
+    //Формализация ввода телефона
+    var listRU = $.masksSort($.masksLoad("/js/plugins/inputmask/phones-ru.json"), ['#'], /[0-9]|#/, "mask");
+    var optsRU = {
+        inputmask: {
+            definitions: {
+                '#': {validator: "[0-9]", cardinality: 2}
+            },
+            showMaskOnHover: true,
+            autoUnmask: true,
+            clearIncomplete: false,
+            placeholder: "_"
+        },
+        match: /[0-9]/,
+        replace: '#',
+        list: listRU,
+        listKey: "mask"
+    };
+    $('#glt-phone-field').inputmasks(optsRU);
+    $('#glm-phone-field').inputmasks(optsRU);
+    $('#glb-phone-field').inputmasks(optsRU);
+    $('form').on("keypress", "input[name=phone]", (function(key) {
+        if (key.charCode == 13){
+            return true;
+        }
+        if (key.charCode < 48 || key.charCode > 57){
+            return false;
+        }
+    }));
+    $('form input[name=phone]').focus(function(){
+        if (!$(this).val()){
+            $(this).val(7);
+        }
+    });
+    $('form input[name=phone]').blur(function(){
+        if ($(this).val() == 7){
+            $(this).val('');
+        }
+    });
+    
     //Если при загрузке странице есть hash c якорем, то скролим до якоря 
     var hash = document.location.hash;
     var name_id = hash.replace("page-", "is-");
@@ -60,7 +99,9 @@ $(document).ready(function () {
         var $this = $(this);
         var form = $this.attr("href").split("/")[1];
         $this.hide();
-        $("#" + form).fadeIn();
+        $("#" + form).fadeIn(function(){
+            $(this).find("input[name=phone]").focus();
+        });
         return false;
     });
     
@@ -80,6 +121,8 @@ $(document).ready(function () {
                             for (var j in n) {
                                 form.find('*[name=' + n[j] + ']').parent().addClass('has-error');
                             }
+                        } else {
+                            $('#'+form.attr("data-form-selector")+'-' + i + '-error').fadeIn();
                         }
                     });
                 } else {

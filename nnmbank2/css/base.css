@@ -84,6 +84,8 @@ hr.w8{width: 80%; margin: 10px 0px;}
 .f-bold{font-weight: bold !important;}
 .f-italic{font-style: italic !important;}
 
+.text-danger{color: #f95959; font-size: 14px;}
+
 .no-marging{margin: 0 !important;}
 .no-marging-top{margin-top: 0 !important;}
 .no-marging-right{margin-right: 0 !important;}

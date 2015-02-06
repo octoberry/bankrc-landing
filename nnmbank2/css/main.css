@@ -90,6 +90,7 @@
         border-color: black;
     }
         
+    .email-form .has-error .text-danger {margin-top: 10px;}
     .email-form .has-error .form-control {
         border-color: #a94442;
         -webkit-box-shadow: none;
@@ -108,7 +109,7 @@
     .email-form input:-webkit-autofill {
         -webkit-box-shadow: 0 0 0 1000px white inset;
     }
-.email-form-success{display: none; margin: 0px 13px; padding-top: 20px; color: white;}
+.email-form-success{display: none; margin: 0px 13px; padding-top: 20px; color: white; font-size: 18px;}
 .email-form-success.fblack{color: black;}
     .email-form-success br{display: none;}
 

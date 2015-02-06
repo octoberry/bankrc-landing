@@ -7,7 +7,7 @@ if (isset($_POST) && $_POST) {
     $result = array();
     $errors = array();
     
-    $required = array('email');
+    $required = array('phone');
     foreach ($required as $r) {
         if (!isset($data[$r]) || !trim($data[$r])) {
             if (!isset($errors['required'])) {
@@ -16,6 +16,15 @@ if (isset($_POST) && $_POST) {
                 $errors['required'][] = $r;
             }
             $errors['no' . $r] = $r;
+        }
+    }
+    
+    if (isset($data['phone']) && $data['phone'] && strlen($data['phone']) < 11){
+        $errors['wrong_phone'] = "phone";
+        if (!isset($errors['required'])) {
+            $errors['required'] = array("phone");
+        } else {
+            $errors['required'][] = 'phone';
         }
     }
     
