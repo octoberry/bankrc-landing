@@ -286,9 +286,12 @@
                             <div class="row">
                                 <div class="col-xs-7 text-right no-padding-right bb-left">
                                     <a href="#show-form/get-link-middle" class="btn btn-default big first hvr-shutter-out-vertical">Получить ссылку</a>
-                                    <form id="get-link-middle" data-id="get-link" action="" method="post" class="email-form is-hide">
+                                    <form id="get-link-middle" data-id="get-link" data-form-selector="glm" action="" method="post" class="email-form is-hide">
                                         <div class="form-group no-marging">
                                             <input type="text" id="glm-phone-field" name="phone" class="form-control" placeholder="Ваш телефон" />
+                                            
+                                            <p id="glm-nophone-error" class="text-danger is-hide text-left">Не указан телефон</p>
+                                            <p id="glm-wrong_phone-error" class="text-danger is-hide text-left">Необходимо корректно ввести номер, например +7(921)100-00-00</p>
                                         </div>
                                     </form>
                                     <div id="get-link-middle-success" class="email-form-success">Спасибо,<br /> мы отправили вам ссылку</div>
@@ -413,9 +416,12 @@
                             <div class="row">
                                 <div class="col-xs-7 text-right no-padding-right bb-left">
                                     <a href="#show-form/get-link-bottom" class="btn btn-default big first hvr-shutter-out-vertical-black">Получить ссылку</a>
-                                    <form id="get-link-bottom" data-id="get-link" action="" method="post" class="email-form is-hide fblack">
+                                    <form id="get-link-bottom" data-id="get-link" data-form-selector="glb" action="" method="post" class="email-form is-hide fblack">
                                         <div class="form-group no-marging">
                                             <input type="text" id="glb-phone-field" name="phone" class="form-control" placeholder="Ваш телефон" />
+                                            
+                                            <p id="glb-nophone-error" class="text-danger is-hide text-left">Не указан телефон</p>
+                                            <p id="glb-wrong_phone-error" class="text-danger is-hide text-left">Необходимо корректно ввести номер, например +7(921)100-00-00</p>
                                         </div>
                                     </form>
                                     <div id="get-link-bottom-success" class="email-form-success fblack">Спасибо,<br /> мы отправили вам ссылку</div>

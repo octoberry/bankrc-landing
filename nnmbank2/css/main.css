@@ -92,7 +92,7 @@
         
     .email-form .has-error .text-danger {margin-top: 10px;}
     .email-form .has-error .form-control {
-        border-color: #a94442;
+        border-color: #a94442 !important;
         -webkit-box-shadow: none;
         box-shadow: none;
     }

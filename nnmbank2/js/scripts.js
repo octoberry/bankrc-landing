@@ -112,7 +112,9 @@ $(document).ready(function () {
         form.attr("action", GLOBAL.URL_POST);
         var options = {
             dataType: 'json',
-            beforeSubmit: function () {},
+            beforeSubmit: function () {
+                form.find(".has-error .text-danger").hide();
+            },
             success: function (data) {
                 if (data.errors) {
                     $('#klaatu').remove();
