@@ -74,6 +74,7 @@ hr.w8{width: 80%; margin: 10px 0px;}
 }
 
 .d-inline{display: inline-block !important;}
+.d-block{display: block;}
 
 .p-relative{position: relative;}
 .p-none{position: inherit !important;}

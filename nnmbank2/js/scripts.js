@@ -1,3 +1,15 @@
+var scrollSection = [
+    'is-header',
+    'is-interface-info',
+    'is-advantage-info',
+    'is-wisdom',
+    'is-price',
+    'is-warranty',
+    'is-account',
+    'is-leaders'
+];
+scrollPage($(window).scrollTop());
+
 $(document).ready(function () {
     //Слайдер для мобильного разрешения
     var mySwiper = new Swiper('.swiper-container', {
@@ -29,6 +41,7 @@ $(document).ready(function () {
         e.preventDefault();
         mySwiper2.swipeNext();
     });
+    //--------------------------------------------------------------------------
     
     //Формализация ввода телефона
     var listRU = $.masksSort($.masksLoad("/js/plugins/inputmask/phones-ru.json"), ['#'], /[0-9]|#/, "mask");
@@ -68,6 +81,7 @@ $(document).ready(function () {
             $(this).val('');
         }
     });
+    //--------------------------------------------------------------------------
     
     //Если при загрузке странице есть hash c якорем, то скролим до якоря 
     var hash = document.location.hash;
@@ -99,6 +113,7 @@ $(document).ready(function () {
             $("body").addClass("not-landscape");
         }
     }
+    //--------------------------------------------------------------------------
     
     //анимация кнопки appstore
     $('.ci-block').hover(function() {
@@ -108,6 +123,7 @@ $(document).ready(function () {
         $('img.ci', this).stop();
         $('img.ci', this).fadeOut();
     });
+    //--------------------------------------------------------------------------
     
     //Показываем форму "Получить ссылку"
     $("a[href^=#show-form]").click(function(){
@@ -119,6 +135,7 @@ $(document).ready(function () {
         });
         return false;
     });
+    //--------------------------------------------------------------------------
     
     $('form[data-id=get-link]').submit(function () {
         var form = $(this);
@@ -153,13 +170,15 @@ $(document).ready(function () {
         return false;
     });
     
-    $window.scroll(function () {
+    $(window).scroll(function () {
         var st = $(this).scrollTop();
         if (st > 0){
             $("#arrow-down").fadeOut();
         } else {
             $("#arrow-down").fadeIn();
         }
+        
+        scrollPage(st);
     });
     
     
@@ -202,6 +221,35 @@ function scrollWindowToElement(name_id) {
         }
     });
 
+}
+
+function scrollPage(st){
+    if (st > 0) {
+        var pageNum = scrollSection.length-1;
+        for( var i=0; i <= scrollSection.length-1; i++){
+            if ($("#" + scrollSection[i]).offset().top >= st){
+                pageNum = i;
+                break;
+            }
+        }
+    } else {
+        var pageNum = 0;
+    }
+
+    if (pageNum > 0 && pageNum < scrollSection.length-1){
+        $('.page-arrow-down .up').show().attr("onclick", "scrollWindowToElement('#"+scrollSection[pageNum-1]+"')");
+        $('.page-arrow-down .down').show().attr("onclick", "scrollWindowToElement('#"+scrollSection[pageNum+1]+"')");
+    } else {
+        if (pageNum == scrollSection.length-1){
+            $('.page-arrow-down .up').show().attr("onclick", "scrollWindowToElement('#"+scrollSection[pageNum-1]+"')");
+            $('.page-arrow-down .down').hide();
+        } else {
+            if (pageNum == 0){
+                $('.page-arrow-down .up').hide();
+                $('.page-arrow-down .down').show().attr("onclick", "scrollWindowToElement('#"+scrollSection[pageNum+1]+"')");
+            }
+        }
+    }
 }
 
 /**

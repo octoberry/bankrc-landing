@@ -41,34 +41,386 @@
 
     </head>
     <body>
-        <div id="fullpage">
-            <!-- header -->
-            <div id="is-header" class="page header section active">
-                <div class="container">
-                    <div class="header-top" data-scroll-reveal="enter easy over 0.5s after 0.6s">
-                        <div class="socials pull-right">
-                            <a href="https://www.facebook.com/groups/nonamebank/" target="_blank" class="fb"></a>
-                        </div>
-                        <div class="clearfix"></div>
+        <div class="page-arrow-down">
+            <a href="javascript:void(0);" onclick="scrollWindowToElement('#is-interface-info')" class="up d-block">
+                <img src="/img/icons/arrow-up-scroll.png" alt="Вниз" class="n-ci" />
+            </a>
+            <br />
+            <a href="javascript:void(0);" onclick="scrollWindowToElement('#is-interface-info')" class="down d-block">
+                <img src="/img/icons/arrow-down-scroll.png" alt="Вниз" class="n-ci" />
+            </a>
+        </div>
+        
+        <!-- header -->
+        <div id="is-header" class="page header section active">
+            <div class="container">
+                <div class="header-top" data-scroll-reveal="enter easy over 0.5s after 0.6s">
+                    <div class="socials pull-right">
+                        <a href="https://www.facebook.com/groups/nonamebank/" target="_blank" class="fb"></a>
                     </div>
-                    <div class="header-middle text-center">
-                        <div class="logo" data-scroll-reveal="enter easy over 0.5s after 0.4s"><img src="/img/logo.svg" alt="NonameBank" /></div>
-                        <h2 data-scroll-reveal="enter easy over 0.5s after 0.5s">Ничего лишнего. Только бизнес</h2>
-                        <p data-scroll-reveal="enter easy over 0.5s after 0.5s">Функциональный банк для предпринимателей</p>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="header-middle text-center">
+                    <div class="logo" data-scroll-reveal="enter easy over 0.5s after 0.4s"><img src="/img/logo.svg" alt="NonameBank" /></div>
+                    <h2 data-scroll-reveal="enter easy over 0.5s after 0.5s">Ничего лишнего. Только бизнес</h2>
+                    <p data-scroll-reveal="enter easy over 0.5s after 0.5s">Функциональный банк для предпринимателей</p>
+                    <div class="button-block" data-scroll-reveal="enter easy over 0.5s after 0.6s">
+                        <div class="row">
+                            <div class="col-xs-7 text-right no-padding-right bb-left">
+                                <a href="#show-form/get-link-top" class="btn btn-default big first hvr-shutter-out-vertical">Получить ссылку</a>
+                                <form id="get-link-top" data-id="get-link" data-form-selector="glt" action="" method="post" class="email-form is-hide">
+                                    <div class="form-group no-marging">
+                                        <input type="text" id="glt-phone-field" name="phone" class="form-control" placeholder="Ваш телефон" />
+
+                                        <p id="glt-nophone-error" class="text-danger is-hide text-left">Не указан телефон</p>
+                                        <p id="glt-wrong_phone-error" class="text-danger is-hide text-left">Проверьте, пожалуйста, правильность (+79ХХХХХХХХХ) ввода номера.</p>
+                                        <p id="glt-repeat-error" class="text-danger is-hide text-left">Ссылка этому пользователю недавно уже была отправлена.</p>
+                                    </div>
+                                </form>
+                                <div id="get-link-top-success" class="email-form-success">Спасибо,<br /> мы отправили вам ссылку</div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="col-xs-5 text-left no-padding-left">
+                                <a href="#" class="btn btn-default little wdouble second ci-block hvr-shutter-out-vertical">
+                                    <img src="/img/icons/appstore.png" alt="Download on the App Store" class="n-ci" />
+                                    <img src="/img/icons/appstore-b.png" alt="Download on the App Store" class="ci appstore" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom" data-scroll-reveal="enter easy over 0.5s after 0.6s">
+                    <div class="row">
+                        <div class="col-xs-4 text-left">
+                            <p class="hb-title">Банковские услуги предоставляются</p>
+                            <a href="http://www.bankrc.ru/" target="_blank" class="ci-block d-inline">
+                                <img src="/img/partners/1.png" alt="Банк Региональный Кредит" class="n-ci" />
+                                <img src="/img/partners/1-h.png" alt="Банк Региональный Кредит" class="ci" />
+                            </a>
+                        </div>
+                        <div class="col-xs-4 text-center arrow-down">
+                            <br />
+                            <div id="arrow-down">
+                                <a href="javascript:void(0);" onclick="scrollWindowToElement('#is-interface-info')" class="ci-block d-inline">
+                                    <img src="/img/icons/arrow-down.svg" alt="Вниз" class="n-ci" />
+                                    <img src="/img/icons/arrow-down-h.svg" alt="Вниз" class="ci" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 text-right">
+                            <br />
+                            <img src="/img/partners/2.png" alt="Система страхования вкладов" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- interface-info -->
+        <div id="is-interface-info" class="page section">
+            <div class="white">
+                <div class="container p-none">
+                    <div class="info-block">
+                        <h2 data-scroll-reveal="enter easy over 0.5s">Удобный и простой интерфейс</h2>
+                        <div id="interface-info-block" class="ib-body">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12 col-xs-12 ib-block left">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter left over 0.5s">
+                                            <div class="media" data-interface-slider="interface-info" data-info-img="/img/content/interface/screencast_raspoznavanie">
+                                                <span class="pull-left">
+                                                    <img class="media-object" src="/img/icons/bullet.svg" alt="" />
+                                                </span>
+                                                <div class="media-body">
+                                                    <p>Распознавание счетов из фото, пакетная вставка реквизитов из буфера обмена</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter left over 0.5s after 0.2s">
+                                            <div class="media" data-interface-slider="interface-info" data-info-img="/img/content/interface/screencast_povtor-from-timeline">
+                                                <span class="pull-left">
+                                                    <img class="media-object" src="/img/icons/bullet.svg" alt="" />
+                                                </span>
+                                                <div class="media-body">
+                                                    <p>Повтор платежа популярным контрагентам в один клик</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter left over 0.5s after 0.3s">
+                                            <div class="media" data-interface-slider="interface-info" data-info-img="/img/content/interface/screencast_csv-export">
+                                                <span class="pull-left">
+                                                    <img class="media-object" src="/img/icons/bullet.svg" alt="" />
+                                                </span>
+                                                <div class="media-body">
+                                                    <p>Фильтр выписки за неделю, месяц или нужный вам период, и выгрузка ее в .csv</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div id="phone1_block" class="col-md-4 ib-image">
+                                    <div id="phone1">
+                                        <img src="/img/content/interface/phone-0.png" alt="" width="263" data-fix="phone1" />
+                                        <video id="interface-info-video" preload="none" autoplay loop width="221" height="393" poster="/img/bg/phone.jpg">
+                                            <source id="interface-info-mp4" src="/img/content/interface/screencast_raspoznavanie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                                        </video>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12 col-xs-12 ib-block right">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter right over 0.5s">
+                                            <div class="media" data-interface-slider="interface-info" data-info-img="/img/content/interface/screencast_chat">
+                                                <span class="pull-left">
+                                                    <img class="media-object" src="/img/icons/bullet.svg" alt="" />
+                                                </span>
+                                                <div class="media-body">
+                                                    <p>Поддержка в чате – больше никакого ожидания на телефонной линии</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter right over 0.5s after 0.1s">
+                                            <div class="media" data-interface-slider="interface-info" data-info-img="/img/content/interface/screencast_platezh-share">
+                                                <span class="pull-left">
+                                                    <img class="media-object" src="/img/icons/bullet.svg" alt="" />
+                                                </span>
+                                                <div class="media-body">
+                                                    <p>Возможность поделиться платежным поручением в любой момент</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="s-ib-body">
+                            <div class="device">
+                                <a class="arrow-left" href="#"></a> 
+                                <a class="arrow-right" href="#"></a>
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="content-slide s-ib-block">
+                                                <div class="s-ib-gimage">
+                                                    <img src="/img/content/interface/phone-0.png" alt="" />
+                                                    <img src="/img/content/interface/screencast_raspoznavanie.gif" alt="" class="gif"/>
+                                                </div>
+                                                <div class="s-ib-item">
+                                                    <p>Распознавание счетов из фото, пакетная вставка реквизитов из буфера обмена</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="content-slide s-ib-block">
+                                                <div class="s-ib-gimage">
+                                                    <img src="/img/content/interface/phone-0.png" alt="" />
+                                                    <img src="/img/content/interface/screencast_povtor-from-timeline.gif" alt="" class="gif"/>
+                                                </div>
+                                                <div class="s-ib-item">
+                                                    <p>Повтор платежа популярным контрагентам в один клик</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="content-slide s-ib-block">
+                                                <div class="s-ib-gimage">
+                                                    <img src="/img/content/interface/phone-0.png" alt="" />
+                                                    <img src="/img/content/interface/screencast_csv-export.gif" alt="" class="gif"/>
+                                                </div>
+                                                <div class="s-ib-item">
+                                                    <p>Фильтр выписки за неделю, месяц или нужный вам период, и выгрузка ее в .csv</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="content-slide s-ib-block">
+                                                <div class="s-ib-gimage">
+                                                    <img src="/img/content/interface/phone-0.png" alt="" />
+                                                    <img src="/img/content/interface/screencast_chat.gif" alt="" class="gif"/>
+                                                </div>
+                                                <div class="s-ib-item">
+                                                    <p>Поддержка в чате – больше никакого ожидания на телефонной линии</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="content-slide s-ib-block">
+                                                <div class="s-ib-gimage">
+                                                    <img src="/img/content/interface/phone-0.png" alt="" />
+                                                    <img src="/img/content/interface/screencast_platezh-share.gif" alt="" class="gif"/>
+                                                </div>
+                                                <div class="s-ib-item">
+                                                    <p>Возможность поделиться платежным поручением в любой момент</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- advantage-info -->
+        <div id="is-advantage-info" class="page section">
+            <div class="black">
+                <div class="container">
+                    <div class="info-block">
+                        <div id="advantage-info-block" class="ib-body">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12 col-xs-12 ib-block left">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-6 col-xs-12" data-scroll-reveal="enter left over 0.5s">
+                                            <div class="media" data-slider="info-slider" data-info-img="/img/content/advantage/phone-1.png">
+                                                <span class="pull-left">
+                                                    <img class="media-object" src="/img/icons/bullet-w.svg" alt="" />
+                                                </span>
+                                                <div class="media-body">
+                                                    <p>Никаких офисов. Если нам нужно вас увидеть – мы приедем сами</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-6 col-xs-12" data-scroll-reveal="enter left over 0.5s after 0.1s">
+                                            <div class="media" data-slider="info-slider" data-info-img="/img/content/advantage/phone-2.png">
+                                                <span class="pull-left">
+                                                    <img class="media-object" src="/img/icons/bullet-w.svg" alt="" />
+                                                </span>
+                                                <div class="media-body">
+                                                    <p>5% годовых на остаток на счету более 100 000 р.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-6 col-xs-12" data-scroll-reveal="enter left over 0.5s after 0.2s">
+                                            <div class="media" data-slider="info-slider" data-info-img="/img/content/advantage/phone-3.png">
+                                                <span class="pull-left">
+                                                    <img class="media-object" src="/img/icons/bullet-w.svg" alt="" />
+                                                </span>
+                                                <div class="media-body">
+                                                    <p>Бесплатное внесение наличных через тысячи банкоматов сети ОРС</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div id="phone2_block" class="col-md-4 ib-image">
+                                    <div id="phone2" class="sticky">
+                                        <img src="/img/content/advantage/phone-0.png" alt="" width="263" class="is-hide" data-fix="phone2" />
+                                        <video id="advantage-info-video" preload="none" width="221" height="393" poster="/img/bg/phone.jpg"></video>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12 col-xs-12 ib-block right" data-scroll-reveal="enter right over 0.5s">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-6 col-xs-12">
+                                            <div class="media noactive" data-slider="info-slider" data-info-img="/img/content/advantage/phone-3.png">
+                                                <span class="pull-left">
+                                                    <img class="media-object" src="/img/icons/bullet-g.svg" alt="" />
+                                                </span>
+                                                <div class="media-body">
+                                                    <p>Карта <a href="https://rocketbank.ru/" target="_blank">Рокетбанка</a> специально для ИП. Бесплатный перевод до 250 000 р. в день <br class="hide-br" /> <img src="/img/icons/birka.png" alt="Скоро" /></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-6 col-xs-12" data-scroll-reveal="enter right over 0.5s after 0.1s">
+                                            <div class="media noactive" data-slider="info-slider" data-info-img="/img/content/advantage/phone-4.png">
+                                                <span class="pull-left">
+                                                    <img class="media-object" src="/img/icons/bullet-g.svg" alt="" />
+                                                </span>
+                                                <div class="media-body">
+                                                    <p>Три счета в одном приложении: расчетный, карточный и Рокетбанк <br class="hide-br" /> <img src="/img/icons/birka.png" alt="Скоро" /></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="s-ib-body">
+                            <div class="device">
+                                <a class="arrow-left sc2 al-white" href="#"></a> 
+                                <a class="arrow-right sc2 ar-white" href="#"></a>
+                                <div class="swiper-container sc2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="content-slide s-ib-block">
+                                                <div class="s-ib-gimage">
+                                                    <img src="/img/content/advantage/phone-0.png" alt="" />
+                                                    <img src="/img/bg/phone.jpg" alt="" class="gif"/>
+                                                </div>
+                                                <div class="s-ib-item sibi-white">
+                                                    <p>Никаких офисов. Если нам нужно вас увидеть – мы приедем сами</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="content-slide s-ib-block">
+                                                <div class="s-ib-gimage">
+                                                    <img src="/img/content/advantage/phone-0.png" alt="" />
+                                                    <img src="/img/bg/phone.jpg" alt="" class="gif"/>
+                                                </div>
+                                                <div class="s-ib-item sibi-white">
+                                                    <p>5% годовых на остаток на счету более 100 000 р.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="content-slide s-ib-block">
+                                                <div class="s-ib-gimage">
+                                                    <img src="/img/content/advantage/phone-0.png" alt="" />
+                                                    <img src="/img/bg/phone.jpg" alt="" class="gif"/>
+                                                </div>
+                                                <div class="s-ib-item sibi-white">
+                                                    <p>Бесплатное внесение наличных через тысячи банкоматов сети ОРС</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="content-slide s-ib-block">
+                                                <div class="s-ib-gimage">
+                                                    <img src="/img/content/advantage/phone-0.png" alt="" />
+                                                    <img src="/img/bg/phone.jpg" alt="" class="gif"/>
+                                                </div>
+                                                <div class="s-ib-item sibi-gray">
+                                                    <p>Карта <a href="https://rocketbank.ru/" target="_blank">Рокетбанка</a> специально для ИП. Бесплатный перевод до 250 000 р. в день <br class="hide-br" /> <img src="/img/icons/birka.png" alt="Скоро" /></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="content-slide s-ib-block">
+                                                <div class="s-ib-gimage">
+                                                    <img src="/img/content/advantage/phone-0.png" alt="" />
+                                                    <img src="/img/bg/phone.jpg" alt="" class="gif"/>
+                                                </div>
+                                                <div class="s-ib-item sibi-gray">
+                                                    <p>Три счета в одном приложении: расчетный, карточный и Рокетбанк <br class="hide-br" /> <img src="/img/icons/birka.png" alt="Скоро" /></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pagination sc2"></div>
+                            </div>
+                        </div>
+
                         <div class="button-block" data-scroll-reveal="enter easy over 0.5s after 0.6s">
                             <div class="row">
                                 <div class="col-xs-7 text-right no-padding-right bb-left">
-                                    <a href="#show-form/get-link-top" class="btn btn-default big first hvr-shutter-out-vertical">Получить ссылку</a>
-                                    <form id="get-link-top" data-id="get-link" data-form-selector="glt" action="" method="post" class="email-form is-hide">
+                                    <a href="#show-form/get-link-middle" class="btn btn-default big first hvr-shutter-out-vertical">Получить ссылку</a>
+                                    <form id="get-link-middle" data-id="get-link" data-form-selector="glm" action="" method="post" class="email-form is-hide">
                                         <div class="form-group no-marging">
-                                            <input type="text" id="glt-phone-field" name="phone" class="form-control" placeholder="Ваш телефон" />
+                                            <input type="text" id="glm-phone-field" name="phone" class="form-control" placeholder="Ваш телефон" />
 
-                                            <p id="glt-nophone-error" class="text-danger is-hide text-left">Не указан телефон</p>
-                                            <p id="glt-wrong_phone-error" class="text-danger is-hide text-left">Проверьте, пожалуйста, правильность (+79ХХХХХХХХХ) ввода номера.</p>
-                                            <p id="glt-repeat-error" class="text-danger is-hide text-left">Ссылка этому пользователю недавно уже была отправлена.</p>
+                                            <p id="glm-nophone-error" class="text-danger is-hide text-left">Не указан телефон</p>
+                                            <p id="glm-wrong_phone-error" class="text-danger is-hide text-left">Проверьте, пожалуйста, правильность (+79ХХХХХХХХХ) ввода номера.</p>
+                                            <p id="glm-repeat-error" class="text-danger is-hide text-left">Ссылка этому пользователю недавно уже была отправлена.</p>
                                         </div>
                                     </form>
-                                    <div id="get-link-top-success" class="email-form-success">Спасибо,<br /> мы отправили вам ссылку</div>
+                                    <div id="get-link-middle-success" class="email-form-success">Спасибо,<br /> мы отправили вам ссылку</div>
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="col-xs-5 text-left no-padding-left">
@@ -80,610 +432,266 @@
                             </div>
                         </div>
                     </div>
-                    <div class="header-bottom" data-scroll-reveal="enter easy over 0.5s after 0.6s">
+                </div>
+            </div>
+        </div>
+
+        <!-- wisdom -->
+        <div id="is-wisdom" class="page image1 section">
+            <div class="container">
+                <h2 data-scroll-reveal="enter easy over 0.5s">
+                    Для тех, кто хочет всё исправить<br />
+                    и тех, кто не хочет совершать ошибку
+                </h2>
+            </div>
+        </div>
+
+        <!-- price -->
+        <div id="is-price" class="page section">
+            <div class="white">
+                <div class="container">
+                    <h2 data-scroll-reveal="enter easy over 0.5s">Один тариф</h2>
+
+                    <div class="price-block">
+                        <p class="pb-title text-center" data-scroll-reveal="enter bottom over 0.5s after 0.1s">
+                            Платите только тогда, когда пользуетесь услугами банка
+                        </p>
                         <div class="row">
-                            <div class="col-xs-4 text-left">
-                                <p class="hb-title">Банковские услуги предоставляются</p>
-                                <a href="http://www.bankrc.ru/" target="_blank" class="ci-block d-inline">
-                                    <img src="/img/partners/1.png" alt="Банк Региональный Кредит" class="n-ci" />
-                                    <img src="/img/partners/1-h.png" alt="Банк Региональный Кредит" class="ci" />
-                                </a>
+                            <div class="col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s">
+                                <div class="pb-item">
+                                    <div class="pbi-image">
+                                        <img src="/img/content/price/1.png" alt="" />
+                                    </div>
+                                    <h2>Подключение</h2>
+                                </div>
                             </div>
-                            <div class="col-xs-4 text-center arrow-down">
-                                <br />
-                                <div id="arrow-down">
-                                    <a href="javascript:void(0);" onclick="scrollWindowToElement('#is-interface-info')" class="ci-block d-inline">
-                                        <img src="/img/icons/arrow-down.svg" alt="Вниз" class="n-ci" />
-                                        <img src="/img/icons/arrow-down-h.svg" alt="Вниз" class="ci" />
+                            <div class="col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.1s">
+                                <div class="pb-item">
+                                    <div class="pbi-image">
+                                        <img src="/img/content/price/1.png" alt="" />
+                                    </div>
+                                    <h2>Абонентская плата</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.2s">
+                                <div class="pb-item">
+                                    <div class="pbi-image">
+                                        <img src="/img/content/price/2.png" alt="" />
+                                    </div>
+                                    <h2>За платежку юр.лицу</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center" data-scroll-reveal="enter bottom over 0.5s">
+                            Мы ничего не скрываем под звездочками и мелкими сносками,<br />
+                            а если вы хотите прочитать подробности – то можете скачать информацию о нашем <a href="/userfiles/content/tariffs.xlsx" target="_blank">тарифе</a>,<br />
+                            и почитать <a href="/userfiles/content/contract.pdf" target="_blank">Договор на кассовое обслуживание</a> с <a href="/userfiles/content/application.pdf" target="_blank">приложением</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- warranty -->
+        <div id="is-warranty" class="page section">
+            <div class="gray">
+                <div class="container">
+                    <h2 data-scroll-reveal="enter easy over 0.5s">Надёжно и безопасно</h2>
+                    <div class="warranty-block">
+                        <p class="text-center" data-scroll-reveal="enter bottom over 0.5s after 0.1s">
+                            Мы создаём банк для себя и наших друзей.<br />
+                            Поэтому мы выбрали действительного надежного партнера — ОАО КБ «Региональный Кредит».
+                        </p>
+
+                        <h3 data-scroll-reveal="enter bottom over 0.5s after 0.2s">Почему нас не закроют:</h3>
+
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="/img/content/warranty/1.svg" alt="" />
+                                    </span>
+                                    <div class="media-body">
+                                        <p>Все вклады и деньги на счетах ИП застрахованы агентством страхования вкладов</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.1s">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="/img/content/warranty/2.svg" alt="" />
+                                    </span>
+                                    <div class="media-body">
+                                        <p>Прошел проверку Центральным банком РФ в ноябре 2014 года</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.2s">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="/img/content/warranty/3.svg" alt="" />
+                                    </span>
+                                    <div class="media-body">
+                                        <p>Капитал банка растет каждый год на 15-20%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="button-block" data-scroll-reveal="enter easy over 0.5s">
+                            <div class="row">
+                                <div class="col-xs-7 text-right no-padding-right bb-left">
+                                    <a href="#show-form/get-link-bottom" class="btn btn-default big first hvr-shutter-out-vertical-black">Получить ссылку</a>
+                                    <form id="get-link-bottom" data-id="get-link" data-form-selector="glb" action="" method="post" class="email-form is-hide fblack">
+                                        <div class="form-group no-marging">
+                                            <input type="text" id="glb-phone-field" name="phone" class="form-control" placeholder="Ваш телефон" />
+
+                                            <p id="glb-nophone-error" class="text-danger is-hide text-left">Не указан телефон</p>
+                                            <p id="glb-wrong_phone-error" class="text-danger is-hide text-left">Проверьте, пожалуйста, правильность (+79ХХХХХХХХХ) ввода номера.</p>
+                                            <p id="glb-repeat-error" class="text-danger is-hide text-left">Ссылка этому пользователю недавно уже была отправлена.</p>
+                                        </div>
+                                    </form>
+                                    <div id="get-link-bottom-success" class="email-form-success fblack">Спасибо,<br /> мы отправили вам ссылку</div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="col-xs-5 text-left no-padding-left">
+                                    <a href="#" class="btn btn-default little wdouble second ci-block hvr-shutter-out-vertical-black">
+                                        <img src="/img/icons/appstore-b.png" alt="Download on the App Store" class="n-ci" />
+                                        <img src="/img/icons/appstore.png" alt="Download on the App Store" class="ci appstore" />
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-xs-4 text-right">
-                                <br />
-                                <img src="/img/partners/2.png" alt="Система страхования вкладов" />
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- interface-info -->
-            <div id="is-interface-info" class="page section">
-                <div class="white">
-                    <div class="container p-none">
-                        <div class="info-block">
-                            <h2 data-scroll-reveal="enter easy over 0.5s">Удобный и простой интерфейс</h2>
-                            <div id="interface-info-block" class="ib-body">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-12 col-xs-12 ib-block left">
-                                        <div class="row">
-                                            <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter left over 0.5s">
-                                                <div class="media" data-interface-slider="interface-info" data-info-img="/img/content/interface/screencast_raspoznavanie">
-                                                    <span class="pull-left">
-                                                        <img class="media-object" src="/img/icons/bullet.svg" alt="" />
-                                                    </span>
-                                                    <div class="media-body">
-                                                        <p>Распознавание счетов из фото, пакетная вставка реквизитов из буфера обмена</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter left over 0.5s after 0.2s">
-                                                <div class="media" data-interface-slider="interface-info" data-info-img="/img/content/interface/screencast_povtor-from-timeline">
-                                                    <span class="pull-left">
-                                                        <img class="media-object" src="/img/icons/bullet.svg" alt="" />
-                                                    </span>
-                                                    <div class="media-body">
-                                                        <p>Повтор платежа популярным контрагентам в один клик</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter left over 0.5s after 0.3s">
-                                                <div class="media" data-interface-slider="interface-info" data-info-img="/img/content/interface/screencast_csv-export">
-                                                    <span class="pull-left">
-                                                        <img class="media-object" src="/img/icons/bullet.svg" alt="" />
-                                                    </span>
-                                                    <div class="media-body">
-                                                        <p>Фильтр выписки за неделю, месяц или нужный вам период, и выгрузка ее в .csv</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div id="phone1_block" class="col-md-4 ib-image">
-                                        <div id="phone1">
-                                            <img src="/img/content/interface/phone-0.png" alt="" width="263" data-fix="phone1" />
-                                            <video id="interface-info-video" preload="none" autoplay loop width="221" height="393" poster="/img/bg/phone.jpg">
-                                                <source id="interface-info-mp4" src="/img/content/interface/screencast_raspoznavanie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                                            </video>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-12 col-xs-12 ib-block right">
-                                        <div class="row">
-                                            <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter right over 0.5s">
-                                                <div class="media" data-interface-slider="interface-info" data-info-img="/img/content/interface/screencast_chat">
-                                                    <span class="pull-left">
-                                                        <img class="media-object" src="/img/icons/bullet.svg" alt="" />
-                                                    </span>
-                                                    <div class="media-body">
-                                                        <p>Поддержка в чате – больше никакого ожидания на телефонной линии</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter right over 0.5s after 0.1s">
-                                                <div class="media" data-interface-slider="interface-info" data-info-img="/img/content/interface/screencast_platezh-share">
-                                                    <span class="pull-left">
-                                                        <img class="media-object" src="/img/icons/bullet.svg" alt="" />
-                                                    </span>
-                                                    <div class="media-body">
-                                                        <p>Возможность поделиться платежным поручением в любой момент</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="s-ib-body">
-                                <div class="device">
-                                    <a class="arrow-left" href="#"></a> 
-                                    <a class="arrow-right" href="#"></a>
-                                    <div class="swiper-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="content-slide s-ib-block">
-                                                    <div class="s-ib-gimage">
-                                                        <img src="/img/content/interface/phone-0.png" alt="" />
-                                                        <img src="/img/content/interface/screencast_raspoznavanie.gif" alt="" class="gif"/>
-                                                    </div>
-                                                    <div class="s-ib-item">
-                                                        <p>Распознавание счетов из фото, пакетная вставка реквизитов из буфера обмена</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="content-slide s-ib-block">
-                                                    <div class="s-ib-gimage">
-                                                        <img src="/img/content/interface/phone-0.png" alt="" />
-                                                        <img src="/img/content/interface/screencast_povtor-from-timeline.gif" alt="" class="gif"/>
-                                                    </div>
-                                                    <div class="s-ib-item">
-                                                        <p>Повтор платежа популярным контрагентам в один клик</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="content-slide s-ib-block">
-                                                    <div class="s-ib-gimage">
-                                                        <img src="/img/content/interface/phone-0.png" alt="" />
-                                                        <img src="/img/content/interface/screencast_csv-export.gif" alt="" class="gif"/>
-                                                    </div>
-                                                    <div class="s-ib-item">
-                                                        <p>Фильтр выписки за неделю, месяц или нужный вам период, и выгрузка ее в .csv</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="content-slide s-ib-block">
-                                                    <div class="s-ib-gimage">
-                                                        <img src="/img/content/interface/phone-0.png" alt="" />
-                                                        <img src="/img/content/interface/screencast_chat.gif" alt="" class="gif"/>
-                                                    </div>
-                                                    <div class="s-ib-item">
-                                                        <p>Поддержка в чате – больше никакого ожидания на телефонной линии</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="content-slide s-ib-block">
-                                                    <div class="s-ib-gimage">
-                                                        <img src="/img/content/interface/phone-0.png" alt="" />
-                                                        <img src="/img/content/interface/screencast_platezh-share.gif" alt="" class="gif"/>
-                                                    </div>
-                                                    <div class="s-ib-item">
-                                                        <p>Возможность поделиться платежным поручением в любой момент</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pagination"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- account -->
+        <div id="is-account" class="page image2 section">
+            <div class="container">
+                <h2 data-scroll-reveal="enter easy over 0.5s">
+                    Открыть счет и попробовать функции второго банка можно абсолютно бесплатно
+                </h2>
+                <p class="text-center" data-scroll-reveal="enter bottom over 0.5s after 0.1s">
+                    Вы можете иметь несколько расчетных счетов: не нужно уходить из своего Сбербанка или ВТБ,<br />
+                    чтобы попробовать что-то новое.
+                </p>
             </div>
+        </div>
 
-            <!-- advantage-info -->
-            <div id="is-advantage-info" class="page section">
-                <div class="black">
-                    <div class="container">
-                        <div class="info-block">
-                            <div id="advantage-info-block" class="ib-body">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-12 col-xs-12 ib-block left">
-                                        <div class="row">
-                                            <div class="col-md-12 col-sm-6 col-xs-12" data-scroll-reveal="enter left over 0.5s">
-                                                <div class="media" data-slider="info-slider" data-info-img="/img/content/advantage/phone-1.png">
-                                                    <span class="pull-left">
-                                                        <img class="media-object" src="/img/icons/bullet-w.svg" alt="" />
-                                                    </span>
-                                                    <div class="media-body">
-                                                        <p>Никаких офисов. Если нам нужно вас увидеть – мы приедем сами</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 col-sm-6 col-xs-12" data-scroll-reveal="enter left over 0.5s after 0.1s">
-                                                <div class="media" data-slider="info-slider" data-info-img="/img/content/advantage/phone-2.png">
-                                                    <span class="pull-left">
-                                                        <img class="media-object" src="/img/icons/bullet-w.svg" alt="" />
-                                                    </span>
-                                                    <div class="media-body">
-                                                        <p>5% годовых на остаток на счету более 100 000 р.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 col-sm-6 col-xs-12" data-scroll-reveal="enter left over 0.5s after 0.2s">
-                                                <div class="media" data-slider="info-slider" data-info-img="/img/content/advantage/phone-3.png">
-                                                    <span class="pull-left">
-                                                        <img class="media-object" src="/img/icons/bullet-w.svg" alt="" />
-                                                    </span>
-                                                    <div class="media-body">
-                                                        <p>Бесплатное внесение наличных через тысячи банкоматов сети ОРС</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div id="phone2_block" class="col-md-4 ib-image">
-                                        <div id="phone2" class="sticky">
-                                            <img src="/img/content/advantage/phone-0.png" alt="" width="263" class="is-hide" data-fix="phone2" />
-                                            <video id="advantage-info-video" preload="none" width="221" height="393" poster="/img/bg/phone.jpg"></video>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-12 col-xs-12 ib-block right" data-scroll-reveal="enter right over 0.5s">
-                                        <div class="row">
-                                            <div class="col-md-12 col-sm-6 col-xs-12">
-                                                <div class="media noactive" data-slider="info-slider" data-info-img="/img/content/advantage/phone-3.png">
-                                                    <span class="pull-left">
-                                                        <img class="media-object" src="/img/icons/bullet-g.svg" alt="" />
-                                                    </span>
-                                                    <div class="media-body">
-                                                        <p>Карта <a href="https://rocketbank.ru/" target="_blank">Рокетбанка</a> специально для ИП. Бесплатный перевод до 250 000 р. в день <br class="hide-br" /> <img src="/img/icons/birka.png" alt="Скоро" /></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 col-sm-6 col-xs-12" data-scroll-reveal="enter right over 0.5s after 0.1s">
-                                                <div class="media noactive" data-slider="info-slider" data-info-img="/img/content/advantage/phone-4.png">
-                                                    <span class="pull-left">
-                                                        <img class="media-object" src="/img/icons/bullet-g.svg" alt="" />
-                                                    </span>
-                                                    <div class="media-body">
-                                                        <p>Три счета в одном приложении: расчетный, карточный и Рокетбанк <br class="hide-br" /> <img src="/img/icons/birka.png" alt="Скоро" /></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="s-ib-body">
-                                <div class="device">
-                                    <a class="arrow-left sc2 al-white" href="#"></a> 
-                                    <a class="arrow-right sc2 ar-white" href="#"></a>
-                                    <div class="swiper-container sc2">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="content-slide s-ib-block">
-                                                    <div class="s-ib-gimage">
-                                                        <img src="/img/content/advantage/phone-0.png" alt="" />
-                                                        <img src="/img/bg/phone.jpg" alt="" class="gif"/>
-                                                    </div>
-                                                    <div class="s-ib-item sibi-white">
-                                                        <p>Никаких офисов. Если нам нужно вас увидеть – мы приедем сами</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="content-slide s-ib-block">
-                                                    <div class="s-ib-gimage">
-                                                        <img src="/img/content/advantage/phone-0.png" alt="" />
-                                                        <img src="/img/bg/phone.jpg" alt="" class="gif"/>
-                                                    </div>
-                                                    <div class="s-ib-item sibi-white">
-                                                        <p>5% годовых на остаток на счету более 100 000 р.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="content-slide s-ib-block">
-                                                    <div class="s-ib-gimage">
-                                                        <img src="/img/content/advantage/phone-0.png" alt="" />
-                                                        <img src="/img/bg/phone.jpg" alt="" class="gif"/>
-                                                    </div>
-                                                    <div class="s-ib-item sibi-white">
-                                                        <p>Бесплатное внесение наличных через тысячи банкоматов сети ОРС</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="content-slide s-ib-block">
-                                                    <div class="s-ib-gimage">
-                                                        <img src="/img/content/advantage/phone-0.png" alt="" />
-                                                        <img src="/img/bg/phone.jpg" alt="" class="gif"/>
-                                                    </div>
-                                                    <div class="s-ib-item sibi-gray">
-                                                        <p>Карта <a href="https://rocketbank.ru/" target="_blank">Рокетбанка</a> специально для ИП. Бесплатный перевод до 250 000 р. в день <br class="hide-br" /> <img src="/img/icons/birka.png" alt="Скоро" /></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="content-slide s-ib-block">
-                                                    <div class="s-ib-gimage">
-                                                        <img src="/img/content/advantage/phone-0.png" alt="" />
-                                                        <img src="/img/bg/phone.jpg" alt="" class="gif"/>
-                                                    </div>
-                                                    <div class="s-ib-item sibi-gray">
-                                                        <p>Три счета в одном приложении: расчетный, карточный и Рокетбанк <br class="hide-br" /> <img src="/img/icons/birka.png" alt="Скоро" /></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pagination sc2"></div>
-                                </div>
-                            </div>
-
-                            <div class="button-block" data-scroll-reveal="enter easy over 0.5s after 0.6s">
-                                <div class="row">
-                                    <div class="col-xs-7 text-right no-padding-right bb-left">
-                                        <a href="#show-form/get-link-middle" class="btn btn-default big first hvr-shutter-out-vertical">Получить ссылку</a>
-                                        <form id="get-link-middle" data-id="get-link" data-form-selector="glm" action="" method="post" class="email-form is-hide">
-                                            <div class="form-group no-marging">
-                                                <input type="text" id="glm-phone-field" name="phone" class="form-control" placeholder="Ваш телефон" />
-
-                                                <p id="glm-nophone-error" class="text-danger is-hide text-left">Не указан телефон</p>
-                                                <p id="glm-wrong_phone-error" class="text-danger is-hide text-left">Проверьте, пожалуйста, правильность (+79ХХХХХХХХХ) ввода номера.</p>
-                                                <p id="glm-repeat-error" class="text-danger is-hide text-left">Ссылка этому пользователю недавно уже была отправлена.</p>
-                                            </div>
-                                        </form>
-                                        <div id="get-link-middle-success" class="email-form-success">Спасибо,<br /> мы отправили вам ссылку</div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="col-xs-5 text-left no-padding-left">
-                                        <a href="#" class="btn btn-default little wdouble second ci-block hvr-shutter-out-vertical">
-                                            <img src="/img/icons/appstore.png" alt="Download on the App Store" class="n-ci" />
-                                            <img src="/img/icons/appstore-b.png" alt="Download on the App Store" class="ci appstore" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- wisdom -->
-            <div id="is-wisdom" class="page image1 section">
+        <!-- leaders -->
+        <div id="is-leaders" class="page section">
+            <div class="white">
                 <div class="container">
-                    <h2 data-scroll-reveal="enter easy over 0.5s">
-                        Для тех, кто хочет всё исправить<br />
-                        и тех, кто не хочет совершать ошибку
-                    </h2>
-                </div>
-            </div>
+                    <h2 data-scroll-reveal="enter easy over 0.5s">Лидеры проекта</h2>
+                    <div class="leaders-block">
+                        <p class="text-center" data-scroll-reveal="enter bottom over 0.5s after 0.1s">
+                            Если у вас есть вопросы, вы можете задать их напрямую
+                        </p>
 
-            <!-- price -->
-            <div id="is-price" class="page section">
-                <div class="white">
-                    <div class="container">
-                        <h2 data-scroll-reveal="enter easy over 0.5s">Один тариф</h2>
-
-                        <div class="price-block">
-                            <p class="pb-title text-center" data-scroll-reveal="enter bottom over 0.5s after 0.1s">
-                                Платите только тогда, когда пользуетесь услугами банка
-                            </p>
-                            <div class="row">
-                                <div class="col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s">
-                                    <div class="pb-item">
-                                        <div class="pbi-image">
-                                            <img src="/img/content/price/1.png" alt="" />
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s">
+                                <div class="lb-item">
+                                    <div class="lbi-image">
+                                        <img src="/img/content/leaders/1.png" alt="Яков Новиков" />
+                                        <div class="socials pull-right animated zoomIn">
+                                            <a href="https://www.facebook.com/novikovyakov" target="_blank" class="fb"></a>
                                         </div>
-                                        <h2>Подключение</h2>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.1s">
-                                    <div class="pb-item">
-                                        <div class="pbi-image">
-                                            <img src="/img/content/price/1.png" alt="" />
-                                        </div>
-                                        <h2>Абонентская плата</h2>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.2s">
-                                    <div class="pb-item">
-                                        <div class="pbi-image">
-                                            <img src="/img/content/price/2.png" alt="" />
-                                        </div>
-                                        <h2>За платежку юр.лицу</h2>
-                                    </div>
+                                    <h2>Яков Новиков</h2>
+                                    <p>Директор</p>
                                 </div>
                             </div>
-                            <p class="text-center" data-scroll-reveal="enter bottom over 0.5s">
-                                Мы ничего не скрываем под звездочками и мелкими сносками,<br />
-                                а если вы хотите прочитать подробности – то можете скачать информацию о нашем <a href="/userfiles/content/tariffs.xlsx" target="_blank">тарифе</a>,<br />
-                                и почитать <a href="/userfiles/content/contract.pdf" target="_blank">Договор на кассовое обслуживание</a> с <a href="/userfiles/content/application.pdf" target="_blank">приложением</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- warranty -->
-            <div id="is-warranty" class="page section">
-                <div class="gray">
-                    <div class="container">
-                        <h2 data-scroll-reveal="enter easy over 0.5s">Надёжно и безопасно</h2>
-                        <div class="warranty-block">
-                            <p class="text-center" data-scroll-reveal="enter bottom over 0.5s after 0.1s">
-                                Мы создаём банк для себя и наших друзей.<br />
-                                Поэтому мы выбрали действительного надежного партнера — ОАО КБ «Региональный Кредит».
-                            </p>
-
-                            <h3 data-scroll-reveal="enter bottom over 0.5s after 0.2s">Почему нас не закроют:</h3>
-
-                            <div class="row">
-                                <div class="col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s">
-                                    <div class="media">
-                                        <span class="pull-left">
-                                            <img class="media-object" src="/img/content/warranty/1.svg" alt="" />
-                                        </span>
-                                        <div class="media-body">
-                                            <p>Все вклады и деньги на счетах ИП застрахованы агентством страхования вкладов</p>
+                            <div class="col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.1s">
+                                <div class="lb-item">
+                                    <div class="lbi-image">
+                                        <img src="/img/content/leaders/2.png" alt="Иракли Агладзе" />
+                                        <div class="socials pull-right animated zoomIn">
+                                            <a href="https://www.facebook.com/iraqlee" target="_blank" class="fb"></a>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.1s">
-                                    <div class="media">
-                                        <span class="pull-left">
-                                            <img class="media-object" src="/img/content/warranty/2.svg" alt="" />
-                                        </span>
-                                        <div class="media-body">
-                                            <p>Прошел проверку Центральным банком РФ в ноябре 2014 года</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.2s">
-                                    <div class="media">
-                                        <span class="pull-left">
-                                            <img class="media-object" src="/img/content/warranty/3.svg" alt="" />
-                                        </span>
-                                        <div class="media-body">
-                                            <p>Капитал банка растет каждый год на 15-20%</p>
-                                        </div>
-                                    </div>
+                                    <h2>Иракли Агладзе</h2>
+                                    <p>Продуктолог</p>
                                 </div>
                             </div>
-
-                            <div class="button-block" data-scroll-reveal="enter easy over 0.5s">
-                                <div class="row">
-                                    <div class="col-xs-7 text-right no-padding-right bb-left">
-                                        <a href="#show-form/get-link-bottom" class="btn btn-default big first hvr-shutter-out-vertical-black">Получить ссылку</a>
-                                        <form id="get-link-bottom" data-id="get-link" data-form-selector="glb" action="" method="post" class="email-form is-hide fblack">
-                                            <div class="form-group no-marging">
-                                                <input type="text" id="glb-phone-field" name="phone" class="form-control" placeholder="Ваш телефон" />
-
-                                                <p id="glb-nophone-error" class="text-danger is-hide text-left">Не указан телефон</p>
-                                                <p id="glb-wrong_phone-error" class="text-danger is-hide text-left">Проверьте, пожалуйста, правильность (+79ХХХХХХХХХ) ввода номера.</p>
-                                                <p id="glb-repeat-error" class="text-danger is-hide text-left">Ссылка этому пользователю недавно уже была отправлена.</p>
-                                            </div>
-                                        </form>
-                                        <div id="get-link-bottom-success" class="email-form-success fblack">Спасибо,<br /> мы отправили вам ссылку</div>
-                                        <div class="clearfix"></div>
+                            <div class="col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.2s">
+                                <div class="lb-item">
+                                    <div class="lbi-image">
+                                        <img src="/img/content/leaders/3.png" alt="Андрей Пачай" />
+                                        <div class="socials pull-right animated zoomIn">
+                                            <a href="https://www.facebook.com/pachay" target="_blank" class="fb"></a>
+                                        </div>
                                     </div>
-                                    <div class="col-xs-5 text-left no-padding-left">
-                                        <a href="#" class="btn btn-default little wdouble second ci-block hvr-shutter-out-vertical-black">
-                                            <img src="/img/icons/appstore-b.png" alt="Download on the App Store" class="n-ci" />
-                                            <img src="/img/icons/appstore.png" alt="Download on the App Store" class="ci appstore" />
-                                        </a>
+                                    <h2>Андрей Пачай</h2>
+                                    <p>Разработчик</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.3s">
+                                <div class="lb-item">
+                                    <div class="lbi-image">
+                                        <img src="/img/content/leaders/4.png" alt="Никита Филиппов" />
+                                        <div class="socials pull-right animated zoomIn">
+                                            <a href="https://www.facebook.com/nfilippov" target="_blank" class="fb"></a>
+                                        </div>
                                     </div>
+                                    <h2>Никита Филиппов</h2>
+                                    <p>Эксперт</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.4s">
+                                <div class="lb-item">
+                                    <div class="lbi-image">
+                                        <img src="/img/content/leaders/5.png" alt="Андрей Копанев" />
+                                        <div class="socials pull-right animated zoomIn">
+                                            <a href="https://www.facebook.com/andrew.kopanev.9" target="_blank" class="fb"></a>
+                                        </div>
+                                    </div>
+                                    <h2>Андрей Копанев</h2>
+                                    <p>iOS Разработчик</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.5s">
+                                <div class="lb-item">
+                                    <div class="lbi-image">
+                                        <img src="/img/content/leaders/6.png" alt="Андрей Захаров" />
+                                        <div class="socials pull-right animated zoomIn">
+                                            <a href="https://www.facebook.com/overfuse" target="_blank" class="fb"></a>
+                                        </div>
+                                    </div>
+                                    <h2>Андрей Захаров</h2>
+                                    <p>Разработчик</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0" data-scroll-reveal="enter easy over 0.5s after 0.5s">
+                                <div class="lb-item">
+                                    <div class="lbi-image">
+                                        <img src="/img/content/leaders/7.png" alt="Алексей Кузнецов" />
+                                        <div class="socials pull-right animated zoomIn">
+                                            <a href="https://www.facebook.com/alex.m.kuznetsov" target="_blank" class="fb"></a>
+                                        </div>
+                                    </div>
+                                    <h2>Алексей Кузнецов</h2>
+                                    <p>Дизайнер</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0" data-scroll-reveal="enter easy over 0.5s after 0.5s">
+                                <div class="lb-item">
+                                    <div class="lbi-image">
+                                        <img src="/img/content/leaders/8.png" alt="Владимир Тютин" />
+                                        <div class="socials pull-right animated zoomIn">
+                                            <a href="https://www.facebook.com/vladimir.tyutin.5" target="_blank" class="fb"></a>
+                                        </div>
+                                    </div>
+                                    <h2>Владимир Тютин</h2>
+                                    <p>Android разработчик</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- account -->
-            <div id="is-account" class="page image2 section">
-                <div class="container">
-                    <h2 data-scroll-reveal="enter easy over 0.5s">
-                        Открыть счет и попробовать функции второго банка можно абсолютно бесплатно
-                    </h2>
-                    <p class="text-center" data-scroll-reveal="enter bottom over 0.5s after 0.1s">
-                        Вы можете иметь несколько расчетных счетов: не нужно уходить из своего Сбербанка или ВТБ,<br />
-                        чтобы попробовать что-то новое.
-                    </p>
-                </div>
-            </div>
-
-            <!-- leaders -->
-            <div id="is-leaders" class="page section">
-                <div class="white">
-                    <div class="container">
-                        <h2 data-scroll-reveal="enter easy over 0.5s">Лидеры проекта</h2>
-                        <div class="leaders-block">
-                            <p class="text-center" data-scroll-reveal="enter bottom over 0.5s after 0.1s">
-                                Если у вас есть вопросы, вы можете задать их напрямую
-                            </p>
-
-                            <div class="row">
-                                <div class="col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s">
-                                    <div class="lb-item">
-                                        <div class="lbi-image">
-                                            <img src="/img/content/leaders/1.png" alt="Яков Новиков" />
-                                            <div class="socials pull-right animated zoomIn">
-                                                <a href="https://www.facebook.com/novikovyakov" target="_blank" class="fb"></a>
-                                            </div>
-                                        </div>
-                                        <h2>Яков Новиков</h2>
-                                        <p>Директор</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.1s">
-                                    <div class="lb-item">
-                                        <div class="lbi-image">
-                                            <img src="/img/content/leaders/2.png" alt="Иракли Агладзе" />
-                                            <div class="socials pull-right animated zoomIn">
-                                                <a href="https://www.facebook.com/iraqlee" target="_blank" class="fb"></a>
-                                            </div>
-                                        </div>
-                                        <h2>Иракли Агладзе</h2>
-                                        <p>Продуктолог</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.2s">
-                                    <div class="lb-item">
-                                        <div class="lbi-image">
-                                            <img src="/img/content/leaders/3.png" alt="Андрей Пачай" />
-                                            <div class="socials pull-right animated zoomIn">
-                                                <a href="https://www.facebook.com/pachay" target="_blank" class="fb"></a>
-                                            </div>
-                                        </div>
-                                        <h2>Андрей Пачай</h2>
-                                        <p>Разработчик</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.3s">
-                                    <div class="lb-item">
-                                        <div class="lbi-image">
-                                            <img src="/img/content/leaders/4.png" alt="Никита Филиппов" />
-                                            <div class="socials pull-right animated zoomIn">
-                                                <a href="https://www.facebook.com/nfilippov" target="_blank" class="fb"></a>
-                                            </div>
-                                        </div>
-                                        <h2>Никита Филиппов</h2>
-                                        <p>Эксперт</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.4s">
-                                    <div class="lb-item">
-                                        <div class="lbi-image">
-                                            <img src="/img/content/leaders/5.png" alt="Андрей Копанев" />
-                                            <div class="socials pull-right animated zoomIn">
-                                                <a href="https://www.facebook.com/andrew.kopanev.9" target="_blank" class="fb"></a>
-                                            </div>
-                                        </div>
-                                        <h2>Андрей Копанев</h2>
-                                        <p>iOS Разработчик</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.5s">
-                                    <div class="lb-item">
-                                        <div class="lbi-image">
-                                            <img src="/img/content/leaders/6.png" alt="Андрей Захаров" />
-                                            <div class="socials pull-right animated zoomIn">
-                                                <a href="https://www.facebook.com/overfuse" target="_blank" class="fb"></a>
-                                            </div>
-                                        </div>
-                                        <h2>Андрей Захаров</h2>
-                                        <p>Разработчик</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-3 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.5s">
-                                    <div class="lb-item">
-                                        <div class="lbi-image">
-                                            <img src="/img/content/leaders/7.png" alt="Алексей Кузнецов" />
-                                            <div class="socials pull-right animated zoomIn">
-                                                <a href="https://www.facebook.com/alex.m.kuznetsov" target="_blank" class="fb"></a>
-                                            </div>
-                                        </div>
-                                        <h2>Алексей Кузнецов</h2>
-                                        <p>Дизайнер</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-3 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.5s">
-                                    <div class="lb-item">
-                                        <div class="lbi-image">
-                                            <img src="/img/content/leaders/8.png" alt="Владимир Тютин" />
-                                            <div class="socials pull-right animated zoomIn">
-                                                <a href="https://www.facebook.com/vladimir.tyutin.5" target="_blank" class="fb"></a>
-                                            </div>
-                                        </div>
-                                        <h2>Владимир Тютин</h2>
-                                        <p>Android разработчик</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="back-link">
-                            <a href="javascript:void(0);" onclick="scrollWindowToElement('#is-header')">Наверх</a>
-                        </div>
+                    <div class="back-link">
+                        <a href="javascript:void(0);" onclick="scrollWindowToElement('#is-header')">Наверх</a>
                     </div>
                 </div>
             </div>

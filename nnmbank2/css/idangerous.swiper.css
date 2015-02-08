@@ -134,7 +134,7 @@ Pagination Styles
 .device .arrow-left {
     background: url(/img/icons/arrows.png) no-repeat left top;
     position: absolute;
-    left: 10px;
+    left: 40px;
     top: 50%;
     margin-top: -15px;
     width: 17px;
@@ -144,7 +144,7 @@ Pagination Styles
 .device .arrow-right {
     background: url(/img/icons/arrows.png) no-repeat left bottom;
     position: absolute;
-    right: 10px;
+    right: 40px;
     top: 50%;
     margin-top: -15px;
     width: 17px;

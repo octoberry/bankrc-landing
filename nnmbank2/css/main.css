@@ -49,7 +49,18 @@
 @media (max-width: 768px){
     .arrow-down{padding-top: 50px;}
 }
-    
+
+.page-arrow-down{
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    margin-top: -49px;
+    z-index: 1000;
+}
+@media (max-width: 991px){
+    .page-arrow-down{display: none;}
+}
+
 /*** БЛОК С КНОПКАМИ ***/
 .button-block{margin-top: 57px; text-align: center;}
     .button-block .bb-left{max-width: 524px;}
@@ -200,8 +211,6 @@
     .info-block {margin-bottom: 0px;}
     .ib-block {padding-top: 0px;}
     .ib-image {display: none;}
-}
-@media (max-width: 768px){
     .ib-body{display: none;}
     .s-ib-body{display: block;}
 }
