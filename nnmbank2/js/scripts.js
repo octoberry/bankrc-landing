@@ -7,12 +7,27 @@ $(document).ready(function () {
         paginationClickable: true
     });
     $('.arrow-left').on('click', function(e) {
-        e.preventDefault()
-        mySwiper.swipePrev()
+        e.preventDefault();
+        mySwiper.swipePrev();
     });
     $('.arrow-right').on('click', function(e) {
-        e.preventDefault()
-        mySwiper.swipeNext()
+        e.preventDefault();
+        mySwiper.swipeNext();
+    });
+    
+    var mySwiper2 = new Swiper('.swiper-container.sc2', {
+        pagination: '.pagination.sc2',
+        loop: true,
+        grabCursor: true,
+        paginationClickable: true
+    });
+    $('.arrow-left.sc2').on('click', function(e) {
+        e.preventDefault();
+        mySwiper2.swipePrev();
+    });
+    $('.arrow-right.sc2').on('click', function(e) {
+        e.preventDefault();
+        mySwiper2.swipeNext();
     });
     
     //Формализация ввода телефона

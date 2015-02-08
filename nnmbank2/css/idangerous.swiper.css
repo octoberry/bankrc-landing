@@ -132,7 +132,7 @@ Pagination Styles
     width: 100%;
 }
 .device .arrow-left {
-    background: url(/img/arrows.png) no-repeat left top;
+    background: url(/img/icons/arrows.png) no-repeat left top;
     position: absolute;
     left: 10px;
     top: 50%;
@@ -140,8 +140,9 @@ Pagination Styles
     width: 17px;
     height: 30px;
 }
+.device .arrow-left.al-white {background: url(/img/icons/arrows-w.png) no-repeat left top;}
 .device .arrow-right {
-    background: url(/img/arrows.png) no-repeat left bottom;
+    background: url(/img/icons/arrows.png) no-repeat left bottom;
     position: absolute;
     right: 10px;
     top: 50%;
@@ -149,6 +150,7 @@ Pagination Styles
     width: 17px;
     height: 30px;
 }
+.device .arrow-right.ar-white {background: url(/img/icons/arrows-w.png) no-repeat left bottom;}
 .swiper-container {
     height: 610px;
     width: 100%;
