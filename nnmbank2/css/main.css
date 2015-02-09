@@ -212,6 +212,7 @@
     .ib-block {padding-top: 0px;}
     .ib-image {display: none;}
     .ib-body{display: none;}
+    .ib-body.d-block{display: block;}
     .s-ib-body{display: block;}
 }
 

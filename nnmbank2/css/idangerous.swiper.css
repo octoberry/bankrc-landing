@@ -134,21 +134,23 @@ Pagination Styles
 .device .arrow-left {
     background: url(/img/icons/arrows.png) no-repeat left top;
     position: absolute;
-    left: 40px;
+    left: 20px;
     top: 50%;
     margin-top: -15px;
     width: 17px;
     height: 30px;
+    z-index: 10;
 }
 .device .arrow-left.al-white {background: url(/img/icons/arrows-w.png) no-repeat left top;}
 .device .arrow-right {
     background: url(/img/icons/arrows.png) no-repeat left bottom;
     position: absolute;
-    right: 40px;
+    right: 20px;
     top: 50%;
     margin-top: -15px;
     width: 17px;
     height: 30px;
+    z-index: 10;
 }
 .device .arrow-right.ar-white {background: url(/img/icons/arrows-w.png) no-repeat left bottom;}
 .swiper-container {
