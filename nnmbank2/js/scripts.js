@@ -214,7 +214,7 @@ $(document).ready(function () {
  */
 function scrollWindowToElement(name_id) {
     var headerHeight = 0;
-    $('body,html').animate({
+    $('body,html').stop().animate({
         'scrollTop': $(name_id).offset().top - headerHeight
     }, 700, 'swing', function() {
         if ($(window).scrollTop() != ($(name_id).offset().top - headerHeight)) {
