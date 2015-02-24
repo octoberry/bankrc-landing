@@ -56,6 +56,7 @@
     top: 50%;
     margin-top: -49px;
     z-index: 1000;
+    width: 40px;
 }
 @media (max-width: 991px){
     .page-arrow-down{display: none;}
