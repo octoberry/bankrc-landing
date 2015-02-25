@@ -261,11 +261,11 @@ hr.w8{width: 80%; margin: 10px 0px;}
 
 .ci-block{position: relative;}
 .n-ci{position: relative; z-index: 2; top: 0px; left: 0px;}
-.n-ci.appstore{position: absolute; z-index: 2; top: 11px; left: 15px;}
-.n-ci.googleplay{position: absolute; z-index: 2; top: 11px; left: 15px;}
+.n-ci.appstore{position: absolute; z-index: 2; top: 11px; left: 15px; width: 80% !important;}
+.n-ci.googleplay{position: absolute; z-index: 2; top: 11px; left: 15px; width: 80% !important;}
 .ci{position: absolute;top: 0px;left: 0px;z-index: 5;display: none;}
-.ci.appstore{top: 11px;left: 15px;}
-.ci.googleplay{top: 11px;left: 15px;}
+.ci.appstore{top: 11px;left: 15px; width: 80% !important;}
+.ci.googleplay{top: 11px;left: 15px; width: 80% !important;}
 @media (max-width: 768px){
     .ci.appstore{
         top: 9px;
