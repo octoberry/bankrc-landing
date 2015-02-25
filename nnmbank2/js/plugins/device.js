@@ -195,6 +195,8 @@
         }
 
         _handleOrientation();
+    } else {
+        $("body").addClass("desktop");
     }
 
 }).call(this);
