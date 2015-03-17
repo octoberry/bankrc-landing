@@ -170,7 +170,7 @@ hr.w8{width: 80%; margin: 10px 0px;}
 }
 
 /*** СВЕТЛО-СЕРАЯ СТРАНИЦА ***/
-.page .light-gray{background: #ededed; padding: 136px 0px 105px;}
+.page .light-gray{background: #ededed; padding: 136px 0px 105px; width: 100%;}
     .page .light-gray h2{
         color: black;
         text-align: center;
@@ -282,10 +282,10 @@ hr.w8{width: 80%; margin: 10px 0px;}
 .btn.wdouble{padding-top: 10px !important;}
 
 .ci-block{position: relative;}
-.n-ci{position: relative; z-index: 2; top: 0px; left: 0px;}
+.n-ci{position: relative; z-index: 2; top: 0px; left: 0px;box-shadow: #000 0em 0em 0em;}
 .n-ci.appstore{position: absolute; z-index: 2; top: 11px; left: 15px; width: 80% !important;}
 .n-ci.googleplay{position: absolute; z-index: 2; top: 11px; left: 15px; width: 80% !important;}
-.ci{position: absolute;top: 0px;left: 0px;z-index: 5;display: none;}
+.ci{position: absolute;top: 0px;left: 0px;z-index: 5;display: none;box-shadow: #000 0em 0em 0em;}
 .ci.appstore{top: 11px;left: 15px; width: 80% !important;}
 .ci.googleplay{top: 11px;left: 15px; width: 80% !important;}
 @media (max-width: 768px){
@@ -389,20 +389,30 @@ hr.w8{width: 80%; margin: 10px 0px;}
 }
 #footer .container{max-width: 1230px;}
 footer {
-    padding: 46px 0px 0px;
+    padding: 36px 0px 0px;
     color: white;
     font-size: 14px;
 }
     .f-copy{}
-    .f-text{color: #b2b2b2; margin-top: -10px;}
-        .ft-image{margin-right: 20px; padding-top: 5px;}
-        
-        
+        .f-copy .subtext{color: #b2b2b2; font-size: 14px; margin-left: 15px;display: block;}
+            .f-copy .subtext a{color: white;}
+    .f-text{color: #b2b2b2;}
+        .ft-image{margin-right: 20px; padding-top: 5px; height: 70px;}
+@media (max-width: 992px){
+    .f-text{font-size: 12px;}
+    .ft-image{width: 90px;}
+        .ft-image img{max-width: 100%;}
+}
+@media (max-width: 768px){
+    #footer {height: 212px;}
+    .f-copy{margin-bottom: 50px;}
+}
+
 /*** BUTTON ANIMATION HOVER.css ***/
 /* Shutter Out Vertical */
 .hvr-shutter-out-vertical {
     -webkit-transform: translateZ(0);
-    background: transparent;
+    background: white;
     transform: translateZ(0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -420,7 +430,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    background: white;
+    background: rgba(255,255,255,0.1);
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     -webkit-transform-origin: 50%;
@@ -443,7 +453,7 @@ footer {
 
 .hvr-shutter-out-vertical-black {
     -webkit-transform: translateZ(0);
-    background: transparent;
+    background: black;
     transform: translateZ(0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -461,7 +471,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    background: black;
+    background: rgba(0,0,0,0.05);
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     -webkit-transform-origin: 50%;
