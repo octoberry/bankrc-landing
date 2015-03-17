@@ -169,6 +169,28 @@ hr.w8{width: 80%; margin: 10px 0px;}
     .page .gray h3{font-size: 23px;}
 }
 
+/*** СВЕТЛО-СЕРАЯ СТРАНИЦА ***/
+.page .light-gray{background: #ededed; padding: 136px 0px 105px;}
+    .page .light-gray h2{
+        color: black;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 60px;
+    }
+    .page .light-gray h3{
+        color: #212121;
+        font-size: 33px;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 45px;
+    }
+@media (max-width: 768px){
+    .page .light-gray h2{font-size: 30px;}
+    .page .light-gray h3{font-size: 23px;}
+}
+
 /*** ЧЕРНАЯ СТРАНИЦА ***/
 .page .black{background: #212121; padding: 146px 0px 99px;}
     .page .black h2{
@@ -303,6 +325,46 @@ hr.w8{width: 80%; margin: 10px 0px;}
     color: black;
     border: black 2px solid;
 }
+
+.weblime-tooltip{position:relative;}
+    .weblime-tooltip .wt-content{
+        font-size: 16px;
+        color: #4b4b4b;
+        position: relative;
+        width: 100%;
+        padding: 14px 14px;
+        background: #e0e0e0;
+        border: #e0e0e0 3px solid;
+        overflow: visible !important;
+        line-height: 1.3em;
+    }
+        .weblime-tooltip .wt-content p{margin-bottom:20px;line-height:1.3em;}
+        .weblime-tooltip .wt-content p:last-child{margin-bottom:0px;}
+    .weblime-tooltip.big-padding .wt-content{padding:60px 50px;}
+    .weblime-tooltip.small-padding .wt-content{padding:15px;}
+    
+.weblime-tooltip:before,
+.weblime-tooltip:after{content:" ";position:absolute;overflow:hidden;width:0px;height:0px;border:solid transparent;pointer-events:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:-moz-none;user-select:none;}
+.weblime-tooltip.leftArrow{padding-left:30px;}
+.weblime-tooltip.leftArrow:before{top:25px;left:2px;border-color:rgba(194, 225, 245, 0);border-right-color:#e0e0e0;border-width:15px;}
+.weblime-tooltip.leftArrow:after{top:25px;left:6px;border-color:rgba(255, 255, 255, 0);border-right-color:#ffffff;border-width:15px;}
+.weblime-tooltip.leftArrow.centerArrow:before{top:50%;margin-top:-14px;}
+
+.weblime-tooltip.rightArrow{padding-right:30px;}
+.weblime-tooltip.rightArrow:before{top:25px;right:2px;border-color:rgba(194, 225, 245, 0);border-left-color:#e0e0e0;border-width:15px;}
+.weblime-tooltip.rightArrow:after{top:25px;right:6px;border-color:rgba(255, 255, 255, 0);border-left-color:#ffffff;border-width:15px;}
+.weblime-tooltip.rightArrow.centerArrow:before{top:50%;margin-top:-14px;}
+
+.weblime-tooltip.topArrow{padding-top:30px;}
+.weblime-tooltip.topArrow:before{left:20px;top:2px;border-color:rgba(194, 225, 245, 0);border-bottom-color:#e0e0e0;border-width:15px;}
+.weblime-tooltip.topArrow:after{left:20px;top:6px;border-color:rgba(255, 225, 255, 0);border-bottom-color:#e0e0e0;border-width:15px;}
+.weblime-tooltip.topArrow.centerArrow:before{left:50%;margin-left:-14px;}
+
+.weblime-tooltip.bottomArrow{padding-bottom:30px;}
+.weblime-tooltip.bottomArrow:before{left:55px;bottom:2px;border-color:rgba(194, 225, 245, 0);border-top-color:#e0e0e0;border-width:15px;}
+.weblime-tooltip.bottomArrow:after{left:55px;bottom:6px;border-color:rgba(255, 255, 255, 0);border-top-color:#ffffff;border-width:15px;}
+.weblime-tooltip.bottomArrow.centerArrow:before{left:50%;margin-left:-14px;}
+
 
 /*** ВСПЛЫВАЮЩАЯ ФОРМА ***/
 .blackbody{

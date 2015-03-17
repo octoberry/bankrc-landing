@@ -1,11 +1,13 @@
 var scrollSection = [
     'is-header',
+    'is-about',
     'is-interface-info',
     'is-advantage-info',
+    'is-account',
     'is-wisdom',
     'is-price',
     'is-warranty',
-    'is-account',
+    'is-reviews',
     'is-leaders'
 ];
 scrollPage($(window).scrollTop());
@@ -61,6 +63,7 @@ $(document).ready(function () {
         listKey: "mask"
     };
     $('#glt-phone-field').inputmasks(optsRU);
+    $('#gltm-phone-field').inputmasks(optsRU);
     $('#glm-phone-field').inputmasks(optsRU);
     $('#glb-phone-field').inputmasks(optsRU);
     $('form').on("keypress", "input[name=phone]", (function(key) {

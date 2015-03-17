@@ -36,8 +36,6 @@
 
         <!-- CSS Includes -->
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="/css/base.css" media="all" />
-        <link rel="stylesheet" type="text/css" href="/css/main.css" media="all" />
 
     </head>
     <body>
@@ -66,8 +64,11 @@
                     <p data-scroll-reveal="enter easy over 0.5s after 0.5s">Функциональный банк для предпринимателей</p>
                     <div class="button-block" data-scroll-reveal="enter easy over 0.5s after 0.6s">
                         <div class="row">
-                            <div class="col-xs-7 text-right no-padding-right bb-left">
-                                <a href="#show-form/get-link-top" class="btn btn-default big first hvr-shutter-out-vertical">Получить ссылку</a>
+                            <div class="col-xs-6 text-right no-padding-right">
+                                <a href="#show-form/get-link-top" class="btn btn-default little wdouble first ci-block hvr-shutter-out-vertical">
+                                    <img src="/img/icons/appstore-get.png" alt="Получить ссылку для iOS" class="n-ci appstore" />
+                                    <img src="/img/icons/appstore-get-b.png" alt="Получить ссылку для iOS" class="ci appstore" />
+                                </a>
                                 <form id="get-link-top" data-id="get-link" data-form-selector="glt" action="" method="post" class="email-form is-hide">
                                     <div class="form-group no-marging">
                                         <input type="text" id="glt-phone-field" name="phone" class="form-control" placeholder="Ваш телефон" />
@@ -80,7 +81,7 @@
                                 <div id="get-link-top-success" class="email-form-success">Спасибо,<br /> мы отправили вам ссылку</div>
                                 <div class="clearfix"></div>
                             </div>
-                            <div class="col-xs-5 text-left no-padding-left">
+                            <div class="col-xs-6 text-left no-padding-left">
                                 <a href="#" class="btn btn-default little wdouble second ci-block hvr-shutter-out-vertical">
                                     <img src="/img/icons/googleplay.png" alt="Get it on Google play" class="n-ci googleplay" />
                                     <img src="/img/icons/googleplay-b.png" alt="Get it on Google play" class="ci googleplay" />
@@ -115,7 +116,45 @@
                 </div>
             </div>
         </div>
-
+        
+        <!-- about -->
+        <div id="is-about" class="page section">
+            <div class="light-gray">
+                <div class="container">
+                    <h2 data-scroll-reveal="enter easy over 0.5s">О банке</h2>
+                    
+                    <div class="about-block">
+                        <div class="row">
+                            <div class="col-sm-6 ab-media">
+                                <div class="media" data-scroll-reveal="enter left over 0.5s">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="/img/icons/tie.svg" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <p>Nonamebank – первый в России полностью мобильный банк для предпринимателей. Это значит, что вам не нужно приезжать в отделение для открытия счета, получения документов или внесения наличных.</p>
+                                    </div>
+                                </div>
+                                <div class="media" data-scroll-reveal="enter left over 0.5s">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="/img/icons/phone.svg" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <p>
+                                            Все операции со счетом производятся в приложении для iOS или Android.<br />
+                                            Мы сделали приложения так, чтобы создание платежа в них было еще удобнее, чем на большом экране компьютера.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 ab-image" data-scroll-reveal="enter easy over 1s">
+                                <img src="/img/content/about/phone.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <!-- interface-info -->
         <div id="is-interface-info" class="page section">
             <div class="white">
@@ -134,6 +173,7 @@
                                                 <div class="media-body">
                                                     <p>Распознавание счетов из фото, пакетная вставка реквизитов из буфера обмена</p>
                                                 </div>
+                                                <img src="/img/icons/big-arrow-left.png" alt="" class="media-arrow" />
                                             </div>
                                         </div>
                                         <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter left over 0.5s after 0.2s">
@@ -144,6 +184,7 @@
                                                 <div class="media-body">
                                                     <p>Повтор платежа популярным контрагентам в один клик</p>
                                                 </div>
+                                                <img src="/img/icons/big-arrow-left.png" alt="" class="media-arrow" />
                                             </div>
                                         </div>
                                         <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter left over 0.5s after 0.3s">
@@ -154,6 +195,7 @@
                                                 <div class="media-body">
                                                     <p>Фильтр выписки за неделю, месяц или нужный вам период, и выгрузка ее в .csv</p>
                                                 </div>
+                                                <img src="/img/icons/big-arrow-left.png" alt="" class="media-arrow" />
                                             </div>
                                         </div>
 
@@ -161,8 +203,8 @@
                                 </div>
                                 <div id="phone1_block" class="col-md-4 ib-image">
                                     <div id="phone1">
-                                        <img src="/img/content/interface/phone-0.png" alt="" width="263" data-fix="phone1" />
-                                        <video id="interface-info-video" preload="none" autoplay loop width="221" height="393" poster="/img/bg/phone.jpg">
+                                        <img src="/img/content/interface/phone-0.png" alt="" width="271" data-fix="phone1" />
+                                        <video id="interface-info-video" preload="none" autoplay loop width="233" height="415" poster="/img/bg/phone.jpg">
                                             <source id="interface-info-mp4" src="/img/content/interface/screencast_raspoznavanie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
                                         </video>
                                     </div>
@@ -177,6 +219,7 @@
                                                 <div class="media-body">
                                                     <p>Поддержка в чате – больше никакого ожидания на телефонной линии</p>
                                                 </div>
+                                                <img src="/img/icons/big-arrow-right.png" alt="" class="media-arrow" />
                                             </div>
                                         </div>
                                         <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter right over 0.5s after 0.1s">
@@ -187,6 +230,7 @@
                                                 <div class="media-body">
                                                     <p>Возможность поделиться платежным поручением в любой момент</p>
                                                 </div>
+                                                <img src="/img/icons/big-arrow-right.png" alt="" class="media-arrow" />
                                             </div>
                                         </div>
                                     </div>
@@ -309,8 +353,8 @@
                                 </div>
                                 <div id="phone2_block" class="col-md-4 ib-image">
                                     <div id="phone2" class="sticky">
-                                        <img src="/img/content/advantage/phone-0.png" alt="" width="263" class="is-hide" data-fix="phone2" />
-                                        <video id="advantage-info-video" preload="none" width="221" height="393" poster="/img/bg/phone.jpg"></video>
+                                        <img src="/img/content/advantage/phone-0.png" alt="" width="271" class="is-hide" data-fix="phone2" />
+                                        <video id="advantage-info-video" preload="none" width="233" height="415" poster="/img/bg/phone.jpg"></video>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-12 col-xs-12 ib-block right" data-scroll-reveal="enter right over 0.5s">
@@ -339,27 +383,125 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="button-block" data-scroll-reveal="enter easy over 0.5s after 0.6s">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- account -->
+        <div id="is-account" class="page section">
+            <div class="gray">
+                <div class="container">
+                    <div class="account-block">
+                        <h2 data-scroll-reveal="enter easy over 0.5s">Открыть счет и попробовать функции второго банка можно абсолютно бесплатно.</h2>
+                        <h3 data-scroll-reveal="enter easy over 0.5s after 0.2s">Для этого нужно:</h3>
+                    
+                        <div class="row">
+                            <div class="col-md-20">
+                                <div class="ab-item" data-scroll-reveal="enter right over 0.5s">
+                                    <div class="abi-image">
+                                        <img src="/img/icons/ios.svg" alt="" />
+                                    </div>
+                                    <div class="abi-badge">
+                                        <span class="badge">1</span>
+                                        <hr />
+                                    </div>
+                                    <div class="abi-content">
+                                        <p>Установить приложение для iOS или Android</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-20">
+                                <div class="ab-item" data-scroll-reveal="enter right over 0.5s after 0.2s">
+                                    <div class="abi-image">
+                                        <img src="/img/icons/phone_2.svg" alt="" />
+                                    </div>
+                                    <div class="abi-badge">
+                                        <span class="badge">2</span>
+                                        <hr />
+                                    </div>
+                                    <div class="abi-content">
+                                        <p>Ввести свой ОГРН/ОГРНИП и номер мобильного телефона</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-20">
+                                <div class="ab-item" data-scroll-reveal="enter right over 0.5s after 0.4s">
+                                    <div class="abi-image">
+                                        <img src="/img/icons/photo.svg" alt="" />
+                                    </div>
+                                    <div class="abi-badge">
+                                        <span class="badge">3</span>
+                                        <hr />
+                                    </div>
+                                    <div class="abi-content">
+                                        <p>Загрузить фото/сканы страниц паспорта и СНИЛС руководителя.</p>
+                                        <p>
+                                            <small>
+                                                А также вторую страницу устава, если вы регистрируете счет для ООО.<br />
+                                                Счет уже будет зарезервирован и вы сможете поделиться реквизитами с партнерами.
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-20">
+                                <div class="ab-item" data-scroll-reveal="enter right over 0.5s after 0.6s">
+                                    <div class="abi-image">
+                                        <img src="/img/icons/phone_3.svg" alt="" />
+                                    </div>
+                                    <div class="abi-badge">
+                                        <span class="badge">4</span>
+                                        <hr />
+                                    </div>
+                                    <div class="abi-content">
+                                        <p>Дождаться, пока пройдет проверка и взять трубку, когда наш клиентский менеджер вам позвонит, чтобы назначить встречу.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-20">
+                                <div class="ab-item" data-scroll-reveal="enter right over 0.5s after 0.8s">
+                                    <div class="abi-image">
+                                        <img src="/img/icons/pen.svg" alt="" />
+                                    </div>
+                                    <div class="abi-badge">
+                                        <span class="badge">5</span>
+                                        <hr />
+                                    </div>
+                                    <div class="abi-content">
+                                        <p>Подписать документы в удобное для вас время и начать пользоваться счетом немедленно!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="text-center" data-scroll-reveal="enter easy over 0.5s">
+                            Вы можете иметь несколько расчетных счетов: не нужно уходить из своего Сбербанка или ВТБ, чтобы попробовать что-то новое. Оповещать налоговую тоже не нужно – мы сделаем это сами.
+                        </p>
+                        
+                        <div class="button-block" data-scroll-reveal="enter easy over 0.5s">
                             <div class="row">
-                                <div class="col-xs-7 text-right no-padding-right bb-left">
-                                    <a href="#show-form/get-link-middle" class="btn btn-default big first hvr-shutter-out-vertical">Получить ссылку</a>
-                                    <form id="get-link-middle" data-id="get-link" data-form-selector="glm" action="" method="post" class="email-form is-hide">
+                                <div class="col-xs-6 text-right no-padding-right">
+                                    <a href="#show-form/get-link-topmiddle" class="btn btn-default little wdouble first ci-block hvr-shutter-out-vertical-black">
+                                        <img src="/img/icons/appstore-get-b.png" alt="Получить ссылку для iOS" class="n-ci appstore" />
+                                        <img src="/img/icons/appstore-get.png" alt="Получить ссылку для iOS" class="ci appstore" />
+                                    </a>
+                                    <form id="get-link-topmiddle" data-id="get-link" data-form-selector="gltm" action="" method="post" class="email-form is-hide fblack">
                                         <div class="form-group no-marging">
-                                            <input type="text" id="glm-phone-field" name="phone" class="form-control" placeholder="Ваш телефон" />
+                                            <input type="text" id="gltm-phone-field" name="phone" class="form-control" placeholder="Ваш телефон" />
 
-                                            <p id="glm-nophone-error" class="text-danger is-hide text-left">Не указан телефон</p>
-                                            <p id="glm-wrong_phone-error" class="text-danger is-hide text-left">Проверьте, пожалуйста, правильность (+79ХХХХХХХХХ) ввода номера.</p>
-                                            <p id="glm-repeat-error" class="text-danger is-hide text-left">Ссылка этому пользователю недавно уже была отправлена.</p>
+                                            <p id="gltm-nophone-error" class="text-danger is-hide text-left">Не указан телефон</p>
+                                            <p id="gltm-wrong_phone-error" class="text-danger is-hide text-left">Проверьте, пожалуйста, правильность (+79ХХХХХХХХХ) ввода номера.</p>
+                                            <p id="gltm-repeat-error" class="text-danger is-hide text-left">Ссылка этому пользователю недавно уже была отправлена.</p>
                                         </div>
                                     </form>
-                                    <div id="get-link-middle-success" class="email-form-success">Спасибо,<br /> мы отправили вам ссылку</div>
+                                    <div id="get-link-topmiddle-success" class="email-form-success fblack">Спасибо,<br /> мы отправили вам ссылку</div>
                                     <div class="clearfix"></div>
                                 </div>
-                                <div class="col-xs-5 text-left no-padding-left">
-                                    <a href="#" class="btn btn-default little wdouble second ci-block hvr-shutter-out-vertical">
-                                        <img src="/img/icons/googleplay.png" alt="Get it on Google play" class="n-ci googleplay" />
-                                        <img src="/img/icons/googleplay-b.png" alt="Get it on Google play" class="ci googleplay" />
+                                <div class="col-xs-6 text-left no-padding-left">
+                                    <a href="#" class="btn btn-default little wdouble second ci-block hvr-shutter-out-vertical-black">
+                                        <img src="/img/icons/googleplay-b.png" alt="Get it on Google play" class="n-ci googleplay" />
+                                        <img src="/img/icons/googleplay.png" alt="Get it on Google play" class="ci googleplay" />
                                     </a>
                                 </div>
                             </div>
@@ -473,8 +615,11 @@
 
                         <div class="button-block" data-scroll-reveal="enter easy over 0.5s">
                             <div class="row">
-                                <div class="col-xs-7 text-right no-padding-right bb-left">
-                                    <a href="#show-form/get-link-bottom" class="btn btn-default big first hvr-shutter-out-vertical-black">Получить ссылку</a>
+                                <div class="col-xs-6 text-right no-padding-right">
+                                    <a href="#show-form/get-link-bottom" class="btn btn-default little wdouble first ci-block hvr-shutter-out-vertical-black">
+                                        <img src="/img/icons/appstore-get-b.png" alt="Получить ссылку для iOS" class="n-ci appstore" />
+                                        <img src="/img/icons/appstore-get.png" alt="Получить ссылку для iOS" class="ci appstore" />
+                                    </a>
                                     <form id="get-link-bottom" data-id="get-link" data-form-selector="glb" action="" method="post" class="email-form is-hide fblack">
                                         <div class="form-group no-marging">
                                             <input type="text" id="glb-phone-field" name="phone" class="form-control" placeholder="Ваш телефон" />
@@ -487,7 +632,7 @@
                                     <div id="get-link-bottom-success" class="email-form-success fblack">Спасибо,<br /> мы отправили вам ссылку</div>
                                     <div class="clearfix"></div>
                                 </div>
-                                <div class="col-xs-5 text-left no-padding-left">
+                                <div class="col-xs-6 text-left no-padding-left">
                                     <a href="#" class="btn btn-default little wdouble second ci-block hvr-shutter-out-vertical-black">
                                         <img src="/img/icons/googleplay-b.png" alt="Get it on Google play" class="n-ci googleplay" />
                                         <img src="/img/icons/googleplay.png" alt="Get it on Google play" class="ci googleplay" />
@@ -499,17 +644,74 @@
                 </div>
             </div>
         </div>
-
-        <!-- account -->
-        <div id="is-account" class="page image2 section">
-            <div class="container">
-                <h2 data-scroll-reveal="enter easy over 0.5s">
-                    Открыть счет и попробовать функции второго банка можно абсолютно бесплатно
-                </h2>
-                <p class="text-center" data-scroll-reveal="enter bottom over 0.5s after 0.1s">
-                    Вы можете иметь несколько расчетных счетов: не нужно уходить из своего Сбербанка или ВТБ,<br />
-                    чтобы попробовать что-то новое.
-                </p>
+        
+        <!-- reviews -->
+        <div id="is-reviews" class="page section">
+            <div class="light-gray">
+                <div class="container">
+                    <h2 data-scroll-reveal="enter easy over 0.5s">Отзывы</h2>
+                    <div class="review-block">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="rb-item">
+                                    <div class="media" data-scroll-reveal="enter easy over 0.5s">
+                                        <span class="pull-left">
+                                            <img class="media-object" src="/img/content/review/1.png" alt="">
+                                        </span>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Анна Климентьева</h4>
+                                            <p>Директор по маркетингу</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="weblime-tooltip topArrow" data-scroll-reveal="enter bottom over 0.5s after 0.2s">
+                                        <div class="wt-content">
+                                            Спасибо Вам! Очень вовремя! Великолепное обслуживание, работает приложение как часы.
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="rb-item">
+                                    <div class="media" data-scroll-reveal="enter easy over 0.5s after 0.2s">
+                                        <span class="pull-left">
+                                            <img class="media-object" src="/img/content/review/2.png" alt="">
+                                        </span>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Дмитрий Донцов</h4>
+                                            <p>Финансовый директор</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="weblime-tooltip topArrow" data-scroll-reveal="enter bottom over 0.5s after 0.4s">
+                                        <div class="wt-content">
+                                            Удобное приложение, хороший и современный банк. Пользуюсь и очень доволен. 
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="rb-item">
+                                    <div class="media" data-scroll-reveal="enter easy over 0.5s after 0.4s">
+                                        <span class="pull-left">
+                                            <img class="media-object" src="/img/content/review/3.png" alt="">
+                                        </span>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Иван Иванович</h4>
+                                            <p>Руководитель проектов</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="weblime-tooltip topArrow" data-scroll-reveal="enter bottom over 0.5s after 0.6s">
+                                        <div class="wt-content">
+                                            Лучшего приложения пока не видел. Нравиться максимальный функционал и на андройд и на ios.
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -655,6 +857,8 @@
         </div>
 
         <!-- CSS Includes -->
+        <link rel="stylesheet" type="text/css" href="/css/base.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/css/main.css" media="all" />
         <link rel="stylesheet" type="text/css" href="/css/idangerous.swiper.css" media="all" />
 
         <!-- JS Includes -->
@@ -672,7 +876,7 @@
             $(function () {
                 if (!device.mobile()) {
                     if (/chrome/.test(navigator.userAgent.toLowerCase())) {
-                        $('body').append('<script type="text/javascript" src="/js/plugins/smoothscroll.js"><\/script>');
+                        //$('body').append('<script type="text/javascript" src="/js/plugins/smoothscroll.js"><\/script>');
                     }
                 }
             });
@@ -686,24 +890,19 @@
         <script type="text/javascript">
             $(document).ready(function () {
                 if (!device.mobile()) {
-                    var widthWindow;
                     var $header = $('#is-header'),
-                            $wisdom = $('#is-wisdom'),
-                            $account = $('#is-account');
-                    var headerTop, wisdomTop, accountTop;
+                        $wisdom = $('#is-wisdom'),
+                        headerTop,
+                        wisdomTop,
+                        accountTop;
                     function plax() {
-                        widthWindow = $(window).width();
-                        header = $header.offset().top;
-                        wisdom = $wisdom.offset().top;
-                        account = $account.offset().top;
                         //.parallax(xPosition, adjuster, inertia, outerHeight) options:
                         //xPosition - Horizontal position of the element
                         //adjuster - y position to start from
                         //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
                         //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-                        $('#is-header').parallax("50%", header, 0.1, true);
-                        $('#is-wisdom').parallax("50%", wisdom, 0.1, false);
-                        $('#is-account').parallax("50%", account, 0.1, true);
+                        $('#is-header').parallax("50%", $header.offset().top, 0.1, true);
+                        $('#is-wisdom').parallax("50%", $wisdom.offset().top, 0.1, false);
                     }
                     plax();
                     $(window).resize(function () {
@@ -721,7 +920,7 @@
         <!--[if IE]>
             <script src="/js/plugins/html5.js"></script>
         <![endif]-->
-
+        
         <script type="text/javascript" src="/js/plugins/scrollReveal.min.js"></script>
         <script type="text/javascript">
             (function ($) {
