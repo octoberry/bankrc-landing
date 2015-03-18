@@ -290,8 +290,8 @@ hr.w8{width: 80%; margin: 10px 0px;}
 .ci.googleplay{top: 11px;left: 15px; width: 80% !important;}
 @media (max-width: 768px){
     .ci.appstore{
-        top: 9px;
-        left: 5px;
+        top: 11px;
+        left: 15px;
         width: 136px;
     }
 }

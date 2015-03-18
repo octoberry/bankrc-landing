@@ -127,9 +127,10 @@
     .email-form-success br{display: none;}
 
 @media (max-width: 768px){
-    .email-form{width: 226px; margin: 0px 13px 0 0;}
-    .email-form-success {padding-top: 10px;}
+    .email-form{width: 175px; margin: 0px 0px 0 0;}
+    .email-form-success {padding-top: 3px; font-size: 15px;}
         .email-form-success br{display: inline;}
+        .email-form .form-control {font-size: 16px;}
 }
 
 /*** О БАНКЕ ***/
