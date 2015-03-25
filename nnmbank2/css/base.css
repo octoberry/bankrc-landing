@@ -132,6 +132,7 @@ hr.w8{width: 80%; margin: 10px 0px;}
 
 /*** БЕЛАЯ СТРАНИЦА ***/
 .page .white{background: white; padding: 136px 0px 105px;}
+.page .white.short-pb{padding-bottom: 60px;}
     .page .white h2{
         color: black;
         text-align: center;
@@ -171,6 +172,7 @@ hr.w8{width: 80%; margin: 10px 0px;}
 
 /*** СВЕТЛО-СЕРАЯ СТРАНИЦА ***/
 .page .light-gray{background: #ededed; padding: 136px 0px 105px; width: 100%;}
+.page .light-gray.short{padding: 50px 0px 50px;}
     .page .light-gray h2{
         color: black;
         text-align: center;

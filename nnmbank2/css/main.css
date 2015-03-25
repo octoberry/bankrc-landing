@@ -454,17 +454,45 @@
   -webkit-animation-name: zoomIn;
           animation-name: zoomIn;
 }
- 
+
+
+/*** КОНТАКТЫ ***/
+.contacts-block{}
+    .cntb{text-align: center;}
+        .cntb-item{font-size: 24px;}
+        .cntb-item.phone{
+            background: url('/img/icons/phone_4.svg') no-repeat;
+            display: inline-block;
+            min-height: 30px;
+            padding: 4px 0px 0px 35px;
+        }
+        .cntb-item.mail{
+            background: url('/img/icons/mail.svg') no-repeat;
+            display: inline-block;
+            min-height: 28px;
+            padding: 6px 0px 0px 45px;
+            margin-top: -2px
+        }
+            .cntb-item a{color: black; text-decoration: none;}
+@media (max-width: 1090px){
+    .cntb{margin-bottom: 30px;}
+    .cntb:last-child{margin-bottom: 0px;}
+}
     
 /*** ССЫЛКА "НАВЕРХ" ***/
 .back-link{
     position: absolute;
     right: -149px;
-    bottom: -38px;
+    top: 50%;
+    margin-top: -9px;
     letter-spacing: 0.1px;
-    background: url('/img/icons/arrow-up.png') 100% 0 no-repeat;
+    background: url('/img/icons/arrow-up.png') 100% 3px no-repeat;
     padding-right: 16px;
 }
+    .back-link a{color: #737373;}
 @media (max-width: 1399px){
     .back-link{right: 0px;}
+}
+@media (max-width: 620px){
+    .back-link{top: 120%; margin-top: 0px;}
 }
