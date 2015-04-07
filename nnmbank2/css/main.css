@@ -1,14 +1,14 @@
 /*** СТРАНИЦЫ ЛЕДИНГ    А ***/
-#is-header{z-index: 10;}
-#is-info{z-index: 2; min-height: 910px;}
-#is-about{z-index: 3;overflow: hidden;}
-#is-interface-info{z-index: 4;overflow: hidden;}
-#is-advantage-info{z-index: 5; overflow: hidden;}
-#is-wisdom{z-index: 6;}
-#is-price{z-index: 7;}
-#is-warranty{z-index: 8;}
-#is-account{z-index: 9;}
-#is-leaders{z-index: 10;}
+#is-header{}
+#is-info{min-height: 910px;}
+#is-about{overflow: hidden;}
+#is-interface-info{overflow: hidden;}
+#is-advantage-info{overflow: hidden;}
+#is-wisdom{}
+#is-price{}
+#is-warranty{}
+#is-account{}
+#is-leaders{}
 @media (min-width: 992px){
     #is-interface-info .white{min-height: 910px;}
     #is-advantage-info .black{min-height: 802px;}
@@ -170,7 +170,7 @@
 .info-block{margin-bottom: 50px;}
     .ib-body{min-height: 552px;}
         .ib-image{text-align: center; position: inherit;}
-            .ib-image video{  position: absolute; left: 19px; top: 67px;}
+            .ib-image video{  position: absolute; left: 19px; top: 66px;}
         .ib-block{padding-top: 120px;}
             .ib-block .media{margin-bottom: 22px; padding-left: 18px; cursor: pointer;}
                 .media>.pull-left {margin-top: 10px;}
@@ -392,6 +392,7 @@
             width: 146px;
         }
         
+        .lbi-image img{border-radius: 75px;}
         .lbi-image .socials{
             transition: 0.4s;
             display: none;

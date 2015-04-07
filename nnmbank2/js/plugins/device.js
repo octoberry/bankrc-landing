@@ -72,7 +72,7 @@
     };
 
     device.mobile = function () {
-        return device.androidPhone() || device.iphone() || device.ipod() || device.windowsPhone() || device.blackberryPhone() || device.fxosPhone();
+        return device.android() || device.androidPhone() || device.iphone() || device.ipod() || device.windowsPhone() || device.blackberryPhone() || device.fxosPhone();
     };
 
     device.tablet = function () {
@@ -129,9 +129,9 @@
                     appendChild(msViewportStyle);
         }
         if (device.landscape()) {
-            $('#viewport').attr('content', 'width=769px');
+            $('#viewport').attr('content', 'width=769');
         } else {
-            $('#viewport').attr('content', 'width=445px');
+            $('#viewport').attr('content', 'width=445');
         }
 
     };
@@ -148,11 +148,11 @@
                     appendChild(msViewportStyle);
         }
         if (device.landscape()) {
-            $('#viewport').attr('content', 'width=769px');
+            $('#viewport').attr('content', 'width=769');
             $("body").addClass("landscape");
             $("body").removeClass("not-landscape");
         } else {
-            $('#viewport').attr('content', 'width=445px');
+            $('#viewport').attr('content', 'width=445');
             $("body").removeClass("landscape");
             $("body").addClass("not-landscape");
         }

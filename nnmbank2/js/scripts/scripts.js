@@ -10,40 +10,45 @@ var scrollSection = [
     'is-reviews',
     'is-leaders'
 ];
-scrollPage($(window).scrollTop());
+if (!device.mobile()){
+    scrollPage($(window).scrollTop());
+}
 
 $(document).ready(function () {
-    //Слайдер для мобильного разрешения
-    var mySwiper = new Swiper('.swiper-container', {
-        pagination: '.pagination',
-        loop: true,
-        grabCursor: true,
-        paginationClickable: true
-    });
-    $('.arrow-left').on('click', function(e) {
-        e.preventDefault();
-        mySwiper.swipePrev();
-    });
-    $('.arrow-right').on('click', function(e) {
-        e.preventDefault();
-        mySwiper.swipeNext();
-    });
-    
-    var mySwiper2 = new Swiper('.swiper-container.sc2', {
-        pagination: '.pagination.sc2',
-        loop: true,
-        grabCursor: true,
-        paginationClickable: true
-    });
-    $('.arrow-left.sc2').on('click', function(e) {
-        e.preventDefault();
-        mySwiper2.swipePrev();
-    });
-    $('.arrow-right.sc2').on('click', function(e) {
-        e.preventDefault();
-        mySwiper2.swipeNext();
-    });
-    //--------------------------------------------------------------------------
+    //картинки для мобильного
+    if (device.mobile()){
+        initMobileImage();
+    } else {
+        if ($(window).width() < 991){
+            initMobileImage();
+        }
+        $(window).resize(function () {
+            if ($(window).width() < 991){
+                initMobileImage();
+            }
+        });
+    }
+    //parallax
+    if (!device.mobile()) {
+        var $header = $('#is-header'),
+            $wisdom = $('#is-wisdom'),
+            headerTop,
+            wisdomTop,
+            accountTop;
+        function plax() {
+            //.parallax(xPosition, adjuster, inertia, outerHeight) options:
+            //xPosition - Horizontal position of the element
+            //adjuster - y position to start from
+            //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+            //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+            $('#is-header').parallax("50%", $header.offset().top, 0.1, true);
+            $('#is-wisdom').parallax("50%", $wisdom.offset().top, 0.1, false);
+        }
+        plax();
+        $(window).resize(function () {
+            plax();
+        });
+    }
     
     //Формализация ввода телефона
     var listRU = $.masksSort($.masksLoad("/js/plugins/inputmask/phones-ru.json"), ['#'], /[0-9]|#/, "mask");
@@ -289,5 +294,44 @@ function clearForm(form_id) {
             $(this).removeAttr('selected');
         });
         $(this).find('option[value=0]').attr('selected', 'selected');
+    });
+}
+
+function initMobileImage(){
+    if (!$("body").hasClass("init-image")){
+        $("body").addClass("init-image");
+        var imageCount = $("img[data-toggle=mobile-img]").length;
+        var imageCountLoad = 0;
+        $("img[data-toggle=mobile-img]").each(function(){
+            var $image = $(this);
+            $image.attr("src", $image.data("src"));
+            $image.bindImageLoad(function () {
+                imageCountLoad++;
+                if (imageCount == imageCountLoad){
+                    setTimeout(function(){
+                        initMobileSlider();
+                    }, 200);
+                }
+            });
+        });
+    }
+}
+/**
+ * Слайдер для мобильного разрешения
+ */
+function initMobileSlider(){
+    var mySwiper = new Swiper('.swiper-container', {
+        pagination: '.pagination',
+        loop: true,
+        grabCursor: true,
+        paginationClickable: true
+    });
+    $('.arrow-left').on('click', function(e) {
+        e.preventDefault();
+        mySwiper.swipePrev();
+    });
+    $('.arrow-right').on('click', function(e) {
+        e.preventDefault();
+        mySwiper.swipeNext();
     });
 }

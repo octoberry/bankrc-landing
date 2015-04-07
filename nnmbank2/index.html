@@ -53,45 +53,49 @@
         <!-- header -->
         <div id="is-header" class="page header section active">
             <div class="container">
-                <div class="header-top" data-scroll-reveal="enter easy over 0.5s after 0.6s">
+                <div class="header-top" data-sr="wait 0.5s, enter top">
                     <div class="socials pull-right">
                         <a href="https://www.facebook.com/nonamebank.ru" target="_blank" class="fb"></a>
                     </div>
                     <div class="clearfix"></div>
                 </div>
                 <div class="header-middle text-center">
-                    <div class="logo" data-scroll-reveal="enter easy over 0.5s after 0.4s"><img src="/img/logo.svg" alt="NonameBank" /></div>
-                    <h2 data-scroll-reveal="enter easy over 0.5s after 0.5s">Ничего лишнего. Только бизнес</h2>
-                    <p data-scroll-reveal="enter easy over 0.5s after 0.5s">Мобильный банк для предпринимателей</p>
-                    <div class="button-block" data-scroll-reveal="enter easy over 0.5s after 0.6s">
-                        <div class="row">
-                            <div class="col-xs-6 text-right no-padding-right">
-                                <a href="#show-form/get-link-top" class="btn btn-default little wdouble first ci-block hvr-shutter-out-vertical">
-                                    <img src="/img/icons/appstore-get.png" alt="Получить ссылку для iOS" class="ci appstore" />
-                                    <img src="/img/icons/appstore-get-b.png" alt="Получить ссылку для iOS" class="n-ci appstore" />
-                                </a>
-                                <form id="get-link-top" data-id="get-link" data-form-selector="glt" action="" method="post" class="email-form is-hide">
-                                    <div class="form-group no-marging">
-                                        <input type="text" id="glt-phone-field" name="phone" class="form-control" placeholder="Ваш телефон" />
+                    <div data-sr="wait 0.5s, enter top">
+                        <div class="logo">
+                            <img src="/img/logo.svg" alt="NonameBank" />
+                        </div>
+                        <h2>Ничего лишнего. Только бизнес</h2>
+                        <p>Мобильный банк для предпринимателей</p>
+                        <div class="button-block">
+                            <div class="row">
+                                <div class="col-xs-6 text-right no-padding-right">
+                                    <a href="#show-form/get-link-top" class="btn btn-default little wdouble first ci-block hvr-shutter-out-vertical">
+                                        <img src="/img/icons/appstore-get.png" alt="Получить ссылку для iOS" class="ci appstore" />
+                                        <img src="/img/icons/appstore-get-b.png" alt="Получить ссылку для iOS" class="n-ci appstore" />
+                                    </a>
+                                    <form id="get-link-top" data-id="get-link" data-form-selector="glt" action="" method="post" class="email-form is-hide">
+                                        <div class="form-group no-marging">
+                                            <input type="text" id="glt-phone-field" name="phone" class="form-control" placeholder="Ваш телефон" />
 
-                                        <p id="glt-nophone-error" class="text-danger is-hide text-left">Не указан телефон</p>
-                                        <p id="glt-wrong_phone-error" class="text-danger is-hide text-left">Проверьте, пожалуйста, правильность (+79ХХХХХХХХХ) ввода номера.</p>
-                                        <p id="glt-repeat-error" class="text-danger is-hide text-left">Ссылка этому пользователю недавно уже была отправлена.</p>
-                                    </div>
-                                </form>
-                                <div id="get-link-top-success" class="email-form-success">Спасибо,<br /> мы отправили вам ссылку</div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="col-xs-6 text-left no-padding-left">
-                                <a href="#" class="btn btn-default little wdouble second ci-block hvr-shutter-out-vertical">
-                                    <img src="/img/icons/googleplay.png" alt="Get it on Google play" class="ci googleplay" />
-                                    <img src="/img/icons/googleplay-b.png" alt="Get it on Google play" class="n-ci googleplay" />
-                                </a>
+                                            <p id="glt-nophone-error" class="text-danger is-hide text-left">Не указан телефон</p>
+                                            <p id="glt-wrong_phone-error" class="text-danger is-hide text-left">Проверьте, пожалуйста, правильность (+79ХХХХХХХХХ) ввода номера.</p>
+                                            <p id="glt-repeat-error" class="text-danger is-hide text-left">Ссылка этому пользователю недавно уже была отправлена.</p>
+                                        </div>
+                                    </form>
+                                    <div id="get-link-top-success" class="email-form-success">Спасибо,<br /> мы отправили вам ссылку</div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="col-xs-6 text-left no-padding-left">
+                                    <a href="#" class="btn btn-default little wdouble second ci-block hvr-shutter-out-vertical">
+                                        <img src="/img/icons/googleplay.png" alt="Get it on Google play" class="ci googleplay" />
+                                        <img src="/img/icons/googleplay-b.png" alt="Get it on Google play" class="n-ci googleplay" />
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="header-bottom" data-scroll-reveal="enter easy over 0.5s after 0.6s">
+                <div class="header-bottom" data-sr="wait 0.6s, enter top">
                     <div class="row">
                         <div class="col-xs-4 text-left">
                             <p class="hb-title">Банковские услуги предоставляются</p>
@@ -122,12 +126,12 @@
         <div id="is-about" class="page section">
             <div class="light-gray">
                 <div class="container">
-                    <h2 data-scroll-reveal="enter easy over 0.5s">О банке</h2>
+                    <h2>О банке</h2>
                     
-                    <div class="about-block">
+                    <div class="about-block" data-sr="enter top">
                         <div class="row">
                             <div class="col-sm-6 ab-media">
-                                <div class="media" data-scroll-reveal="enter left over 0.5s">
+                                <div class="media">
                                     <span class="pull-left">
                                         <img class="media-object" src="/img/icons/tie.svg" alt="">
                                     </span>
@@ -135,7 +139,7 @@
                                         <p>Nonamebank – первый в России полностью мобильный банк для предпринимателей. Это значит, что вам не нужно приезжать в&nbsp;отделение для открытия счета, получения документов или внесения наличных.</p>
                                     </div>
                                 </div>
-                                <div class="media" data-scroll-reveal="enter left over 0.5s">
+                                <div class="media">
                                     <span class="pull-left">
                                         <img class="media-object" src="/img/icons/phone.svg" alt="">
                                     </span>
@@ -147,7 +151,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 ab-image" data-scroll-reveal="enter easy over 1s">
+                            <div class="col-sm-6 ab-image">
                                 <img src="/img/content/about/phone.png" alt="" />
                             </div>
                         </div>
@@ -161,12 +165,12 @@
             <div class="white">
                 <div class="container p-none">
                     <div class="info-block">
-                        <h2 data-scroll-reveal="enter easy over 0.5s">Удобный и простой интерфейс</h2>
+                        <h2>Удобный и простой интерфейс</h2>
                         <div id="interface-info-block" class="ib-body">
                             <div class="row">
-                                <div class="col-md-4 col-sm-12 col-xs-12 ib-block left">
+                                <div class="col-md-4 col-sm-12 col-xs-12 ib-block left" data-sr="enter left">
                                     <div class="row">
-                                        <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter left over 0.5s">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
                                             <div class="media" data-interface-slider="interface-info" data-info-img="/img/content/interface/screencast_raspoznavanie">
                                                 <span class="pull-left">
                                                     <img class="media-object" src="/img/icons/bullet.svg" alt="" />
@@ -177,7 +181,7 @@
                                                 <img src="/img/icons/big-arrow-left.png" alt="" class="media-arrow" />
                                             </div>
                                         </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter left over 0.5s after 0.2s">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
                                             <div class="media" data-interface-slider="interface-info" data-info-img="/img/content/interface/screencast_povtor-from-timeline">
                                                 <span class="pull-left">
                                                     <img class="media-object" src="/img/icons/bullet.svg" alt="" />
@@ -188,7 +192,7 @@
                                                 <img src="/img/icons/big-arrow-left.png" alt="" class="media-arrow" />
                                             </div>
                                         </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter left over 0.5s after 0.3s">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
                                             <div class="media" data-interface-slider="interface-info" data-info-img="/img/content/interface/screencast_csv-export">
                                                 <span class="pull-left">
                                                     <img class="media-object" src="/img/icons/bullet.svg" alt="" />
@@ -210,9 +214,9 @@
                                         </video>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-12 col-xs-12 ib-block right">
+                                <div class="col-md-4 col-sm-12 col-xs-12 ib-block right" data-sr="enter right">
                                     <div class="row">
-                                        <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter right over 0.5s">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
                                             <div class="media" data-interface-slider="interface-info" data-info-img="/img/content/interface/screencast_chat">
                                                 <span class="pull-left">
                                                     <img class="media-object" src="/img/icons/bullet.svg" alt="" />
@@ -223,7 +227,7 @@
                                                 <img src="/img/icons/big-arrow-right.png" alt="" class="media-arrow" />
                                             </div>
                                         </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter right over 0.5s after 0.1s">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
                                             <div class="media" data-interface-slider="interface-info" data-info-img="/img/content/interface/screencast_platezh-share">
                                                 <span class="pull-left">
                                                     <img class="media-object" src="/img/icons/bullet.svg" alt="" />
@@ -238,7 +242,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        
                         <div class="s-ib-body">
                             <div class="device">
                                 <a class="arrow-left" href="#"></a> 
@@ -248,8 +252,8 @@
                                         <div class="swiper-slide">
                                             <div class="content-slide s-ib-block">
                                                 <div class="s-ib-gimage">
-                                                    <img src="/img/content/interface/phone-0.png" alt="" />
-                                                    <img src="/img/content/interface/screencast_raspoznavanie.gif" alt="" class="gif"/>
+                                                    <img src="/css/blank.gif" data-toggle="mobile-img" data-src="/img/content/interface/phone-0.png" alt="" />
+                                                    <img src="/css/blank.gif" data-toggle="mobile-img" data-src="/img/content/interface/screencast_raspoznavanie.gif" alt="" class="gif"/>
                                                 </div>
                                                 <div class="s-ib-item">
                                                     <p>Возможность оплаты счетов по&nbsp;фотографии, скану или просто по&nbsp;реквизитам из&nbsp;файла или письма</p>
@@ -259,8 +263,8 @@
                                         <div class="swiper-slide">
                                             <div class="content-slide s-ib-block">
                                                 <div class="s-ib-gimage">
-                                                    <img src="/img/content/interface/phone-0.png" alt="" />
-                                                    <img src="/img/content/interface/screencast_povtor-from-timeline.gif" alt="" class="gif"/>
+                                                    <img src="/css/blank.gif" data-toggle="mobile-img" data-src="/img/content/interface/phone-0.png" alt="" />
+                                                    <img src="/css/blank.gif" data-toggle="mobile-img" data-src="/img/content/interface/screencast_povtor-from-timeline.gif" alt="" class="gif"/>
                                                 </div>
                                                 <div class="s-ib-item">
                                                     <p>Повтор платежа популярным контрагентам в&nbsp;один клик</p>
@@ -270,8 +274,8 @@
                                         <div class="swiper-slide">
                                             <div class="content-slide s-ib-block">
                                                 <div class="s-ib-gimage">
-                                                    <img src="/img/content/interface/phone-0.png" alt="" />
-                                                    <img src="/img/content/interface/screencast_csv-export.gif" alt="" class="gif"/>
+                                                    <img src="/css/blank.gif" data-toggle="mobile-img" data-src="/img/content/interface/phone-0.png" alt="" />
+                                                    <img src="/css/blank.gif" data-toggle="mobile-img" data-src="/img/content/interface/screencast_csv-export.gif" alt="" class="gif"/>
                                                 </div>
                                                 <div class="s-ib-item">
                                                     <p>Предоставляем выписки за&nbsp;любой период в&nbsp;формате&nbsp;.csv</p>
@@ -281,8 +285,8 @@
                                         <div class="swiper-slide">
                                             <div class="content-slide s-ib-block">
                                                 <div class="s-ib-gimage">
-                                                    <img src="/img/content/interface/phone-0.png" alt="" />
-                                                    <img src="/img/content/interface/screencast_chat.gif" alt="" class="gif"/>
+                                                    <img src="/css/blank.gif" data-toggle="mobile-img" data-src="/img/content/interface/phone-0.png" alt="" />
+                                                    <img src="/css/blank.gif" data-toggle="mobile-img" data-src="/img/content/interface/screencast_chat.gif" alt="" class="gif"/>
                                                 </div>
                                                 <div class="s-ib-item">
                                                     <p>Дружелюбная поддержка в&nbsp;чате – больше никакого ожидания на&nbsp;линии</p>
@@ -292,8 +296,8 @@
                                         <div class="swiper-slide">
                                             <div class="content-slide s-ib-block">
                                                 <div class="s-ib-gimage">
-                                                    <img src="/img/content/interface/phone-0.png" alt="" />
-                                                    <img src="/img/content/interface/screencast_platezh-share.gif" alt="" class="gif"/>
+                                                    <img src="/css/blank.gif" data-toggle="mobile-img" data-src="/img/content/interface/phone-0.png" alt="" />
+                                                    <img src="/css/blank.gif" data-toggle="mobile-img" data-src="/img/content/interface/screencast_platezh-share.gif" alt="" class="gif"/>
                                                 </div>
                                                 <div class="s-ib-item">
                                                     <p>Возможность поделиться платежным поручением в&nbsp;любой момент</p>
@@ -319,7 +323,7 @@
                             <div class="row">
                                 <div class="col-md-4 col-sm-12 col-xs-12 ib-block left">
                                     <div class="row">
-                                        <div class="col-md-12 col-sm-6 col-xs-12" data-scroll-reveal="enter left over 0.5s">
+                                        <div class="col-md-12 col-sm-6 col-xs-12">
                                             <div class="media" data-slider="info-slider" data-info-img="/img/content/advantage/phone-1.png">
                                                 <span class="pull-left">
                                                     <img class="media-object" src="/img/icons/bullet-w.svg" alt="" />
@@ -329,7 +333,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-12 col-sm-6 col-xs-12" data-scroll-reveal="enter left over 0.5s after 0.1s">
+                                        <div class="col-md-12 col-sm-6 col-xs-12">
                                             <div class="media" data-slider="info-slider" data-info-img="/img/content/advantage/phone-2.png">
                                                 <span class="pull-left">
                                                     <img class="media-object" src="/img/icons/bullet-w.svg" alt="" />
@@ -339,7 +343,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-12 col-sm-6 col-xs-12" data-scroll-reveal="enter left over 0.5s after 0.2s">
+                                        <div class="col-md-12 col-sm-6 col-xs-12">
                                             <div class="media" data-slider="info-slider" data-info-img="/img/content/advantage/phone-3.png">
                                                 <span class="pull-left">
                                                     <img class="media-object" src="/img/icons/bullet-w.svg" alt="" />
@@ -358,7 +362,7 @@
                                         <video id="advantage-info-video" preload="none" width="233" height="415" poster="/img/bg/phone.jpg"></video>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-12 col-xs-12 ib-block right" data-scroll-reveal="enter right over 0.5s">
+                                <div class="col-md-4 col-sm-12 col-xs-12 ib-block right">
                                     <div class="row">
                                         <div class="col-md-12 col-sm-6 col-xs-12">
                                             <div class="media noactive" data-slider="info-slider" data-info-img="/img/content/advantage/phone-3.png">
@@ -370,17 +374,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-12 col-sm-6 col-xs-12" data-scroll-reveal="enter right over 0.5s after 0.1s">
+                                        <div class="col-md-12 col-sm-6 col-xs-12">
                                             <div class="media noactive" data-slider="info-slider" data-info-img="/img/content/advantage/phone-4.png">
                                                 <span class="pull-left">
                                                     <img class="media-object" src="/img/icons/bullet-g.svg" alt="" />
                                                 </span>
                                                 <div class="media-body">
-                                                    <p>Легкие валютные платежи – никакой головной боли при работе с&nbsp;зарубежными партнерами <br class="hide-br" /> <img src="{{ url_for('static', filename='img/icons/birka.png') }}" alt="Скоро" /></p>
+                                                    <p>Легкие валютные платежи – никакой головной боли при работе с&nbsp;зарубежными партнерами <br class="hide-br" /> <img src="/img/icons/birka.png" alt="Скоро" /></p>
                                                 </div>
                                             </div>
                                         </div>
-                                         <div class="col-md-12 col-sm-6 col-xs-12" data-scroll-reveal="enter right over 0.5s after 0.1s">
+                                         <div class="col-md-12 col-sm-6 col-xs-12">
                                             <div class="media noactive" data-slider="info-slider" data-info-img="/img/content/advantage/phone-4.png">
                                                 <span class="pull-left">
                                                     <img class="media-object" src="/img/icons/bullet-g.svg" alt="" />
@@ -404,12 +408,14 @@
             <div class="gray">
                 <div class="container">
                     <div class="account-block">
-                        <h2 data-scroll-reveal="enter easy over 0.5s">Открыть счет и попробовать функции второго банка можно абсолютно бесплатно.</h2>
-                        <h3 data-scroll-reveal="enter easy over 0.5s after 0.2s">Для этого нужно:</h3>
+                        <div data-sr="enter top">
+                            <h2>Открыть счет и попробовать функции второго банка можно абсолютно бесплатно.</h2>
+                            <h3>Для этого нужно:</h3>
+                        </div>
                     
-                        <div class="row">
+                        <div class="row" data-sr="enter top">
                             <div class="col-md-20">
-                                <div class="ab-item" data-scroll-reveal="enter right over 0.5s">
+                                <div class="ab-item">
                                     <div class="abi-image">
                                         <img src="/img/icons/ios.svg" alt="" />
                                     </div>
@@ -423,7 +429,7 @@
                                 </div>
                             </div>
                             <div class="col-md-20">
-                                <div class="ab-item" data-scroll-reveal="enter right over 0.5s after 0.2s">
+                                <div class="ab-item">
                                     <div class="abi-image">
                                         <img src="/img/icons/phone_2.svg" alt="" />
                                     </div>
@@ -437,7 +443,7 @@
                                 </div>
                             </div>
                             <div class="col-md-20">
-                                <div class="ab-item" data-scroll-reveal="enter right over 0.5s after 0.4s">
+                                <div class="ab-item">
                                     <div class="abi-image">
                                         <img src="/img/icons/photo.svg" alt="" />
                                     </div>
@@ -451,7 +457,7 @@
                                 </div>
                             </div>
                             <div class="col-md-20">
-                                <div class="ab-item" data-scroll-reveal="enter right over 0.5s after 0.6s">
+                                <div class="ab-item">
                                     <div class="abi-image">
                                         <img src="/img/icons/phone_3.svg" alt="" />
                                     </div>
@@ -465,7 +471,7 @@
                                 </div>
                             </div>
                             <div class="col-md-20">
-                                <div class="ab-item" data-scroll-reveal="enter right over 0.5s after 0.8s">
+                                <div class="ab-item">
                                     <div class="abi-image">
                                         <img src="/img/icons/pen.svg" alt="" />
                                     </div>
@@ -480,34 +486,36 @@
                             </div>
                         </div>
                         
-                        <p class="text-center" data-scroll-reveal="enter easy over 0.5s">
-                            Вы можете иметь несколько расчетных счетов: не нужно уходить из своего Сбербанка или ВТБ, чтобы попробовать что-то новое. Оповещать налоговую тоже не нужно – мы сделаем это сами.
-                        </p>
-                        
-                        <div class="button-block" data-scroll-reveal="enter easy over 0.5s">
-                            <div class="row">
-                                <div class="col-xs-6 text-right no-padding-right">
-                                    <a href="#show-form/get-link-topmiddle" class="btn btn-default little wdouble first ci-block hvr-shutter-out-vertical-black">
-                                        <img src="/img/icons/appstore-get-b.png" alt="Получить ссылку для iOS" class="ci appstore" />
-                                        <img src="/img/icons/appstore-get.png" alt="Получить ссылку для iOS" class="n-ci appstore" />
-                                    </a>
-                                    <form id="get-link-topmiddle" data-id="get-link" data-form-selector="gltm" action="" method="post" class="email-form is-hide fblack">
-                                        <div class="form-group no-marging">
-                                            <input type="text" id="gltm-phone-field" name="phone" class="form-control" placeholder="Ваш телефон" />
-
-                                            <p id="gltm-nophone-error" class="text-danger is-hide text-left">Не указан телефон</p>
-                                            <p id="gltm-wrong_phone-error" class="text-danger is-hide text-left">Проверьте, пожалуйста, правильность (+79ХХХХХХХХХ) ввода номера.</p>
-                                            <p id="gltm-repeat-error" class="text-danger is-hide text-left">Ссылка этому пользователю недавно уже была отправлена.</p>
-                                        </div>
-                                    </form>
-                                    <div id="get-link-topmiddle-success" class="email-form-success fblack">Спасибо,<br /> мы отправили вам ссылку</div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="col-xs-6 text-left no-padding-left">
-                                    <a href="#" class="btn btn-default little wdouble second ci-block hvr-shutter-out-vertical-black">
-                                        <img src="/img/icons/googleplay-b.png" alt="Get it on Google play" class="ci googleplay" />
-                                        <img src="/img/icons/googleplay.png" alt="Get it on Google play" class="n-ci googleplay" />
-                                    </a>
+                        <div data-sr="enter top">
+                            <p class="text-center">
+                                Вы можете иметь несколько расчетных счетов: не нужно уходить из своего Сбербанка или ВТБ, чтобы попробовать что-то новое. Оповещать налоговую тоже не нужно – мы сделаем это сами.
+                            </p>
+                            
+                            <div class="button-block">
+                                <div class="row">
+                                    <div class="col-xs-6 text-right no-padding-right">
+                                        <a href="#show-form/get-link-topmiddle" class="btn btn-default little wdouble first ci-block hvr-shutter-out-vertical-black">
+                                            <img src="/img/icons/appstore-get-b.png" alt="Получить ссылку для iOS" class="ci appstore" />
+                                            <img src="/img/icons/appstore-get.png" alt="Получить ссылку для iOS" class="n-ci appstore" />
+                                        </a>
+                                        <form id="get-link-topmiddle" data-id="get-link" data-form-selector="gltm" action="" method="post" class="email-form is-hide fblack">
+                                            <div class="form-group no-marging">
+                                                <input type="text" id="gltm-phone-field" name="phone" class="form-control" placeholder="Ваш телефон" />
+                            
+                                                <p id="gltm-nophone-error" class="text-danger is-hide text-left">Не указан телефон</p>
+                                                <p id="gltm-wrong_phone-error" class="text-danger is-hide text-left">Проверьте, пожалуйста, правильность (+79ХХХХХХХХХ) ввода номера.</p>
+                                                <p id="gltm-repeat-error" class="text-danger is-hide text-left">Ссылка этому пользователю недавно уже была отправлена.</p>
+                                            </div>
+                                        </form>
+                                        <div id="get-link-topmiddle-success" class="email-form-success fblack">Спасибо,<br /> мы отправили вам ссылку</div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="col-xs-6 text-left no-padding-left">
+                                        <a href="#" class="btn btn-default little wdouble second ci-block hvr-shutter-out-vertical-black">
+                                            <img src="/img/icons/googleplay-b.png" alt="Get it on Google play" class="ci googleplay" />
+                                            <img src="/img/icons/googleplay.png" alt="Get it on Google play" class="n-ci googleplay" />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -519,7 +527,7 @@
         <!-- wisdom -->
         <div id="is-wisdom" class="page image1 section">
             <div class="container">
-                <h2 data-scroll-reveal="enter easy over 0.5s">
+                <h2>
                     NONAMEBANK – для тех, кто привык контролировать<br />
                     свои расходы и не платить за то, чем не пользуется
                 </h2>
@@ -530,14 +538,14 @@
         <div id="is-price" class="page section">
             <div class="white">
                 <div class="container">
-                    <h2 data-scroll-reveal="enter easy over 0.5s">Один тариф</h2>
+                    <h2>Один тариф</h2>
 
                     <div class="price-block">
-                        <p class="pb-title text-center" data-scroll-reveal="enter bottom over 0.5s after 0.1s">
+                        <p class="pb-title text-center">
                             Платите только тогда, когда пользуетесь услугами банка
                         </p>
-                        <div class="row">
-                            <div class="col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s">
+                        <div class="row" data-sr="enter top">
+                            <div class="col-md-4 col-sm-6 col-xs-12">
                                 <div class="pb-item">
                                     <div class="pbi-image">
                                         <img src="/img/content/price/1.png" alt="" />
@@ -545,7 +553,7 @@
                                     <h2>Подключение</h2>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.1s">
+                            <div class="col-md-4 col-sm-6 col-xs-12">
                                 <div class="pb-item">
                                     <div class="pbi-image">
                                         <img src="/img/content/price/1.png" alt="" />
@@ -553,7 +561,7 @@
                                     <h2>Абонентская плата</h2>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.2s">
+                            <div class="col-md-4 col-sm-6 col-xs-12">
                                 <div class="pb-item">
                                     <div class="pbi-image">
                                         <img src="/img/content/price/2.png" alt="" />
@@ -562,7 +570,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="text-center" data-scroll-reveal="enter bottom over 0.5s">
+                        <p class="text-center">
                             Мы ничего не скрываем под звездочками и мелкими сносками,<br />
                             а если вы хотите прочитать подробности – то можете скачать информацию о нашем <a href="/userfiles/content/tariffs.xlsx" target="_blank">тарифе</a>,<br />
                             и почитать <a href="/userfiles/content/contract.pdf" target="_blank">Договор на кассовое обслуживание</a> с <a href="/userfiles/content/application.pdf" target="_blank">приложением</a>
@@ -576,17 +584,17 @@
         <div id="is-warranty" class="page section">
             <div class="gray">
                 <div class="container">
-                    <h2 data-scroll-reveal="enter easy over 0.5s">Надёжно и безопасно</h2>
+                    <h2>Надёжно и безопасно</h2>
                     <div class="warranty-block">
-                        <p class="text-center" data-scroll-reveal="enter bottom over 0.5s after 0.1s">
+                        <p class="text-center" data-sr="enter top">
                             Мы создаём банк для себя и наших друзей.<br />
                             Поэтому мы выбрали действительного надежного партнера — ОАО КБ «Региональный Кредит».
                         </p>
 
-                        <h3 data-scroll-reveal="enter bottom over 0.5s after 0.2s">Почему нас не закроют:</h3>
+                        <h3>Почему нас не закроют:</h3>
 
-                        <div class="row">
-                            <div class="col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s">
+                        <div class="row" data-sr="enter top">
+                            <div class="col-md-4 col-sm-6 col-xs-12">
                                 <div class="media">
                                     <span class="pull-left">
                                         <img class="media-object" src="/img/content/warranty/1.svg" alt="" />
@@ -596,7 +604,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.1s">
+                            <div class="col-md-4 col-sm-6 col-xs-12">
                                 <div class="media">
                                     <span class="pull-left">
                                         <img class="media-object" src="/img/content/warranty/2.svg" alt="" />
@@ -606,7 +614,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.2s">
+                            <div class="col-md-4 col-sm-6 col-xs-12">
                                 <div class="media">
                                     <span class="pull-left">
                                         <img class="media-object" src="/img/content/warranty/3.svg" alt="" />
@@ -618,7 +626,7 @@
                             </div>
                         </div>
 
-                        <div class="button-block" data-scroll-reveal="enter easy over 0.5s">
+                        <div class="button-block">
                             <div class="row">
                                 <div class="col-xs-6 text-right no-padding-right">
                                     <a href="#show-form/get-link-bottom" class="btn btn-default little wdouble first ci-block hvr-shutter-out-vertical-black">
@@ -654,12 +662,12 @@
         <div id="is-reviews" class="page section">
             <div class="light-gray">
                 <div class="container">
-                    <h2 data-scroll-reveal="enter easy over 0.5s">Отзывы</h2>
+                    <h2>Отзывы</h2>
                     <div class="review-block">
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="rb-item">
-                                    <div class="media" data-scroll-reveal="enter easy over 0.5s">
+                                    <div class="media">
                                         <span class="pull-left">
                                             <img class="media-object" src="/img/content/review/1.png" alt="">
                                         </span>
@@ -669,7 +677,7 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="weblime-tooltip topArrow" data-scroll-reveal="enter bottom over 0.5s after 0.2s">
+                                    <div class="weblime-tooltip topArrow" data-sr="enter top">
                                         <div class="wt-content">
                                             В старом банке приходилось тратить час на каждый перевод, переключаться между разными браузерами и скачивать последнюю версию Java — хочу забыть обо всем этом. Интерфейсы NONAMEBANK мне понравились – всё просто и понятно.
                                         </div>
@@ -678,7 +686,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="rb-item">
-                                    <div class="media" data-scroll-reveal="enter easy over 0.5s after 0.2s">
+                                    <div class="media">
                                         <span class="pull-left">
                                             <img class="media-object" src="/img/content/review/2.png" alt="">
                                         </span>
@@ -688,7 +696,7 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="weblime-tooltip topArrow" data-scroll-reveal="enter bottom over 0.5s after 0.4s">
+                                    <div class="weblime-tooltip topArrow" data-sr="enter top">
                                         <div class="wt-content">
                                             Nonamebank мы выбрали, почувствовав идеологическую близость: к каждому клиенту здесь относятся как к главному. 
                                         </div> 
@@ -697,7 +705,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="rb-item">
-                                    <div class="media" data-scroll-reveal="enter easy over 0.5s after 0.4s">
+                                    <div class="media">
                                         <span class="pull-left">
                                             <img class="media-object" src="/img/content/review/3.png" alt="">
                                         </span>
@@ -707,7 +715,7 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="weblime-tooltip topArrow" data-scroll-reveal="enter bottom over 0.5s after 0.6s">
+                                    <div class="weblime-tooltip topArrow" data-sr="enter top">
                                         <div class="wt-content">
                                             НоНейм – это какой-то новый уровень. Теперь вся полезная информация (включая техподдержку) есть в мобильнике. А абонентка 0 рублей это вообще чудо.
                                         </div> 
@@ -724,17 +732,17 @@
         <div id="is-leaders" class="page section">
             <div class="white short-pb">
                 <div class="container">
-                    <h2 data-scroll-reveal="enter easy over 0.5s">Лидеры проекта</h2>
+                    <h2>Лидеры проекта</h2>
                     <div class="leaders-block">
-                        <p class="text-center" data-scroll-reveal="enter bottom over 0.5s after 0.1s">
+                        <p class="text-center">
                             Если у вас есть вопросы, вы можете задать их напрямую
                         </p>
 
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s">
+                        <div class="row" data-sr="enter top">
+                            <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="lb-item">
                                     <div class="lbi-image">
-                                        <img src="/img/content/leaders/1.png" alt="Яков Новиков" />
+                                        <img src="/img/content/leaders/1.jpg" alt="Яков Новиков" />
                                         <div class="socials pull-right animated zoomIn">
                                             <a href="https://www.facebook.com/novikovyakov" target="_blank" class="fb"></a>
                                         </div>
@@ -743,10 +751,10 @@
                                     <p>Директор</p>
                                 </div>
                             </div>
-                            <div class="col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.1s">
+                            <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="lb-item">
                                     <div class="lbi-image">
-                                        <img src="/img/content/leaders/2.png" alt="Иракли Агладзе" />
+                                        <img src="/img/content/leaders/2.jpg" alt="Иракли Агладзе" />
                                         <div class="socials pull-right animated zoomIn">
                                             <a href="https://www.facebook.com/iraqlee" target="_blank" class="fb"></a>
                                         </div>
@@ -755,10 +763,10 @@
                                     <p>Продуктолог</p>
                                 </div>
                             </div>
-                            <div class="col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.2s">
+                            <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="lb-item">
                                     <div class="lbi-image">
-                                        <img src="/img/content/leaders/3.png" alt="Андрей Пачай" />
+                                        <img src="/img/content/leaders/3.jpg" alt="Андрей Пачай" />
                                         <div class="socials pull-right animated zoomIn">
                                             <a href="https://www.facebook.com/pachay" target="_blank" class="fb"></a>
                                         </div>
@@ -767,10 +775,10 @@
                                     <p>Разработчик</p>
                                 </div>
                             </div>
-                            <div class="col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.3s">
+                            <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="lb-item">
                                     <div class="lbi-image">
-                                        <img src="/img/content/leaders/4.png" alt="Никита Филиппов" />
+                                        <img src="/img/content/leaders/4.jpg" alt="Никита Филиппов" />
                                         <div class="socials pull-right animated zoomIn">
                                             <a href="https://www.facebook.com/nfilippov" target="_blank" class="fb"></a>
                                         </div>
@@ -779,10 +787,10 @@
                                     <p>Эксперт</p>
                                 </div>
                             </div>
-                            <div class="col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.4s">
+                            <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="lb-item">
                                     <div class="lbi-image">
-                                        <img src="/img/content/leaders/5.png" alt="Андрей Копанев" />
+                                        <img src="/img/content/leaders/5.jpg" alt="Андрей Копанев" />
                                         <div class="socials pull-right animated zoomIn">
                                             <a href="https://www.facebook.com/andrew.kopanev.9" target="_blank" class="fb"></a>
                                         </div>
@@ -791,10 +799,10 @@
                                     <p>iOS Разработчик</p>
                                 </div>
                             </div>
-                            <div class="col-md-3 col-sm-6 col-xs-12" data-scroll-reveal="enter easy over 0.5s after 0.5s">
+                            <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="lb-item">
                                     <div class="lbi-image">
-                                        <img src="/img/content/leaders/6.png" alt="Андрей Захаров" />
+                                        <img src="/img/content/leaders/6.jpg" alt="Андрей Захаров" />
                                         <div class="socials pull-right animated zoomIn">
                                             <a href="https://www.facebook.com/overfuse" target="_blank" class="fb"></a>
                                         </div>
@@ -803,10 +811,10 @@
                                     <p>Разработчик</p>
                                 </div>
                             </div>
-                            <div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0" data-scroll-reveal="enter easy over 0.5s after 0.5s">
+                            <div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0">
                                 <div class="lb-item">
                                     <div class="lbi-image">
-                                        <img src="/img/content/leaders/7.png" alt="Алексей Кузнецов" />
+                                        <img src="/img/content/leaders/7.jpg" alt="Алексей Кузнецов" />
                                         <div class="socials pull-right animated zoomIn">
                                             <a href="https://www.facebook.com/alex.m.kuznetsov" target="_blank" class="fb"></a>
                                         </div>
@@ -815,10 +823,10 @@
                                     <p>Дизайнер</p>
                                 </div>
                             </div>
-                            <div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0" data-scroll-reveal="enter easy over 0.5s after 0.5s">
+                            <div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0">
                                 <div class="lb-item">
                                     <div class="lbi-image">
-                                        <img src="/img/content/leaders/8.png" alt="Владимир Тютин" />
+                                        <img src="/img/content/leaders/8.jpg" alt="Владимир Тютин" />
                                         <div class="socials pull-right animated zoomIn">
                                             <a href="https://www.facebook.com/vladimir.tyutin.5" target="_blank" class="fb"></a>
                                         </div>
@@ -882,65 +890,18 @@
         </div>
 
         <!-- CSS Includes -->
-        <link rel="stylesheet" type="text/css" href="/css/base.css" media="all" />
-        <link rel="stylesheet" type="text/css" href="/css/main.css" media="all" />
-        <link rel="stylesheet" type="text/css" href="/css/idangerous.swiper.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/css/base.min.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/css/main.min.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/css/idangerous.swiper.min.css" media="all" />
 
         <!-- JS Includes -->
         <script type="text/javascript">
             var GLOBAL = GLOBAL || {};
             GLOBAL.URL_POST = '/submit.php';
         </script>
-        <script type="text/javascript" src="/js/source/jquery.js"></script>
-        <script type="text/javascript" src="/js/source/jquery.mousewheel.js"></script>
-        <script type="text/javascript" src="/js/source/jquery.form.js"></script>
-
-        <script type="text/javascript" src="/js/plugins/bootstrap.min.js"></script>
-        <script type="text/javascript" src="/js/plugins/device.js"></script>
-        <script type="text/javascript">
-            $(function () {
-                if (!device.mobile()) {
-                    if (/chrome/.test(navigator.userAgent.toLowerCase())) {
-                        //$('body').append('<script type="text/javascript" src="/js/plugins/smoothscroll.js"><\/script>');
-                    }
-                }
-            });
-        </script>
-
-        <script type="text/javascript" src="/js/plugins/inputmask/jquery.inputmask.js"></script>
-        <script type="text/javascript" src="/js/plugins/inputmask/jquery.bind-first-0.2.3.min.js"></script>
-        <script type="text/javascript" src="/js/plugins/inputmask/jquery.inputmask-multi.js"></script>
-
-        <script type="text/javascript" src="/js/plugins/jquery.parallax-1.1.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                if (!device.mobile()) {
-                    var $header = $('#is-header'),
-                        $wisdom = $('#is-wisdom'),
-                        headerTop,
-                        wisdomTop,
-                        accountTop;
-                    function plax() {
-                        //.parallax(xPosition, adjuster, inertia, outerHeight) options:
-                        //xPosition - Horizontal position of the element
-                        //adjuster - y position to start from
-                        //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
-                        //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-                        $('#is-header').parallax("50%", $header.offset().top, 0.1, true);
-                        $('#is-wisdom').parallax("50%", $wisdom.offset().top, 0.1, false);
-                    }
-                    plax();
-                    $(window).resize(function () {
-                        plax();
-                    });
-                }
-            });
-        </script>
-
-        <script type="text/javascript" src="/js/plugins/fix.mobile.js"></script>
-        <script type="text/javascript" src="/js/plugins/idangerous.swiper.min.js"></script>
-
-        <script type="text/javascript" src="/js/scripts.js"></script>
+        <script type="text/javascript" src="/js/source.min.js"></script>
+        <script type="text/javascript" src="/js/plugins.min.js"></script>
+        <script type="text/javascript" src="/js/scripts.min.js"></script>
         <!-- ПОДДЕРЖКА HTML5 ДЛЯ IE -->
         <!--[if IE]>
             <script src="/js/plugins/html5.js"></script>
@@ -948,30 +909,11 @@
         
         <script type="text/javascript" src="/js/plugins/scrollReveal.min.js"></script>
         <script type="text/javascript">
-            (function ($) {
-                if (!device.mobile()) {
-                    'use strict';
-                    window.scrollReveal = new scrollReveal({reset: false});
-                    // This function returns the appropriate CSS-transition end event name
-                    // to the transitionEnd variable. e.g usage: $(el).on('transitionEnd', func(e));
-                    var transitionEnd = (function () {
-                        var t;
-                        var el = document.createElement('fakeelement');
-                        var transitions = {
-                            'transition': 'transitionend',
-                            'OTransition': 'oTransitionEnd',
-                            'MozTransition': 'transitionend',
-                            'WebkitTransition': 'webkitTransitionEnd'
-                        }
-
-                        for (t in transitions) {
-                            if (el.style[t] !== undefined) {
-                                return transitions[t];
-                            }
-                        }
-                    })();
-                }
-            })();
+            window.sr = new scrollReveal({
+                enter: 'top',
+                reset: false,
+                mobile: false
+            });
         </script>
     </body>
 </html>
